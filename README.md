@@ -28,7 +28,7 @@ pod 'WBSDK'
 * **WikiParser.py**
   * a python script collection api json files from wiki
 * **WeiboSDK**
-  * Pod Classes files
+  * Pod Classes files
 * **SampleProject**
   * a sample project shows how to use WeiboSDK
 * **WBSDKGenerator**
