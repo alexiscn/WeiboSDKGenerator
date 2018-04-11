@@ -1,4 +1,4 @@
-# NOTE
+# NOTE!!!
 
 Since [Weibo](https://weibo.com) Open API does not provide post Weibo anymore. You should prefer to use [official weibosdk](https://github.com/sinaweibosdk/weibo_ios_sdk) .
 
