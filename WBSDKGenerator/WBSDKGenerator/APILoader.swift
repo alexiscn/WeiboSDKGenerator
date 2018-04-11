@@ -60,7 +60,7 @@ class APILoader {
             let f = try decoder.decode(WBFunction.self, from: data)
             return f
         } catch (let error as NSError) {
-            print(error.localizedDescription)
+            print(error.localizedDescription + path)
         }
         return nil
     }

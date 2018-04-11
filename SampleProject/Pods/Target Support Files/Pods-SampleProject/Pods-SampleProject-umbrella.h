@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_WeiboSampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_WeiboSampleVersionString[];
+FOUNDATION_EXPORT double Pods_SampleProjectVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SampleProjectVersionString[];
 

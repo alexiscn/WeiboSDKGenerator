@@ -33,8 +33,8 @@ copyNecessaryFiles()
 
 if let contents = try? FileManager.default.contentsOfDirectory(atPath: buildPath) {
     let files = contents.sorted(by: { $0 < $1 })
-    if let first = files.first {
-        let path = buildPath.appending(first)
+    for file in files {
+        let path = buildPath.appending(file)
         let loader = APILoader()
         if let f = loader.load(at: path) {
             let generator = APIGenerator(wbFunction: f)

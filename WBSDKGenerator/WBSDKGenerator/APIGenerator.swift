@@ -20,22 +20,31 @@ class APIGenerator {
     
     func generate() {
         
-        var body = ""
-        body.append(headerString)
-        body.append("\n\n")
-        body.append("import GenericNetworking \n")
-        body.append("\n")
-        
-        body.append("// MARK: - \(wbFunction.category) related API \n")
-        body.append("extension WeiboSDK {\n")
-        body.append("\n")
-        
-        body.append(generateFunc())
-        
-        body.append("}")
-        
         let fileName = "WeiboSDK+\(wbFunction.category).swift"
         let fileURL = URL(fileURLWithPath: WBOutputDir.appending("/\(fileName)"))
+        
+        if !FileManager.default.fileExists(atPath: fileURL.path) {
+            var body = ""
+            body.append(headerString)
+            body.append("\n\n")
+            body.append("import GenericNetworking \n")
+            body.append("\n")
+            
+            body.append("// MARK: - \(wbFunction.category) related API \n")
+            body.append("extension WeiboSDK {\n")
+            body.append("}")
+            if let data = body.data(using: .utf8) {
+                try? data.write(to: fileURL)
+            }
+        }
+        
+        guard var body = try? String(contentsOfFile: fileURL.path) else {
+            return
+        }
+        body.removeLast()
+        body.append("\n")
+        body.append(generateFunc())
+        body.append("}")
         if let data = body.data(using: .utf8) {
             try? data.write(to: fileURL)
         }

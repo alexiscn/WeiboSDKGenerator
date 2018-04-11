@@ -16,6 +16,7 @@
 		A3811C06207E1C9500E20BAD /* Podspec.txt in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE3207E07AF00E20BAD /* Podspec.txt */; };
 		A3811C07207E1CE000E20BAD /* Podspec.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = A3811BE3207E07AF00E20BAD /* Podspec.txt */; };
 		A3811C08207E1E4A00E20BAD /* WeiboSDK.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = A3811BE6207E14E300E20BAD /* WeiboSDK.txt */; };
+		A3811C0A207E25FA00E20BAD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811C09207E25FA00E20BAD /* Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		A3811BE3207E07AF00E20BAD /* Podspec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podspec.txt; sourceTree = "<group>"; };
 		A3811BE4207E0A9200E20BAD /* APIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
 		A3811BE6207E14E300E20BAD /* WeiboSDK.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeiboSDK.txt; sourceTree = "<group>"; };
+		A3811C09207E25FA00E20BAD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				A3811BE3207E07AF00E20BAD /* Podspec.txt */,
 				A3811BE4207E0A9200E20BAD /* APIFetcher.swift */,
 				A3811BE6207E14E300E20BAD /* WeiboSDK.txt */,
+				A3811C09207E25FA00E20BAD /* Document.swift */,
 			);
 			path = WBSDKGenerator;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3811C0A207E25FA00E20BAD /* Document.swift in Sources */,
 				A3811C06207E1C9500E20BAD /* Podspec.txt in Sources */,
 				A3811BE0207DEE4E00E20BAD /* APIGenerator.swift in Sources */,
 				A3811BE7207E14E300E20BAD /* WeiboSDK.txt in Sources */,

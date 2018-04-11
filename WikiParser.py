@@ -10,6 +10,7 @@ import os
 import sys
 import json
 import urlparse
+import shutil
 
 
 defaultencoding = 'utf-8'
@@ -73,6 +74,7 @@ def parse_detail_wiki(url, desc):
     api_path = urlparse.urlparse(api_url).path
     api_name = api_url.rsplit('/', 1)[1]
     api_category = api_path.rsplit('/')[2]
+    api_category = api_category.replace('.', '_').title()
     api_dict["url"] = api_url
     api_dict["description"] = desc
     api_dict["method"] = "GET"
@@ -87,14 +89,19 @@ def parse_detail_wiki(url, desc):
         api_dict["parameters"] = parameters
         response = parse_response_model(tables[1])
         api_dict["response"] = response
+    elif len(tables) == 1:
+        parameters = parse_request_parameters(tables[0])
+        api_dict["parameters"] = parameters
+        api_dict["response"] = []
     else:
-        print "detail page error"
+        print "!!!!!!!!!! detail page error"
+        return
 
     filename = api_url.rsplit('/', 1)[1]
     if not filename.endswith('json'):
         return
 
-    file_path = "build/" + filename
+    file_path = "build/" + api_category + "_" + filename
     with open(file_path, mode='w') as f:
         f.write(json.dumps(api_dict, encoding='UTF-8', ensure_ascii=False))
     print "parsing detail page done ====== "
@@ -140,8 +147,8 @@ def parse_response_model(table):
 
 
 if __name__ == '__main__':
-    if not os.path.exists('build'):
-        os.mkdir('build')
+    shutil.rmtree('build')
+    os.mkdir('build')
     parse_main_wiki()
 
 
