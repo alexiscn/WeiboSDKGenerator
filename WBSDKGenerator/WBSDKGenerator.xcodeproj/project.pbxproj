@@ -31,6 +31,7 @@
 		A3811BDD207DEE4000E20BAD /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
 		A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGenerator.swift; sourceTree = "<group>"; };
 		A3811BE1207DF52C00E20BAD /* TypeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMapper.swift; sourceTree = "<group>"; };
+		A3811BE3207E07AF00E20BAD /* WeiboSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeiboSDK.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 				A3811BDD207DEE4000E20BAD /* APILoader.swift */,
 				A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */,
 				A3811BE1207DF52C00E20BAD /* TypeMapper.swift */,
+				A3811BE3207E07AF00E20BAD /* WeiboSDK.podspec */,
 			);
 			path = WBSDKGenerator;
 			sourceTree = "<group>";

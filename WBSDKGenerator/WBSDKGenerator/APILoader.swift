@@ -50,19 +50,18 @@ struct WBResponse: Codable {
 
 class APILoader {
     
-    func load(at path: String) {
-        
+    func load(at path: String) -> WBFunction? {        
         let url = URL(fileURLWithPath: path)
         guard let data = try? Data(contentsOf: url) else {
-            return
+            return nil
         }
-    
         do {
             let decoder = JSONDecoder()
-            let wb = try decoder.decode(WBFunction.self, from: data)
-            print(wb.description)
+            let f = try decoder.decode(WBFunction.self, from: data)
+            return f
         } catch (let error as NSError) {
             print(error.localizedDescription)
         }
+        return nil
     }
 }
