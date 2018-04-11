@@ -38,7 +38,7 @@ enum WBHTTPMethod: String, Codable {
 struct WBParameter: Codable {
     let name: String
     let type: String
-    let optional: String
+    let optional: Bool
     let description: String
 }
 
@@ -50,7 +50,7 @@ struct WBResponse: Codable {
 
 class APILoader {
     
-    func load(at path: String) -> WBFunction? {        
+    func load(at path: String) -> WBFunction? {
         let url = URL(fileURLWithPath: path)
         guard let data = try? Data(contentsOf: url) else {
             return nil

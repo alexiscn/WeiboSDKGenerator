@@ -12,7 +12,7 @@ fileprivate let maps = [
     "string": "String",
     "int64": "Int64",
     "int": "Int",
-    "boolean": "bool",
+    "boolean": "Bool",
     "array": "[Any]",
     "object": "Any",
     "object array": "[Any]"

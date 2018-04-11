@@ -29,6 +29,9 @@ class APIGenerator {
         body.append("// MARK: - \(wbFunction.category) related API \n")
         body.append("extension WeiboSDK {\n")
         body.append("\n")
+        
+        body.append(generateFunc())
+        
         body.append("}")
         
         let fileName = "WeiboSDK+\(wbFunction.category).swift"
@@ -38,14 +41,43 @@ class APIGenerator {
         }
     }
     
-    func generateFunc(_ f: WBFunction) -> String {
+    func generateFunc() -> String {
         
         var content = ""
-        content.append("/// \(f.description)\n")
-        content.append("///\n")
-        content.append("/// - Parameters\n")
-        content.append("public class func \(f.signature)(")
+        content.append("    /// \(wbFunction.description)\n")
+        content.append("    ///\n")
+        content.append("    /// - Parameters:\n")
+        for param in wbFunction.parameters {
+            content.append("    ///   - \(param.name): \(param.description)\n")
+        }
+        content.append("    ///   - completion: Callback\n")
+        content.append("    ")
+        content.append("public class func \(wbFunction.signature)(")
         
+        for param in wbFunction.parameters {
+            content.append(param.name)
+            content.append(": ")
+            content.append(swiftTypeFor(param.type))
+            if param.optional {
+                content.append("?")
+            }
+            content.append(", ")
+        }
+        content.append("completion: @escaping GenericNetworkingCompletion<Int>")
+        content.append(") {\n")
+        content.append("        let path = \"\(wbFunction.path)\"\n")
+        content.append("        var params: [String: Any] = [:]\n")
+        for param in wbFunction.parameters {
+            if param.optional {
+                content.append("        if let \(param.name) = \(param.name) {\n")
+                content.append("            params[\"\(param.name)\"] = \(param.name)\n")
+                content.append("        }\n")
+            } else {
+                content.append("        params[\"\(param.name)\"] = \(param.name)\n")
+            }
+        }
+        content.append("        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)\n")
+        content.append("    ")
         content.append("}\n")
         return content
     }

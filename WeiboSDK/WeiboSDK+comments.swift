@@ -5,4 +5,35 @@ import GenericNetworking
 // MARK: - comments related API 
 extension WeiboSDK {
 
+    /// 我发出的评论列表
+    ///
+    /// - Parameters:
+    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
+    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
+    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
+    ///   - count: 单页返回的记录条数，默认为50。
+    ///   - page: 返回结果的页码，默认为1。
+    ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
+    ///   - completion: Callback
+    public class func comments_by_me(access_token: String, since_id: Int64?, max_id: Int64?, count: Int?, page: Int?, filter_by_source: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+        let path = "/2/comments/by_me.json"
+        var params: [String: Any] = [:]
+        params["access_token"] = access_token
+        if let since_id = since_id {
+            params["since_id"] = since_id
+        }
+        if let max_id = max_id {
+            params["max_id"] = max_id
+        }
+        if let count = count {
+            params["count"] = count
+        }
+        if let page = page {
+            params["page"] = page
+        }
+        if let filter_by_source = filter_by_source {
+            params["filter_by_source"] = filter_by_source
+        }
+        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+    }
 }

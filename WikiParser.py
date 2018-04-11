@@ -24,7 +24,7 @@ base_url = 'http://open.weibo.com'
 def parse_main_wiki():
     url = 'http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI'
     content = requests.get(url).text
-    soup = BeautifulSoup(content)
+    soup = BeautifulSoup(content, "html5lib")
     table = soup.find_all(class_='wiki_table')
     parse_main_wiki_table(table)
 
@@ -60,7 +60,7 @@ def parse_detail_wiki(url, desc):
     print url
 
     content = requests.get(url).text
-    soup = BeautifulSoup(content)
+    soup = BeautifulSoup(content, "html5lib")
 
     api_dict = dict()
 
@@ -72,13 +72,13 @@ def parse_detail_wiki(url, desc):
     api_url = api_node["href"]
     api_path = urlparse.urlparse(api_url).path
     api_name = api_url.rsplit('/', 1)[1]
+    api_category = api_path.rsplit('/')[2]
     api_dict["url"] = api_url
     api_dict["description"] = desc
     api_dict["method"] = "GET"
-    api_dict["signature"] = api_name.rsplit('.', 1)[0]
-    api_dict["category"] = api_path.rsplit('/')[2]
+    api_dict["signature"] = api_category + "_" + api_name.rsplit('.', 1)[0]
+    api_dict["category"] = api_category
     api_dict["path"] = api_path
-
 
     # parse parameters and responses
     tables = soup.find_all('table', class_='parameters')
@@ -107,13 +107,14 @@ def parse_request_parameters(table):
         tds = line.find_all('td')
         if len(tds) == 4:
             name = tds[0].get_text().rstrip()
-            param_type = tds[1].get_text().rstrip()
-            optional = tds[2].get_text().rstrip()
+            is_must = tds[1].get_text().rstrip()
+            b_optional = True if is_must == "false" else False
+            param_type = tds[2].get_text().rstrip()
             desc = tds[3].get_text().rstrip()
             param = {
                 "name": name,
                 "type": param_type,
-                "optional": optional,
+                "optional": b_optional,
                 "description": desc
             }
             params.append(param)
@@ -139,7 +140,6 @@ def parse_response_model(table):
 
 
 if __name__ == '__main__':
-
     if not os.path.exists('build'):
         os.mkdir('build')
     parse_main_wiki()
