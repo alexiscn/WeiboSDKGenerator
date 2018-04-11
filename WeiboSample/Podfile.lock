@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.7.1)
+  - GenericNetworking (0.1.9):
+    - Alamofire
+  - WeiboSDK (0.0.2):
+    - GenericNetworking
+
+DEPENDENCIES:
+  - WeiboSDK (from `../WeiboSDK`)
+
+EXTERNAL SOURCES:
+  WeiboSDK:
+    :path: ../WeiboSDK
+
+SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  GenericNetworking: a80a48896d250fd0bd0ab395d773e074de2580c4
+  WeiboSDK: 50684b935599de6f4cd2eeb9b2d4ee0db91bf6bf
+
+PODFILE CHECKSUM: ffc466da9bc9b8980e5d2d2e69164e77322c697c
+
+COCOAPODS: 1.4.0

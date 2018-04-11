@@ -1,0 +1,26 @@
+{
+  "name": "WeiboSDK",
+  "version": "0.0.2",
+  "license": "MIT",
+  "requires_arc": true,
+  "source": {
+    "path": "WeiboSDK"
+  },
+  "summary": "WeiboSDK for iOS",
+  "homepage": "No homepage",
+  "authors": {
+    "xushuifeng": "shuifengxu@gmail.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": [
+    "*.swift",
+    "**/*.swift"
+  ],
+  "dependencies": {
+    "GenericNetworking": [
+
+    ]
+  }
+}

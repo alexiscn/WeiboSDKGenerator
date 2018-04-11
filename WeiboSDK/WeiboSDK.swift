@@ -1,5 +1,5 @@
 //
-//  WeiboSDK.swift
+//  WeiboSDK.txt
 //  WBSDKGenerator
 //
 //  Created by xu.shuifeng on 2018/4/11.
