@@ -1,3 +1,7 @@
+# NOTE
+
+Since [Weibo](https://weibo.com) Open API does not provide post Weibo anymore. You should prefer to use [official weibosdk](https://github.com/sinaweibosdk/weibo_ios_sdk) .
+
 # WeiboSDKGenerator
 Weibo iOS SDK Generator
 
@@ -8,11 +12,7 @@ Weibo iOS SDK Generator
 
 # Installation
 
-TODO...
-
-```sh
-pod 'WBSDK'
-```
+This project just demonstrate how can we generate Weibo SDK via API wiki.
 
 # How it works
 
