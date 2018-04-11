@@ -74,7 +74,7 @@ def parse_detail_wiki(url, desc):
     api_path = urlparse.urlparse(api_url).path
     api_name = api_url.rsplit('/', 1)[1]
     api_category = api_path.rsplit('/')[2]
-    api_category = api_category.replace('.', '_').title()
+    api_category = api_category.replace('.', '').title()
     api_dict["url"] = api_url
     api_dict["description"] = desc
     api_dict["method"] = "GET"

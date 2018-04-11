@@ -8,14 +8,15 @@
 
 import Foundation
 
+// update to your local path
 let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/build/"
-
 let WBOutputDir = "/Users/xushuifeng/github/WeiboSDKGenerator/WeiboSDK"
 
-try? FileManager.default.removeItem(atPath: WBOutputDir)
-try? FileManager.default.createDirectory(atPath: WBOutputDir, withIntermediateDirectories: true, attributes: nil)
-
-func copyNecessaryFiles() {
+func doNecessaryWork() {
+    
+    try? FileManager.default.removeItem(atPath: WBOutputDir)
+    try? FileManager.default.createDirectory(atPath: WBOutputDir, withIntermediateDirectories: true, attributes: nil)
+    
     if let path = Bundle.main.url(forResource: "Podspec", withExtension: "txt") {
         let filePath = WBOutputDir.appending("/WeiboSDK.podspec")
         let destURL = URL(fileURLWithPath: filePath)
@@ -29,19 +30,23 @@ func copyNecessaryFiles() {
     }
 }
 
-copyNecessaryFiles()
-
-if let contents = try? FileManager.default.contentsOfDirectory(atPath: buildPath) {
-    let files = contents.sorted(by: { $0 < $1 })
-    for file in files {
-        let path = buildPath.appending(file)
-        let loader = APILoader()
-        if let f = loader.load(at: path) {
-            let generator = APIGenerator(wbFunction: f)
-            generator.generate()
+func generate() {
+    if let contents = try? FileManager.default.contentsOfDirectory(atPath: buildPath) {
+        let files = contents.sorted(by: { $0 < $1 })
+        for file in files {
+            print("processing file:\(file)")
+            let path = buildPath.appending(file)
+            let loader = APILoader()
+            if let f = loader.load(at: path) {
+                let generator = APIGenerator(wbFunction: f)
+                generator.generate()
+            }
+            print("done file:\(file)")
+            print("")
         }
     }
 }
 
-
+doNecessaryWork()
+generate()
 
