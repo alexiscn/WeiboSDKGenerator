@@ -9,6 +9,7 @@ import requests
 import os
 import sys
 import json
+import urlparse
 
 
 defaultencoding = 'utf-8'
@@ -69,9 +70,15 @@ def parse_detail_wiki(url, desc):
         print url + "does not contains an API path"
         return
     api_url = api_node["href"]
+    api_path = urlparse.urlparse(api_url).path
+    api_name = api_url.rsplit('/', 1)[1]
     api_dict["url"] = api_url
-    api_dict["desc"] = desc
+    api_dict["description"] = desc
     api_dict["method"] = "GET"
+    api_dict["signature"] = api_name.rsplit('.', 1)[0]
+    api_dict["category"] = api_path.rsplit('/')[2]
+    api_dict["path"] = api_path
+
 
     # parse parameters and responses
     tables = soup.find_all('table', class_='parameters')
@@ -107,7 +114,7 @@ def parse_request_parameters(table):
                 "name": name,
                 "type": param_type,
                 "optional": optional,
-                "desc": desc
+                "description": desc
             }
             params.append(param)
     return params
@@ -125,7 +132,7 @@ def parse_response_model(table):
             res = {
                 "name": name,
                 "type": param_type,
-                "desc": desc
+                "description": desc
             }
             response.append(res)
     return response
@@ -133,7 +140,8 @@ def parse_response_model(table):
 
 if __name__ == '__main__':
 
-    os.mkdir('build')
+    if not os.path.exists('build'):
+        os.mkdir('build')
     parse_main_wiki()
 
 

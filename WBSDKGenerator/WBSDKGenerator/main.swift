@@ -8,5 +8,12 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/build/"
+if let contents = try? FileManager.default.contentsOfDirectory(atPath: buildPath) {
+    let files = contents.sorted(by: { $0 < $1 })
+    if let first = files.first {
+        let path = buildPath.appending(first)
+        let loader = APILoader()
+        loader.load(at: path)
+    }
+}
