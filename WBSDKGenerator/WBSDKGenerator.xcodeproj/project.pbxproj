@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A3811BD7207DEDD900E20BAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BD6207DEDD900E20BAD /* main.swift */; };
-		A3811BE0207DEE4E00E20BAD /* APIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */; };
 		A3811BE2207DF52C00E20BAD /* TypeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE1207DF52C00E20BAD /* TypeMapper.swift */; };
 		A3811BE5207E0A9200E20BAD /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE4207E0A9200E20BAD /* APIFetcher.swift */; };
 		A3811BE7207E14E300E20BAD /* WeiboSDK.txt in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE6207E14E300E20BAD /* WeiboSDK.txt */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		A3811BD3207DEDD900E20BAD /* WBSDKGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WBSDKGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3811BD6207DEDD900E20BAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGenerator.swift; sourceTree = "<group>"; };
 		A3811BE1207DF52C00E20BAD /* TypeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMapper.swift; sourceTree = "<group>"; };
 		A3811BE3207E07AF00E20BAD /* Podspec.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podspec.txt; sourceTree = "<group>"; };
 		A3811BE4207E0A9200E20BAD /* APIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetcher.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				A38B2EC9207F024E00456815 /* WBModels.swift */,
 				A3811C09207E25FA00E20BAD /* Document.swift */,
 				A3811BE1207DF52C00E20BAD /* TypeMapper.swift */,
-				A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 				A3811C0A207E25FA00E20BAD /* Document.swift in Sources */,
 				A38B2EC6207F017800456815 /* JsonConvert.swift in Sources */,
 				A3811C06207E1C9500E20BAD /* Podspec.txt in Sources */,
-				A3811BE0207DEE4E00E20BAD /* APIGenerator.swift in Sources */,
 				A3811BE7207E14E300E20BAD /* WeiboSDK.txt in Sources */,
 				A3811BD7207DEDD900E20BAD /* main.swift in Sources */,
 				A3811BE5207E0A9200E20BAD /* APIFetcher.swift in Sources */,

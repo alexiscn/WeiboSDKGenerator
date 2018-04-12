@@ -10,10 +10,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - codes: 需要查询的地址编码，多个之间用逗号分隔。
     ///   - completion: Callback
-    public class func Common_code_to_location(codes: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_code_to_location(param: Common_code_to_locationParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/code_to_location.json"
-        var params: [String: Any] = [:]
-        params["codes"] = codes
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -24,16 +23,9 @@ extension WeiboSDK {
     ///   - capital: 城市的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_city(province: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_city(param: Common_get_cityParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_city.json"
-        var params: [String: Any] = [:]
-        params["province"] = province
-        if let capital = capital {
-            params["capital"] = capital
-        }
-        if let language = language {
-            params["language"] = language
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -43,15 +35,9 @@ extension WeiboSDK {
     ///   - capital: 国家的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_country(capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_country(param: Common_get_countryParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_country.json"
-        var params: [String: Any] = [:]
-        if let capital = capital {
-            params["capital"] = capital
-        }
-        if let language = language {
-            params["language"] = language
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -62,16 +48,9 @@ extension WeiboSDK {
     ///   - capital: 省份的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_province(country: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_province(param: Common_get_provinceParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_province.json"
-        var params: [String: Any] = [:]
-        params["country"] = country
-        if let capital = capital {
-            params["capital"] = capital
-        }
-        if let language = language {
-            params["language"] = language
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -80,12 +59,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_timezone(language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_timezone(param: Common_get_timezoneParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_timezone.json"
-        var params: [String: Any] = [:]
-        if let language = language {
-            params["language"] = language
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 }

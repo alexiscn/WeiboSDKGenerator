@@ -10,10 +10,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - ids: 需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。
     ///   - completion: Callback
-    public class func Statuses_count(ids: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_count(param: Statuses_countParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/count.json"
-        var params: [String: Any] = [:]
-        params["ids"] = ids
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -28,30 +27,9 @@ extension WeiboSDK {
     ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
     ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
     ///   - completion: Callback
-    public class func Statuses_home_timeline(since_id: Int64?, max_id: Int64?, count: Int?, page: Int?, base_app: Int?, feature: Int?, trim_user: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_home_timeline(param: Statuses_home_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/home_timeline.json"
-        var params: [String: Any] = [:]
-        if let since_id = since_id {
-            params["since_id"] = since_id
-        }
-        if let max_id = max_id {
-            params["max_id"] = max_id
-        }
-        if let count = count {
-            params["count"] = count
-        }
-        if let page = page {
-            params["page"] = page
-        }
-        if let base_app = base_app {
-            params["base_app"] = base_app
-        }
-        if let feature = feature {
-            params["feature"] = feature
-        }
-        if let trim_user = trim_user {
-            params["trim_user"] = trim_user
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -66,30 +44,9 @@ extension WeiboSDK {
     ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博、2：来自微群，默认为0。
     ///   - filter_by_type: 原创筛选类型，0：全部微博、1：原创的微博，默认为0。
     ///   - completion: Callback
-    public class func Statuses_mentions(since_id: Int64?, max_id: Int64?, count: Int?, page: Int?, filter_by_author: Int?, filter_by_source: Int?, filter_by_type: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_mentions(param: Statuses_mentionsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/mentions.json"
-        var params: [String: Any] = [:]
-        if let since_id = since_id {
-            params["since_id"] = since_id
-        }
-        if let max_id = max_id {
-            params["max_id"] = max_id
-        }
-        if let count = count {
-            params["count"] = count
-        }
-        if let page = page {
-            params["page"] = page
-        }
-        if let filter_by_author = filter_by_author {
-            params["filter_by_author"] = filter_by_author
-        }
-        if let filter_by_source = filter_by_source {
-            params["filter_by_source"] = filter_by_source
-        }
-        if let filter_by_type = filter_by_type {
-            params["filter_by_type"] = filter_by_type
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -103,25 +60,9 @@ extension WeiboSDK {
     ///   - page: 返回结果的页码，默认为1。
     ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
     ///   - completion: Callback
-    public class func Statuses_repost_timeline(id: Int64, since_id: Int64?, max_id: Int64?, count: Int?, page: Int?, filter_by_author: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_repost_timeline(param: Statuses_repost_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/repost_timeline.json"
-        var params: [String: Any] = [:]
-        params["id"] = id
-        if let since_id = since_id {
-            params["since_id"] = since_id
-        }
-        if let max_id = max_id {
-            params["max_id"] = max_id
-        }
-        if let count = count {
-            params["count"] = count
-        }
-        if let page = page {
-            params["page"] = page
-        }
-        if let filter_by_author = filter_by_author {
-            params["filter_by_author"] = filter_by_author
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -132,16 +73,9 @@ extension WeiboSDK {
     ///   - pic: 用户想要分享到微博的图片，仅支持JPEG、GIF、PNG图片，上传图片大小限制为<5M。上传图片时，POST方式提交请求，需要采用multipart/form-data编码方式。
     ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
     ///   - completion: Callback
-    public class func Statuses_share(status: String, pic: Any?, rip: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_share(param: Statuses_shareParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/share.json"
-        var params: [String: Any] = [:]
-        params["status"] = status
-        if let pic = pic {
-            params["pic"] = pic
-        }
-        if let rip = rip {
-            params["rip"] = rip
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -150,10 +84,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - id: 需要获取的微博ID。
     ///   - completion: Callback
-    public class func Statuses_show(id: Int64, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_show(param: Statuses_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/show.json"
-        var params: [String: Any] = [:]
-        params["id"] = id
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -170,36 +103,9 @@ extension WeiboSDK {
     ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
     ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
     ///   - completion: Callback
-    public class func Statuses_user_timeline(uid: Int64?, screen_name: String?, since_id: Int64?, max_id: Int64?, count: Int?, page: Int?, base_app: Int?, feature: Int?, trim_user: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Statuses_user_timeline(param: Statuses_user_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/user_timeline.json"
-        var params: [String: Any] = [:]
-        if let uid = uid {
-            params["uid"] = uid
-        }
-        if let screen_name = screen_name {
-            params["screen_name"] = screen_name
-        }
-        if let since_id = since_id {
-            params["since_id"] = since_id
-        }
-        if let max_id = max_id {
-            params["max_id"] = max_id
-        }
-        if let count = count {
-            params["count"] = count
-        }
-        if let page = page {
-            params["page"] = page
-        }
-        if let base_app = base_app {
-            params["base_app"] = base_app
-        }
-        if let feature = feature {
-            params["feature"] = feature
-        }
-        if let trim_user = trim_user {
-            params["trim_user"] = trim_user
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 }

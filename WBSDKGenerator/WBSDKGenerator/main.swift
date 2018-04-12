@@ -18,6 +18,9 @@ func doNecessaryWork() {
     try? FileManager.default.removeItem(atPath: WBOutputDir)
     try? FileManager.default.createDirectory(atPath: WBOutputDir, withIntermediateDirectories: true, attributes: nil)
     
+    let parametersFolderPath = WBOutputDir.appending("/").appending(Document.ParameterFolderName)
+    try? FileManager.default.createDirectory(atPath: parametersFolderPath, withIntermediateDirectories: true, attributes: nil)
+    
     if let path = Bundle.main.url(forResource: "Podspec", withExtension: "txt") {
         let filePath = WBOutputDir.appending("/WeiboSDK.podspec")
         let destURL = URL(fileURLWithPath: filePath)
@@ -37,16 +40,21 @@ func generate() {
         for file in files {
             print("processing file:\(file)")
             let path = buildPath.appending(file)
+            
             if let f = WBFunction.fromLocalFilePath(path) {
-                let generator = APIGenerator(wbFunction: f)
-                generator.generate()
+                let doc = Document(wbFunction: f)
+                doc.generate()
+                //                let generator = APIGenerator(wbFunction: f)
+                //                generator.generate()
             }
             print("done file:\(file)")
             print("")
         }
+        
     }
 }
 
 doNecessaryWork()
 generate()
+
 

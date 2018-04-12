@@ -10,10 +10,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - uids: 需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。
     ///   - completion: Callback
-    public class func Users_counts(uids: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Users_counts(param: Users_countsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/counts.json"
-        var params: [String: Any] = [:]
-        params["uids"] = uids
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -22,10 +21,9 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - domain: 需要查询的个性化域名。
     ///   - completion: Callback
-    public class func Users_domain_show(domain: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Users_domain_show(param: Users_domain_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/domain_show.json"
-        var params: [String: Any] = [:]
-        params["domain"] = domain
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
@@ -35,15 +33,9 @@ extension WeiboSDK {
     ///   - uid: 需要查询的用户ID。
     ///   - screen_name: 需要查询的用户昵称。
     ///   - completion: Callback
-    public class func Users_show(uid: Int64?, screen_name: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Users_show(param: Users_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/show.json"
-        var params: [String: Any] = [:]
-        if let uid = uid {
-            params["uid"] = uid
-        }
-        if let screen_name = screen_name {
-            params["screen_name"] = screen_name
-        }
+        let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 }
