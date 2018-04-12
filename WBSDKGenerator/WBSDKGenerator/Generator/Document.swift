@@ -42,8 +42,11 @@ extension Document {
             var body = ""
             body.append(headerString)
             body.append("\n\n")
-            body.append("extension WeiboSDK {\n")
+            body.append("extension WBParameter {\n")
             
+            body.append("    public struct \(wbFunction.category) {\n")
+            
+            body.append("    }\n")
             body.append("}")
             if let data = body.data(using: .utf8) {
                 try? data.write(to: fileURL)
@@ -53,9 +56,14 @@ extension Document {
         guard var body = try? String(contentsOfFile: fileURL.path) else {
             return
         }
-        body.removeLast()
+        
+        for _ in 0...6 {
+            body.removeLast()
+        }
+    
         body.append("\n")
         body.append(parameterMembers())
+        body.append("    }\n")
         body.append("}")
         if let data = body.data(using: .utf8) {
             try? data.write(to: fileURL)
@@ -64,13 +72,11 @@ extension Document {
     
     fileprivate func parameterMembers() -> String {
         
-        let requestParamTypeName = "\(wbFunction.signature)Parameter"
-        
         var content = ""
-        content.append("    public class \(requestParamTypeName): NSObject {\n\n")
+        content.append("        public class \(wbFunction.shortName): NSObject {\n\n")
         for param in wbFunction.parameters {
-            content.append("        // \(param.description)\n")
-            content.append("        public var ")
+            content.append("            // \(param.description)\n")
+            content.append("            public var ")
             content.append("\(param.name): \(swiftTypeFor(param.type))")
             if param.optional {
                 content.append("?")
@@ -81,7 +87,7 @@ extension Document {
         
         let initialProperties = wbFunction.parameters.filter({ return $0.optional == false })
         if initialProperties.count > 0 {
-            content.append("        public init(")
+            content.append("            public init(")
             for property in initialProperties {
                 content.append("\(property.name): \(swiftTypeFor(property.type)), ")
             }
@@ -89,27 +95,27 @@ extension Document {
             content.removeLast()
             content.append(") {\n")
             for property in initialProperties {
-                content.append("            self.\(property.name) = \(property.name)\n ")
+                content.append("                self.\(property.name) = \(property.name)\n ")
             }
-            content.append("}\n")
+            content.append("            }\n")
         }
         
         // create value function for request parameter
-        content.append("        func value() -> [String: Any] {\n")
-        content.append("            var params: [String: Any] = [:]\n")
+        content.append("            func value() -> [String: Any] {\n")
+        content.append("                var params: [String: Any] = [:]\n")
         for param in wbFunction.parameters {
             if param.optional {
-                content.append("            if let \(param.name) = \(param.name) {\n")
-                content.append("                params[\"\(param.name)\"] = \(param.name)\n")
-                content.append("            }\n")
+                content.append("                if let \(param.name) = \(param.name) {\n")
+                content.append("                    params[\"\(param.name)\"] = \(param.name)\n")
+                content.append("                }\n")
             } else {
-                content.append("            params[\"\(param.name)\"] = \(param.name)\n")
+                content.append("                params[\"\(param.name)\"] = \(param.name)\n")
             }
         }
-        content.append("            return params\n")
-        content.append("        }\n")
+        content.append("                return params\n")
+        content.append("            }\n")
         
-        content.append("    }\n")
+        content.append("        }\n")
         return content
     }
 }
@@ -159,8 +165,8 @@ extension Document {
         content.append("    ")
         content.append("public class func \(wbFunction.signature)(")
         if wbFunction.parameters.count > 0 {
-            let requestParamTypeName = "\(wbFunction.signature)Parameter"
-            content.append("param: \(requestParamTypeName),")
+            let type = "WBParameter.\(wbFunction.category).\(wbFunction.shortName)"
+            content.append("param: \(type),")
         }
         content.append("completion: @escaping GenericNetworkingCompletion<Int>")
         content.append(") {\n")

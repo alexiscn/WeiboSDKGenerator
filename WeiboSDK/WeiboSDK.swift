@@ -8,6 +8,9 @@
 
 import Foundation
 
+public struct WBParameter {
+}
+
 public class WeiboSDK {
     
     public class func configurate() {

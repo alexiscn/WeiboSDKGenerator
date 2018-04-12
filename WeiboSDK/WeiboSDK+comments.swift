@@ -14,7 +14,7 @@ extension WeiboSDK {
     ///   - page: 返回结果的页码，默认为1。
     ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
     ///   - completion: Callback
-    public class func Comments_by_me(param: Comments_by_meParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsByMe(param: WBParameter.Comments.ByMe,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/by_me.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -28,7 +28,7 @@ extension WeiboSDK {
     ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
     ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
     ///   - completion: Callback
-    public class func Comments_create(param: Comments_createParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsCreate(param: WBParameter.Comments.Create,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/create.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -39,7 +39,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - cid: 要删除的评论ID，只能删除登录用户自己发布的评论。
     ///   - completion: Callback
-    public class func Comments_destroy(param: Comments_destroyParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsDestroy(param: WBParameter.Comments.Destroy,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -50,7 +50,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - cids: 需要删除的评论ID，用半角逗号隔开，最多20个。
     ///   - completion: Callback
-    public class func Comments_destroy_batch(param: Comments_destroy_batchParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsDestroyBatch(param: WBParameter.Comments.DestroyBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy_batch.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -66,7 +66,7 @@ extension WeiboSDK {
     ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
     ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
     ///   - completion: Callback
-    public class func Comments_mentions(param: Comments_mentionsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsMentions(param: WBParameter.Comments.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/mentions.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -82,7 +82,7 @@ extension WeiboSDK {
     ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
     ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
     ///   - completion: Callback
-    public class func Comments_reply(param: Comments_replyParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsReply(param: WBParameter.Comments.Reply,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/reply.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -98,7 +98,7 @@ extension WeiboSDK {
     ///   - page: 返回结果的页码，默认为1。
     ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
     ///   - completion: Callback
-    public class func Comments_show(param: Comments_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsShow(param: WBParameter.Comments.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/show.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -109,7 +109,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - cids: 需要查询的批量评论ID，用半角逗号分隔，最大50。
     ///   - completion: Callback
-    public class func Comments_show_batch(param: Comments_show_batchParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsShowBatch(param: WBParameter.Comments.ShowBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/show_batch.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -124,7 +124,7 @@ extension WeiboSDK {
     ///   - page: 返回结果的页码，默认为1。
     ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
     ///   - completion: Callback
-    public class func Comments_timeline(param: Comments_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsTimeline(param: WBParameter.Comments.Timeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/timeline.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -140,7 +140,7 @@ extension WeiboSDK {
     ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
     ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
     ///   - completion: Callback
-    public class func Comments_to_me(param: Comments_to_meParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func CommentsToMe(param: WBParameter.Comments.ToMe,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/to_me.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

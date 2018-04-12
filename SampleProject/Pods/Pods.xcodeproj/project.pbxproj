@@ -7,53 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E62CD802840F7CD661D3A94A5CC5FF /* Short_UrlParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE67999D4FBAEAA668A04B00096880 /* Short_UrlParameter.swift */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993904A6AE4FB59B1E113B1063CFFBB /* Timeline.swift */; };
 		1162C47FA84ABB4E276E7CA0E71C1D05 /* Pods-SampleProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9A1496CC3FB36B9C135CA82FFDD04A /* Pods-SampleProject-dummy.m */; };
-		15D216A00BFE1A213E129175F775F342 /* WeiboSDK+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB531209B323FAE7F7D8676E9DF44E3 /* WeiboSDK+Common.swift */; };
 		184B070DEBAA4D823B68621CE1B080E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61543ED22B45691CAC909A2AFCAE463B /* Foundation.framework */; };
+		18C1B9893EA9973A9067416AD76EE1B6 /* WeiboSDK+Friendships.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F28CB17FE41A9EBD7B3A05FECC5542 /* WeiboSDK+Friendships.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9F51EE231E8C882A986A81E10DFC015 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24456167524FBCE640C08B1D0291ECC6 /* UsersParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40759A9B35A0BF6C7B0A8F738C387966 /* UsersParameter.swift */; };
+		2F7CB9A0D3E3E1D31F97F41EEB47888E /* WeiboSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3080839A841F22883C0BF41B2699B1E7 /* WeiboSDK.swift */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23623F9ED7EDA10C34F5D6408FF7085E /* TaskDelegate.swift */; };
+		3A064CC2A1669559396E3892B0A87051 /* WeiboSDK+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD991FB0C5D651A305CC8BE0AE3D6B0 /* WeiboSDK+Users.swift */; };
 		3F10865CEA003AB7087F05CC6CDFDB91 /* GenericNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E044DC72456E38F310169DA9AEE260 /* GenericNetworking-dummy.m */; };
-		43FD0F7346CD6D83385A01E623F12D0E /* WeiboSDK+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D0D8984A1FD3D256131F8A747CA3 /* WeiboSDK+Users.swift */; };
+		4519B3BE7E3BE67889AD87D97FF9C29B /* SearchParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E68BA9588F1D2E115F6D5A58F6E862 /* SearchParameter.swift */; };
 		460793810240584EFE56EA33F4D1FE29 /* GenericNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27746ECA8646CB8155E3FC1C606B8DAC /* GenericNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49DE9B180D64DCB65C48A5CECCD8D4E2 /* FriendshipsParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CB287FC0460AE013B21E36BB2F7DBD /* FriendshipsParameter.swift */; };
-		5065E195B2F44D5522259E034921A6DE /* StatusesParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BF079DE2A7DFB80EBC551BA434C562 /* StatusesParameter.swift */; };
+		50E892E9A2DB2B5DE02D77392275CC20 /* WeiboSDK+Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41628D5ACA971273996A1634480C94 /* WeiboSDK+Statuses.swift */; };
 		516ACA35AFE9EF57173955C91723E6B0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B0C22217079697EFD5CB36413AD59 /* Alamofire.framework */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0397ACDC853A23C7FD465CEC58F2379 /* Request.swift */; };
-		58E84E88CBB70FF6112EFF3799478F4B /* WeiboSDK+Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F72D562C994A94E4FFE21B3190B674 /* WeiboSDK+Statuses.swift */; };
+		5F2BCC30F97C11B1434F6AD8E6E72D38 /* EmotionsjsonParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97B4E23CF25139F4FD3E62F4F02C80 /* EmotionsjsonParameter.swift */; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613DD983946E65BEA1FF273881994962 /* DispatchQueue+Alamofire.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FFBF894D04DAC25B3CA1813E82F9A3 /* ServerTrustPolicy.swift */; };
 		664EBE6FC43101B03E799EE5046884F1 /* GenericNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F35D585212D5AFFFB072E2E361A634 /* GenericNetworking.swift */; };
 		6E083F7787EA55786FEC4DE84F971C33 /* Pods-SampleProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FAC7B21BE0CB9757EFCC1E8B50F5827 /* Pods-SampleProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61543ED22B45691CAC909A2AFCAE463B /* Foundation.framework */; };
-		75AD353ACC9CFB4371A9361A197041FF /* Short_UrlParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFF2C6DD4D51410D2B4149922EFF68 /* Short_UrlParameter.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96317F3244AAB6262183A54B109C156 /* SessionDelegate.swift */; };
 		7CF590BAA23E76D8635BBE9EE40E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61543ED22B45691CAC909A2AFCAE463B /* Foundation.framework */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA86C84D0BFF4D80D18CBCCEA26B343D /* Result.swift */; };
 		8806D737D78C6740F013A74CB65C1E40 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364B0C22217079697EFD5CB36413AD59 /* Alamofire.framework */; };
-		8C3613F4EF50AFABC30E2D490753B9E4 /* WeiboSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC006AEAA7020B4AC03ECC01C69ADA7 /* WeiboSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91DE39B34B2D7DCC4175B9E9B526BB01 /* CommonParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6ADFF9C565D893B97E37E4A8E5F8B0 /* CommonParameter.swift */; };
-		9E989D8D929EA849A9C483A34AA685AC /* WeiboSDK+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD3082D5B5FA24BF20A95B4AC03BFD /* WeiboSDK+Account.swift */; };
+		8C3613F4EF50AFABC30E2D490753B9E4 /* WeiboSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB84D948CC4D55E024F6D61E3C566AD3 /* WeiboSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C48D55834BC43816D31DFE1845A5F46 /* FriendshipsParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC00AD255299298BD3707FAAC27E1E /* FriendshipsParameter.swift */; };
+		8F188CF298B8A9D8C69A8FE434174A62 /* WeiboSDK+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2838001B1D621BF6FBCBA3A867DC8D00 /* WeiboSDK+Search.swift */; };
+		9AAD13AB364206CE9CEA36825F646E4C /* StatusesParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D408AF1AFCDB775E0BF5189899F4EE /* StatusesParameter.swift */; };
+		9B640F21C0188B7F91C9F21A5291C739 /* WeiboSDK+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA399EFDF70668241F8AC680FB26E0F /* WeiboSDK+Comments.swift */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD1D5995068067D8EBB314F3DA9FCF /* AFError.swift */; };
-		9FA2738AA80ED4BE9855A1435FBCF065 /* WeiboSDK+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A4C11586CFBEAE99FBDD653E557AAE /* WeiboSDK+Comments.swift */; };
-		A28242B9F179B2C6B485274F8FD03C18 /* WeiboSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F357D4BF962AD9374DD5090DBDFAB745 /* WeiboSDK-dummy.m */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D824458327A516F187D4EC251A4A646B /* NetworkReachabilityManager.swift */; };
 		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B02B051B8D8C3935C8B76357AB74AC /* Alamofire-dummy.m */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F07A4587209DB35EA6D69F26F0467 /* SessionManager.swift */; };
 		AE9B505E647B74D377FD4B71DC53A4F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61543ED22B45691CAC909A2AFCAE463B /* Foundation.framework */; };
-		AF22B3BC679408AD04F47441F228CE9F /* WeiboSDK+Short_Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493C1D70E3F0C86BBB1D9469ACD8516 /* WeiboSDK+Short_Url.swift */; };
+		AFC1DDC1A599C28BDEFA54654C1CD79F /* WeiboSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA257E1D6BAC8D5A3C7315DFC8B09EEF /* WeiboSDK-dummy.m */; };
+		B63EA38CFEF2567EDC2086AB812F0789 /* WeiboSDK+Emotionsjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE318F32D99AF574D97CD38E9931D5 /* WeiboSDK+Emotionsjson.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229396BC8BE60479352045123B497D37 /* MultipartFormData.swift */; };
+		B9DDBBEC50ED4913BF3BEBA5FAF1095C /* CommonParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEFAD416AC724BC6DD088AAE1DDC8A5 /* CommonParameter.swift */; };
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57924504EB8B7133F775C848FD22F4EC /* Validation.swift */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DBBB8234109D3360BE5763F013969 /* ParameterEncoding.swift */; };
+		C523D5E918CC09D8564D8FC8C19A426C /* WeiboSDK+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25AD96C51EA5D3C4AC16B3DB6B8EC0 /* WeiboSDK+Account.swift */; };
 		C95924882BC6F2DD36E961A02A741830 /* GenericNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767E70A7FDAB265E534F76B6AE5BF112 /* GenericNetworking.framework */; };
+		C9825CD75523A4C3BEB36BF908573C8B /* WeiboSDK+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA7209815F0B8576C41773E76E4ADC /* WeiboSDK+Common.swift */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6308838683C496C0B6A0A06C68CD17D /* Response.swift */; };
-		DB624D42E9C5A600E7A9ACC2C8ACE5B7 /* WeiboSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E4B05B162DAFFFBDC21CF4AA475132 /* WeiboSDK.swift */; };
-		DD3B71CBF05CC1042B9A88EF660E0FA2 /* WeiboSDK+Friendships.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6BCE0422C1E7E284B646D4D1DAC36B /* WeiboSDK+Friendships.swift */; };
-		E4EA8CBD79D6DB9074B67E025D3BEB17 /* CommentsParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D98C8F756B14D8D5E5B6F2BF5EE6C0 /* CommentsParameter.swift */; };
+		E7D9FD9692C1DC980DEF177F48AA3CB9 /* WeiboSDK+Short_Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA36847AF579F16A47D0E168CB795E4 /* WeiboSDK+Short_Url.swift */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BABE739A53207CEE08A72109C4E7DDA /* Notifications.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B03FF8AF910EAA78D083BEC767D7C3 /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA82FB5ACBB9E5F801D60AE5A1A2D51A /* Alamofire.swift */; };
-		FCAFEBDF70F96956F18D261FBC61001B /* UsersParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3574369C5DE2B5C3905F9CAB4A22D0F /* UsersParameter.swift */; };
+		FD69C4FBA23BB1637DCBA841E936BBF1 /* CommentsParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CE517E19326365C781AD3ED7A4C8D /* CommentsParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,24 +107,23 @@
 
 /* Begin PBXFileReference section */
 		01B03FF8AF910EAA78D083BEC767D7C3 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		02D408AF1AFCDB775E0BF5189899F4EE /* StatusesParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusesParameter.swift; sourceTree = "<group>"; };
 		07AE96A9782B975F14F253B06FEC93C0 /* Pods-SampleProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SampleProject-resources.sh"; sourceTree = "<group>"; };
 		080E8B0A69B92018C8CC82517358F478 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		11E4B05B162DAFFFBDC21CF4AA475132 /* WeiboSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeiboSDK.swift; sourceTree = "<group>"; };
 		12FFBF894D04DAC25B3CA1813E82F9A3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		1AA2D0D8984A1FD3D256131F8A747CA3 /* WeiboSDK+Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Users.swift"; sourceTree = "<group>"; };
 		1B9813030CC2D99196143FC2083EB2BF /* GenericNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GenericNetworking.modulemap; sourceTree = "<group>"; };
-		1EC006AEAA7020B4AC03ECC01C69ADA7 /* WeiboSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK-umbrella.h"; sourceTree = "<group>"; };
 		21B02B051B8D8C3935C8B76357AB74AC /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		229396BC8BE60479352045123B497D37 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		23623F9ED7EDA10C34F5D6408FF7085E /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		27746ECA8646CB8155E3FC1C606B8DAC /* GenericNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GenericNetworking-umbrella.h"; sourceTree = "<group>"; };
-		30BF6D67237BEC502DD5B0919B737B1D /* WeiboSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK-prefix.pch"; sourceTree = "<group>"; };
+		2838001B1D621BF6FBCBA3A867DC8D00 /* WeiboSDK+Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Search.swift"; sourceTree = "<group>"; };
+		2BCC00AD255299298BD3707FAAC27E1E /* FriendshipsParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendshipsParameter.swift; sourceTree = "<group>"; };
+		3080839A841F22883C0BF41B2699B1E7 /* WeiboSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WeiboSDK.swift; sourceTree = "<group>"; };
 		351CE837511581986FC5E5FE7F8B9DD8 /* Pods-SampleProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SampleProject-frameworks.sh"; sourceTree = "<group>"; };
 		364B0C22217079697EFD5CB36413AD59 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		403E5D1D716D542C2EF0EFCCCD00B70D /* WeiboSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WeiboSDK.modulemap; sourceTree = "<group>"; };
-		43D98C8F756B14D8D5E5B6F2BF5EE6C0 /* CommentsParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommentsParameter.swift; sourceTree = "<group>"; };
-		4493C1D70E3F0C86BBB1D9469ACD8516 /* WeiboSDK+Short_Url.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Short_Url.swift"; sourceTree = "<group>"; };
-		45BD3082D5B5FA24BF20A95B4AC03BFD /* WeiboSDK+Account.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Account.swift"; sourceTree = "<group>"; };
+		3A25AD96C51EA5D3C4AC16B3DB6B8EC0 /* WeiboSDK+Account.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Account.swift"; sourceTree = "<group>"; };
+		40759A9B35A0BF6C7B0A8F738C387966 /* UsersParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsersParameter.swift; sourceTree = "<group>"; };
+		43E5115A50CDDE2AE42CF1232E43095B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4890DE20B2F8232E064422257B2FA305 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		489AE26BDAACB0BFD892EE553CE8E12E /* GenericNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GenericNetworking.framework; path = GenericNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BABE739A53207CEE08A72109C4E7DDA /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
@@ -131,45 +134,50 @@
 		61543ED22B45691CAC909A2AFCAE463B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		689ACC34FD4DD18F206C2B5D8A9E9C0D /* GenericNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GenericNetworking-prefix.pch"; sourceTree = "<group>"; };
 		68AEF6C034597013E042F3456D1AA95E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DA36847AF579F16A47D0E168CB795E4 /* WeiboSDK+Short_Url.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Short_Url.swift"; sourceTree = "<group>"; };
+		6F3513391EB18C09045B70DC1A01D55E /* WeiboSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WeiboSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6FAC7B21BE0CB9757EFCC1E8B50F5827 /* Pods-SampleProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SampleProject-umbrella.h"; sourceTree = "<group>"; };
 		705C16CB38F0E579F067E9B7223C0717 /* WeiboSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WeiboSDK.framework; path = WeiboSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72BFF2C6DD4D51410D2B4149922EFF68 /* Short_UrlParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Short_UrlParameter.swift; sourceTree = "<group>"; };
 		767E70A7FDAB265E534F76B6AE5BF112 /* GenericNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenericNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9CAF3AFA9751E1706698448EE57787 /* WeiboSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK-prefix.pch"; sourceTree = "<group>"; };
 		803984D74C2874B00B351E0890F57EB9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8294EDAA8FB4C5352AFA85CFAF3E84F8 /* Pods-SampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SampleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8F09ADF2ADB5BD4AFDB2736CD78655B2 /* Pods_SampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SampleProject.framework; path = "Pods-SampleProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C59B4616F185932C1AF74935C26E71 /* Pods-SampleProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SampleProject.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99A4C11586CFBEAE99FBDD653E557AAE /* WeiboSDK+Comments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Comments.swift"; sourceTree = "<group>"; };
+		942A98C7E4AE1F5A9B4C7431EB339AA2 /* WeiboSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WeiboSDK.modulemap; sourceTree = "<group>"; };
 		A0397ACDC853A23C7FD465CEC58F2379 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		A16F84B48EE9900ED54D08856E4855A8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1B60555873AB56E315CCA89C3085CED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1F35D585212D5AFFFB072E2E361A634 /* GenericNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericNetworking.swift; path = GenericNetworking/Classes/GenericNetworking.swift; sourceTree = "<group>"; };
-		A3574369C5DE2B5C3905F9CAB4A22D0F /* UsersParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UsersParameter.swift; sourceTree = "<group>"; };
 		A993904A6AE4FB59B1E113B1063CFFBB /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		ABBD1D5995068067D8EBB314F3DA9FCF /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		AE41628D5ACA971273996A1634480C94 /* WeiboSDK+Statuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Statuses.swift"; sourceTree = "<group>"; };
 		AF9A1496CC3FB36B9C135CA82FFDD04A /* Pods-SampleProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SampleProject-dummy.m"; sourceTree = "<group>"; };
+		B5EA7209815F0B8576C41773E76E4ADC /* WeiboSDK+Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Common.swift"; sourceTree = "<group>"; };
 		BA86C84D0BFF4D80D18CBCCEA26B343D /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		BD9CE517E19326365C781AD3ED7A4C8D /* CommentsParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommentsParameter.swift; sourceTree = "<group>"; };
 		BEC638E5A5973CE5C977099B786A6F67 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		C4063370F0173A50DF270EFD076ADD88 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		C46DBBB8234109D3360BE5763F013969 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		C4F28CB17FE41A9EBD7B3A05FECC5542 /* WeiboSDK+Friendships.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Friendships.swift"; sourceTree = "<group>"; };
+		C6FE67999D4FBAEAA668A04B00096880 /* Short_UrlParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Short_UrlParameter.swift; sourceTree = "<group>"; };
+		C9E68BA9588F1D2E115F6D5A58F6E862 /* SearchParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchParameter.swift; sourceTree = "<group>"; };
 		CA82FB5ACBB9E5F801D60AE5A1A2D51A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		CCB531209B323FAE7F7D8676E9DF44E3 /* WeiboSDK+Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Common.swift"; sourceTree = "<group>"; };
-		CF6ADFF9C565D893B97E37E4A8E5F8B0 /* CommonParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommonParameter.swift; sourceTree = "<group>"; };
+		CBD991FB0C5D651A305CC8BE0AE3D6B0 /* WeiboSDK+Users.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Users.swift"; sourceTree = "<group>"; };
+		CCA399EFDF70668241F8AC680FB26E0F /* WeiboSDK+Comments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Comments.swift"; sourceTree = "<group>"; };
+		CE97B4E23CF25139F4FD3E62F4F02C80 /* EmotionsjsonParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmotionsjsonParameter.swift; sourceTree = "<group>"; };
 		D0E044DC72456E38F310169DA9AEE260 /* GenericNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GenericNetworking-dummy.m"; sourceTree = "<group>"; };
-		D2F72D562C994A94E4FFE21B3190B674 /* WeiboSDK+Statuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Statuses.swift"; sourceTree = "<group>"; };
 		D7B2EA018288ACC26BA74F0A4BC11505 /* GenericNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GenericNetworking.xcconfig; sourceTree = "<group>"; };
 		D824458327A516F187D4EC251A4A646B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		D96317F3244AAB6262183A54B109C156 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		D9FD2756D8235C24F4AF8860913E30C6 /* WeiboSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = WeiboSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E0CB287FC0460AE013B21E36BB2F7DBD /* FriendshipsParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FriendshipsParameter.swift; sourceTree = "<group>"; };
+		DB84D948CC4D55E024F6D61E3C566AD3 /* WeiboSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK-umbrella.h"; sourceTree = "<group>"; };
+		DEEFAD416AC724BC6DD088AAE1DDC8A5 /* CommonParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommonParameter.swift; sourceTree = "<group>"; };
 		E6308838683C496C0B6A0A06C68CD17D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		E9BF079DE2A7DFB80EBC551BA434C562 /* StatusesParameter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusesParameter.swift; sourceTree = "<group>"; };
 		E9F51EE231E8C882A986A81E10DFC015 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		EA0930052B68D19260BC26C2E0B10E83 /* Pods-SampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SampleProject.release.xcconfig"; sourceTree = "<group>"; };
-		F357D4BF962AD9374DD5090DBDFAB745 /* WeiboSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WeiboSDK-dummy.m"; sourceTree = "<group>"; };
-		F4978A8AC763025F891832150F6BFC63 /* WeiboSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeiboSDK.xcconfig; sourceTree = "<group>"; };
-		FA6BCE0422C1E7E284B646D4D1DAC36B /* WeiboSDK+Friendships.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Friendships.swift"; sourceTree = "<group>"; };
+		F4AE318F32D99AF574D97CD38E9931D5 /* WeiboSDK+Emotionsjson.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "WeiboSDK+Emotionsjson.swift"; sourceTree = "<group>"; };
+		FA257E1D6BAC8D5A3C7315DFC8B09EEF /* WeiboSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WeiboSDK-dummy.m"; sourceTree = "<group>"; };
+		FD66B760E25F375B3BF5E94F777037A8 /* WeiboSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WeiboSDK.xcconfig; sourceTree = "<group>"; };
 		FF5F07A4587209DB35EA6D69F26F0467 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,14 +220,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CDC2D397FC15D09D95C37506E1F2454 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D9FD2756D8235C24F4AF8860913E30C6 /* WeiboSDK.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		104E42DC43E9414A313605D31292592E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,20 +239,6 @@
 				705C16CB38F0E579F067E9B7223C0717 /* WeiboSDK.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2636C72EBE28AC51B580AD01694A935E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A1B60555873AB56E315CCA89C3085CED /* Info.plist */,
-				403E5D1D716D542C2EF0EFCCCD00B70D /* WeiboSDK.modulemap */,
-				F4978A8AC763025F891832150F6BFC63 /* WeiboSDK.xcconfig */,
-				F357D4BF962AD9374DD5090DBDFAB745 /* WeiboSDK-dummy.m */,
-				30BF6D67237BEC502DD5B0919B737B1D /* WeiboSDK-prefix.pch */,
-				1EC006AEAA7020B4AC03ECC01C69ADA7 /* WeiboSDK-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../SampleProject/Pods/Target Support Files/WeiboSDK";
 			sourceTree = "<group>";
 		};
 		402EBFE662207F8C140A93A1B057C2E7 /* GenericNetworking */ = {
@@ -281,25 +267,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		632691173D3C38B37814F91255A5D651 /* WeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				11E4B05B162DAFFFBDC21CF4AA475132 /* WeiboSDK.swift */,
-				45BD3082D5B5FA24BF20A95B4AC03BFD /* WeiboSDK+Account.swift */,
-				99A4C11586CFBEAE99FBDD653E557AAE /* WeiboSDK+Comments.swift */,
-				CCB531209B323FAE7F7D8676E9DF44E3 /* WeiboSDK+Common.swift */,
-				FA6BCE0422C1E7E284B646D4D1DAC36B /* WeiboSDK+Friendships.swift */,
-				4493C1D70E3F0C86BBB1D9469ACD8516 /* WeiboSDK+Short_Url.swift */,
-				D2F72D562C994A94E4FFE21B3190B674 /* WeiboSDK+Statuses.swift */,
-				1AA2D0D8984A1FD3D256131F8A747CA3 /* WeiboSDK+Users.swift */,
-				ABA2B3D57A64E785B492FCB2A36E0DE4 /* ParameterModels */,
-				0CDC2D397FC15D09D95C37506E1F2454 /* Pod */,
-				2636C72EBE28AC51B580AD01694A935E /* Support Files */,
-			);
-			name = WeiboSDK;
-			path = ../../WeiboSDK;
-			sourceTree = "<group>";
-		};
 		72772BEE0F8762F44E4530BD0944C7B5 /* Pods-SampleProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				7FC02E413C65F8085A4EFA7E06A1F945 /* Development Pods */,
+				F55DFCAAC074B737FBE5B8F1974C0704 /* Development Pods */,
 				104E42DC43E9414A313605D31292592E /* Frameworks */,
 				ADF3CCB5A476DD3B3DC9D7A7AFA5B097 /* Pods */,
 				14A493F1CB690D065D35227A2856003E /* Products */,
@@ -330,23 +297,17 @@
 			);
 			sourceTree = "<group>";
 		};
-		7FC02E413C65F8085A4EFA7E06A1F945 /* Development Pods */ = {
+		A4032F5ECF9B9375672F596B91B19980 /* ParameterModels */ = {
 			isa = PBXGroup;
 			children = (
-				632691173D3C38B37814F91255A5D651 /* WeiboSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		ABA2B3D57A64E785B492FCB2A36E0DE4 /* ParameterModels */ = {
-			isa = PBXGroup;
-			children = (
-				43D98C8F756B14D8D5E5B6F2BF5EE6C0 /* CommentsParameter.swift */,
-				CF6ADFF9C565D893B97E37E4A8E5F8B0 /* CommonParameter.swift */,
-				E0CB287FC0460AE013B21E36BB2F7DBD /* FriendshipsParameter.swift */,
-				72BFF2C6DD4D51410D2B4149922EFF68 /* Short_UrlParameter.swift */,
-				E9BF079DE2A7DFB80EBC551BA434C562 /* StatusesParameter.swift */,
-				A3574369C5DE2B5C3905F9CAB4A22D0F /* UsersParameter.swift */,
+				BD9CE517E19326365C781AD3ED7A4C8D /* CommentsParameter.swift */,
+				DEEFAD416AC724BC6DD088AAE1DDC8A5 /* CommonParameter.swift */,
+				CE97B4E23CF25139F4FD3E62F4F02C80 /* EmotionsjsonParameter.swift */,
+				2BCC00AD255299298BD3707FAAC27E1E /* FriendshipsParameter.swift */,
+				C9E68BA9588F1D2E115F6D5A58F6E862 /* SearchParameter.swift */,
+				C6FE67999D4FBAEAA668A04B00096880 /* Short_UrlParameter.swift */,
+				02D408AF1AFCDB775E0BF5189899F4EE /* StatusesParameter.swift */,
+				40759A9B35A0BF6C7B0A8F738C387966 /* UsersParameter.swift */,
 			);
 			name = ParameterModels;
 			path = ParameterModels;
@@ -361,6 +322,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B71B728F2E17D88A3EEAA7FFDB888CC0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				43E5115A50CDDE2AE42CF1232E43095B /* Info.plist */,
+				942A98C7E4AE1F5A9B4C7431EB339AA2 /* WeiboSDK.modulemap */,
+				FD66B760E25F375B3BF5E94F777037A8 /* WeiboSDK.xcconfig */,
+				FA257E1D6BAC8D5A3C7315DFC8B09EEF /* WeiboSDK-dummy.m */,
+				7F9CAF3AFA9751E1706698448EE57787 /* WeiboSDK-prefix.pch */,
+				DB84D948CC4D55E024F6D61E3C566AD3 /* WeiboSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../SampleProject/Pods/Target Support Files/WeiboSDK";
+			sourceTree = "<group>";
+		};
 		B73B399EA362C63CEBDC5FF6D70292AC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +348,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		C844F9F01D4CAC398100626F5EA1217B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6F3513391EB18C09045B70DC1A01D55E /* WeiboSDK.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CDADF68CB54738957DDDE30C08729174 /* Alamofire */ = {
@@ -401,6 +384,27 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		D5FCA622E7E52DE6C8C84F2355102665 /* WeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3080839A841F22883C0BF41B2699B1E7 /* WeiboSDK.swift */,
+				3A25AD96C51EA5D3C4AC16B3DB6B8EC0 /* WeiboSDK+Account.swift */,
+				CCA399EFDF70668241F8AC680FB26E0F /* WeiboSDK+Comments.swift */,
+				B5EA7209815F0B8576C41773E76E4ADC /* WeiboSDK+Common.swift */,
+				F4AE318F32D99AF574D97CD38E9931D5 /* WeiboSDK+Emotionsjson.swift */,
+				C4F28CB17FE41A9EBD7B3A05FECC5542 /* WeiboSDK+Friendships.swift */,
+				2838001B1D621BF6FBCBA3A867DC8D00 /* WeiboSDK+Search.swift */,
+				6DA36847AF579F16A47D0E168CB795E4 /* WeiboSDK+Short_Url.swift */,
+				AE41628D5ACA971273996A1634480C94 /* WeiboSDK+Statuses.swift */,
+				CBD991FB0C5D651A305CC8BE0AE3D6B0 /* WeiboSDK+Users.swift */,
+				A4032F5ECF9B9375672F596B91B19980 /* ParameterModels */,
+				C844F9F01D4CAC398100626F5EA1217B /* Pod */,
+				B71B728F2E17D88A3EEAA7FFDB888CC0 /* Support Files */,
+			);
+			name = WeiboSDK;
+			path = ../../WeiboSDK;
+			sourceTree = "<group>";
+		};
 		E40B777546E475D2CDEA46039A6266B4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +417,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GenericNetworking";
+			sourceTree = "<group>";
+		};
+		F55DFCAAC074B737FBE5B8F1974C0704 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5FCA622E7E52DE6C8C84F2355102665 /* WeiboSDK */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,7 +524,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B78C8735A26FA30647DFE3753B607F3 /* Build configuration list for PBXNativeTarget "WeiboSDK" */;
 			buildPhases = (
-				487619FDA99BE4F8B914548728CDCEB5 /* Sources */,
+				8A8FE13CD53F5514FFC708841ABB52B6 /* Sources */,
 				8ED3878090C413EEC363F6AA4F9BBB38 /* Frameworks */,
 				554000EBE7BC778259257F2368D0DF40 /* Headers */,
 			);
@@ -582,28 +594,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		487619FDA99BE4F8B914548728CDCEB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4EA8CBD79D6DB9074B67E025D3BEB17 /* CommentsParameter.swift in Sources */,
-				91DE39B34B2D7DCC4175B9E9B526BB01 /* CommonParameter.swift in Sources */,
-				49DE9B180D64DCB65C48A5CECCD8D4E2 /* FriendshipsParameter.swift in Sources */,
-				75AD353ACC9CFB4371A9361A197041FF /* Short_UrlParameter.swift in Sources */,
-				5065E195B2F44D5522259E034921A6DE /* StatusesParameter.swift in Sources */,
-				FCAFEBDF70F96956F18D261FBC61001B /* UsersParameter.swift in Sources */,
-				9E989D8D929EA849A9C483A34AA685AC /* WeiboSDK+Account.swift in Sources */,
-				9FA2738AA80ED4BE9855A1435FBCF065 /* WeiboSDK+Comments.swift in Sources */,
-				15D216A00BFE1A213E129175F775F342 /* WeiboSDK+Common.swift in Sources */,
-				DD3B71CBF05CC1042B9A88EF660E0FA2 /* WeiboSDK+Friendships.swift in Sources */,
-				AF22B3BC679408AD04F47441F228CE9F /* WeiboSDK+Short_Url.swift in Sources */,
-				58E84E88CBB70FF6112EFF3799478F4B /* WeiboSDK+Statuses.swift in Sources */,
-				43FD0F7346CD6D83385A01E623F12D0E /* WeiboSDK+Users.swift in Sources */,
-				A28242B9F179B2C6B485274F8FD03C18 /* WeiboSDK-dummy.m in Sources */,
-				DB624D42E9C5A600E7A9ACC2C8ACE5B7 /* WeiboSDK.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5AD521633B1124E15899E41D620F8846 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -618,6 +608,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				1162C47FA84ABB4E276E7CA0E71C1D05 /* Pods-SampleProject-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8FE13CD53F5514FFC708841ABB52B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD69C4FBA23BB1637DCBA841E936BBF1 /* CommentsParameter.swift in Sources */,
+				B9DDBBEC50ED4913BF3BEBA5FAF1095C /* CommonParameter.swift in Sources */,
+				5F2BCC30F97C11B1434F6AD8E6E72D38 /* EmotionsjsonParameter.swift in Sources */,
+				8C48D55834BC43816D31DFE1845A5F46 /* FriendshipsParameter.swift in Sources */,
+				4519B3BE7E3BE67889AD87D97FF9C29B /* SearchParameter.swift in Sources */,
+				04E62CD802840F7CD661D3A94A5CC5FF /* Short_UrlParameter.swift in Sources */,
+				9AAD13AB364206CE9CEA36825F646E4C /* StatusesParameter.swift in Sources */,
+				24456167524FBCE640C08B1D0291ECC6 /* UsersParameter.swift in Sources */,
+				C523D5E918CC09D8564D8FC8C19A426C /* WeiboSDK+Account.swift in Sources */,
+				9B640F21C0188B7F91C9F21A5291C739 /* WeiboSDK+Comments.swift in Sources */,
+				C9825CD75523A4C3BEB36BF908573C8B /* WeiboSDK+Common.swift in Sources */,
+				B63EA38CFEF2567EDC2086AB812F0789 /* WeiboSDK+Emotionsjson.swift in Sources */,
+				18C1B9893EA9973A9067416AD76EE1B6 /* WeiboSDK+Friendships.swift in Sources */,
+				8F188CF298B8A9D8C69A8FE434174A62 /* WeiboSDK+Search.swift in Sources */,
+				E7D9FD9692C1DC980DEF177F48AA3CB9 /* WeiboSDK+Short_Url.swift in Sources */,
+				50E892E9A2DB2B5DE02D77392275CC20 /* WeiboSDK+Statuses.swift in Sources */,
+				3A064CC2A1669559396E3892B0A87051 /* WeiboSDK+Users.swift in Sources */,
+				AFC1DDC1A599C28BDEFA54654C1CD79F /* WeiboSDK-dummy.m in Sources */,
+				2F7CB9A0D3E3E1D31F97F41EEB47888E /* WeiboSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,7 +805,7 @@
 		};
 		6A0A29D194975F484A9FF6FBB403BF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4978A8AC763025F891832150F6BFC63 /* WeiboSDK.xcconfig */;
+			baseConfigurationReference = FD66B760E25F375B3BF5E94F777037A8 /* WeiboSDK.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -853,7 +869,7 @@
 		};
 		90B50E903F6ED4BEDA026815412F8BE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4978A8AC763025F891832150F6BFC63 /* WeiboSDK.xcconfig */;
+			baseConfigurationReference = FD66B760E25F375B3BF5E94F777037A8 /* WeiboSDK.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

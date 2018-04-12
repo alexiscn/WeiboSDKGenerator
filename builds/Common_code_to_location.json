@@ -12,7 +12,8 @@
     ], 
     "url": "https://api.weibo.com/2/common/code_to_location.json", 
     "response": [], 
-    "signature": "Common_code_to_location", 
+    "signature": "CommonCodeToLocation", 
     "path": "/2/common/code_to_location.json", 
+    "shortName": "CodeToLocation", 
     "method": "GET"
 }

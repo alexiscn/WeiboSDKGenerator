@@ -143,7 +143,8 @@
             "description": "转发的微博信息字段"
         }
     ], 
-    "signature": "Statuses_repost_timeline", 
+    "signature": "StatusesRepostTimeline", 
     "path": "/2/statuses/repost_timeline.json", 
+    "shortName": "RepostTimeline", 
     "method": "GET"
 }

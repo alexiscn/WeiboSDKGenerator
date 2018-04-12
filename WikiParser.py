@@ -77,10 +77,12 @@ def parse_detail_wiki(url, desc):
     api_name = api_url.rsplit('/', 1)[1]
     api_category = api_path.rsplit('/')[2]
     api_category = api_category.replace('.', '').title()
+    api_short_name =  api_name.rsplit('.', 1)[0].title().replace('_', "")
     api_dict["url"] = api_url
     api_dict["description"] = desc
     api_dict["method"] = "GET"
-    api_dict["signature"] = api_category + "_" + api_name.rsplit('.', 1)[0]
+    api_dict["signature"] = api_category + api_short_name
+    api_dict["shortName"] = api_short_name
     api_dict["category"] = api_category
     api_dict["path"] = api_path
 

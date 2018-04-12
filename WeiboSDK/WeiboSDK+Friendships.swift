@@ -14,7 +14,7 @@ extension WeiboSDK {
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
     ///   - completion: Callback
-    public class func Friendships_followers(param: Friendships_followersParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func FriendshipsFollowers(param: WBParameter.Friendships.Followers,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -29,7 +29,7 @@ extension WeiboSDK {
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
     ///   - completion: Callback
-    public class func Friendships_friends(param: Friendships_friendsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func FriendshipsFriends(param: WBParameter.Friendships.Friends,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/friends.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -43,7 +43,7 @@ extension WeiboSDK {
     ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - completion: Callback
-    public class func Friendships_ids(param: Friendships_idsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func FriendshipsIds(param: WBParameter.Friendships.Ids,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers/ids.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -57,7 +57,7 @@ extension WeiboSDK {
     ///   - target_id: 目标用户的UID。
     ///   - target_screen_name: 目标用户的微博昵称。
     ///   - completion: Callback
-    public class func Friendships_show(param: Friendships_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func FriendshipsShow(param: WBParameter.Friendships.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/show.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

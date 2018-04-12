@@ -10,7 +10,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - url_short: 需要取得分享数的短链接，需要URLencoded，最多不超过20个。
     ///   - completion: Callback
-    public class func Short_Url_counts(param: Short_Url_countsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_UrlCounts(param: WBParameter.Short_Url.Counts,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/comment/counts.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -21,7 +21,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - url_short: 需要还原的短链接，需要URLencoded，最多不超过20个 。
     ///   - completion: Callback
-    public class func Short_Url_expand(param: Short_Url_expandParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_UrlExpand(param: WBParameter.Short_Url.Expand,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/expand.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -32,7 +32,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - url_long: 需要转换的长链接，需要URLencoded，最多不超过20个。
     ///   - completion: Callback
-    public class func Short_Url_shorten(param: Short_Url_shortenParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_UrlShorten(param: WBParameter.Short_Url.Shorten,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/shorten.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

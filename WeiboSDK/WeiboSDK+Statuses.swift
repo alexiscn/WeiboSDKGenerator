@@ -10,7 +10,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - ids: 需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。
     ///   - completion: Callback
-    public class func Statuses_count(param: Statuses_countParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesCount(param: WBParameter.Statuses.Count,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/count.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -27,7 +27,7 @@ extension WeiboSDK {
     ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
     ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
     ///   - completion: Callback
-    public class func Statuses_home_timeline(param: Statuses_home_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesHomeTimeline(param: WBParameter.Statuses.HomeTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/home_timeline.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -44,7 +44,7 @@ extension WeiboSDK {
     ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博、2：来自微群，默认为0。
     ///   - filter_by_type: 原创筛选类型，0：全部微博、1：原创的微博，默认为0。
     ///   - completion: Callback
-    public class func Statuses_mentions(param: Statuses_mentionsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesMentions(param: WBParameter.Statuses.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/mentions.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -60,7 +60,7 @@ extension WeiboSDK {
     ///   - page: 返回结果的页码，默认为1。
     ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
     ///   - completion: Callback
-    public class func Statuses_repost_timeline(param: Statuses_repost_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesRepostTimeline(param: WBParameter.Statuses.RepostTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/repost_timeline.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -73,7 +73,7 @@ extension WeiboSDK {
     ///   - pic: 用户想要分享到微博的图片，仅支持JPEG、GIF、PNG图片，上传图片大小限制为<5M。上传图片时，POST方式提交请求，需要采用multipart/form-data编码方式。
     ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
     ///   - completion: Callback
-    public class func Statuses_share(param: Statuses_shareParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesShare(param: WBParameter.Statuses.Share,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/share.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -84,7 +84,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - id: 需要获取的微博ID。
     ///   - completion: Callback
-    public class func Statuses_show(param: Statuses_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesShow(param: WBParameter.Statuses.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/show.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -103,7 +103,7 @@ extension WeiboSDK {
     ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
     ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
     ///   - completion: Callback
-    public class func Statuses_user_timeline(param: Statuses_user_timelineParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func StatusesUserTimeline(param: WBParameter.Statuses.UserTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/user_timeline.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

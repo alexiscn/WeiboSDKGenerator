@@ -5,7 +5,8 @@
     "parameters": [], 
     "url": "https://api.weibo.com/2/account/profile/email.json", 
     "response": [], 
-    "signature": "Account_email", 
+    "signature": "AccountEmail", 
     "path": "/2/account/profile/email.json", 
+    "shortName": "Email", 
     "method": "GET"
 }

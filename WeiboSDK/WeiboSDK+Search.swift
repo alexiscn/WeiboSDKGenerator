@@ -12,7 +12,7 @@ extension WeiboSDK {
     ///   - count: 单页返回的记录条数，默认为10，最大为50。
     ///   - page: 返回结果的页码，默认为1。
     ///   - completion: Callback
-    public class func Search_topics(param: Search_topicsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func SearchTopics(param: WBParameter.Search.Topics,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/search/topics.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

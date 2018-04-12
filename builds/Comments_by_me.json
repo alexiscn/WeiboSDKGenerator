@@ -82,7 +82,8 @@
             "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
         }
     ], 
-    "signature": "Comments_by_me", 
+    "signature": "CommentsByMe", 
     "path": "/2/comments/by_me.json", 
+    "shortName": "ByMe", 
     "method": "GET"
 }

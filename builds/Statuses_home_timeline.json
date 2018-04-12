@@ -169,7 +169,8 @@
             "description": "微博流内的推广微博ID"
         }
     ], 
-    "signature": "Statuses_home_timeline", 
+    "signature": "StatusesHomeTimeline", 
     "path": "/2/statuses/home_timeline.json", 
+    "shortName": "HomeTimeline", 
     "method": "GET"
 }

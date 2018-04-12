@@ -58,7 +58,8 @@
             "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
         }
     ], 
-    "signature": "Comments_show_batch", 
+    "signature": "CommentsShowBatch", 
     "path": "/2/comments/show_batch.json", 
+    "shortName": "ShowBatch", 
     "method": "GET"
 }

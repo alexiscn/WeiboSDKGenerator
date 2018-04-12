@@ -10,7 +10,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - uids: 需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。
     ///   - completion: Callback
-    public class func Users_counts(param: Users_countsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func UsersCounts(param: WBParameter.Users.Counts,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/counts.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -21,7 +21,7 @@ extension WeiboSDK {
     /// - Parameters:
     ///   - domain: 需要查询的个性化域名。
     ///   - completion: Callback
-    public class func Users_domain_show(param: Users_domain_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func UsersDomainShow(param: WBParameter.Users.DomainShow,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/domain_show.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
@@ -33,7 +33,7 @@ extension WeiboSDK {
     ///   - uid: 需要查询的用户ID。
     ///   - screen_name: 需要查询的用户昵称。
     ///   - completion: Callback
-    public class func Users_show(param: Users_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func UsersShow(param: WBParameter.Users.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/show.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

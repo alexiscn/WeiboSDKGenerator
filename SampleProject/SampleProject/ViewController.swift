@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let p = WeiboSDK.Comments_to_meParameter()
+        let p = WBParameter.Common.GetCity(province: "beijing")
     }
 
     override func didReceiveMemoryWarning() {

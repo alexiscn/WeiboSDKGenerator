@@ -12,7 +12,8 @@
     ], 
     "url": "https://api.weibo.com/2/common/get_timezone.json", 
     "response": [], 
-    "signature": "Common_get_timezone", 
+    "signature": "CommonGetTimezone", 
     "path": "/2/common/get_timezone.json", 
+    "shortName": "GetTimezone", 
     "method": "GET"
 }

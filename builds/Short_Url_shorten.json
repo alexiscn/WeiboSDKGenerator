@@ -33,7 +33,8 @@
             "description": "短链的可用状态，true：可用、false：不可用。"
         }
     ], 
-    "signature": "Short_Url_shorten", 
+    "signature": "Short_UrlShorten", 
     "path": "/2/short_url/shorten.json", 
+    "shortName": "Shorten", 
     "method": "GET"
 }
