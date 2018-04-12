@@ -61,5 +61,5 @@
     "signature": "CommentsDestroyBatch", 
     "path": "/2/comments/destroy_batch.json", 
     "shortName": "DestroyBatch", 
-    "method": "GET"
+    "method": "POST"
 }

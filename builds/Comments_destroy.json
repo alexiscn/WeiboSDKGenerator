@@ -61,5 +61,5 @@
     "signature": "CommentsDestroy", 
     "path": "/2/comments/destroy.json", 
     "shortName": "Destroy", 
-    "method": "GET"
+    "method": "POST"
 }

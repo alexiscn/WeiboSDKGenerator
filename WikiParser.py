@@ -88,7 +88,14 @@ def parse_detail_wiki(url, desc):
 
     console = soup.find('a', text='API测试工具')
     if console:
-        api_dict["console"] = console["href"]
+        console_url = console["href"]
+        api_dict["console"] = console_url
+        params = dict(urlparse.parse_qsl(urlparse.urlsplit(console_url).query))
+        http_method = params.get('httpmethod')
+        if http_method == 'None':
+            api_dict["method"] = 'GET'
+        else:
+            api_dict["method"] = http_method
 
     # parse parameters and responses
     tables = soup.find_all('table', class_='parameters')

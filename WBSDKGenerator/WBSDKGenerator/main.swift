@@ -21,6 +21,9 @@ func doNecessaryWork() {
     let parametersFolderPath = WBOutputDir.appending("/").appending(Document.ParameterFolderName)
     try? FileManager.default.createDirectory(atPath: parametersFolderPath, withIntermediateDirectories: true, attributes: nil)
     
+    let responseFolderPath = WBOutputDir.appending("/").appending(Document.ResponseFolderName)
+    try? FileManager.default.createDirectory(atPath: responseFolderPath, withIntermediateDirectories: true, attributes: nil)
+    
     if let path = Bundle.main.url(forResource: "Podspec", withExtension: "txt") {
         let filePath = WBOutputDir.appending("/WeiboSDK.podspec")
         let destURL = URL(fileURLWithPath: filePath)

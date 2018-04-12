@@ -24,7 +24,7 @@ extension WeiboSDK {
     public class func CommentsCreate(param: WBParameter.Comments.Create,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/create.json"
         let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
     }
 
     /// 删除一条我的评论
@@ -35,7 +35,7 @@ extension WeiboSDK {
     public class func CommentsDestroy(param: WBParameter.Comments.Destroy,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy.json"
         let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
     }
 
     /// 批量删除我的评论
@@ -46,7 +46,7 @@ extension WeiboSDK {
     public class func CommentsDestroyBatch(param: WBParameter.Comments.DestroyBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy_batch.json"
         let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
     }
 
     /// 获取@到我的评论
@@ -68,7 +68,7 @@ extension WeiboSDK {
     public class func CommentsReply(param: WBParameter.Comments.Reply,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/reply.json"
         let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
     }
 
     /// 获取某条微博的评论列表

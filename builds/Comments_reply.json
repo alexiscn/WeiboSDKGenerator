@@ -91,5 +91,5 @@
     "signature": "CommentsReply", 
     "path": "/2/comments/reply.json", 
     "shortName": "Reply", 
-    "method": "GET"
+    "method": "POST"
 }

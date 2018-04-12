@@ -79,5 +79,5 @@
     "signature": "CommentsCreate", 
     "path": "/2/comments/create.json", 
     "shortName": "Create", 
-    "method": "GET"
+    "method": "POST"
 }
