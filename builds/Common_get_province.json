@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "console": "http://open.weibo.com/tools/console?uri=common/get_province&httpmethod=GET&key1=country&value1=001", 
     "description": "获取省份列表", 
     "parameters": [
         {

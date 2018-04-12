@@ -1,5 +1,6 @@
 {
     "category": "Account", 
+    "console": "http://open.weibo.com/tools/console?uri=account/get_uid&httpmethod=GET&", 
     "description": "授权之后获取用户的UID", 
     "parameters": [], 
     "url": "https://api.weibo.com/2/account/get_uid.json", 

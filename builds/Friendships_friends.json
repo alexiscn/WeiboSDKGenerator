@@ -1,5 +1,6 @@
 {
     "category": "Friendships", 
+    "console": "http://open.weibo.com/tools/console?uri=friendships/friends&httpmethod=GET&key1=uid&value1=1870632073", 
     "description": "获取用户的关注列表", 
     "parameters": [
         {

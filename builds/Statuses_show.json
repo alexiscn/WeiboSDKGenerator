@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/show&httpmethod=GET&key1=id&value1=3481475946781445", 
     "description": "根据ID获取单条微博信息", 
     "parameters": [
         {

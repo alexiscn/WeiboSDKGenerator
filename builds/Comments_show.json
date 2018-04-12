@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/show&httpmethod=GET&key1=id&value1=3481474642286341", 
     "description": "获取某条微博的评论列表", 
     "parameters": [
         {

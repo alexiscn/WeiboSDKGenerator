@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/repost_timeline&httpmethod=GET&key1=id&value1=3481474642286341", 
     "description": "返回一条原创微博的最新转发微博", 
     "parameters": [
         {

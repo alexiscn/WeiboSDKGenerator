@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "console": "http://open.weibo.com/tools/console?uri=common/get_country&httpmethod=GET&key1=capital&value1=c", 
     "description": "获取国家列表", 
     "parameters": [
         {

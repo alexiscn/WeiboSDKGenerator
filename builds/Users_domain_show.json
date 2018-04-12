@@ -1,5 +1,6 @@
 {
     "category": "Users", 
+    "console": "http://open.weibo.com/tools/console?uri=users/domain_show&httpmethod=GET&key1=domain&value1=openapi", 
     "description": "通过个性域名获取用户信息", 
     "parameters": [
         {

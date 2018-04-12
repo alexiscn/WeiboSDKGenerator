@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "console": "http://open.weibo.com/tools/console?uri=common/code_to_location&httpmethod=GET&key1=codes&value1=100,200", 
     "description": "通过地址编码获取地址名称", 
     "parameters": [
         {

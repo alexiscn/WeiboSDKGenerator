@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/by_me&httpmethod=GET&", 
     "description": "我发出的评论列表", 
     "parameters": [
         {

@@ -84,6 +84,10 @@ def parse_detail_wiki(url, desc):
     api_dict["category"] = api_category
     api_dict["path"] = api_path
 
+    console = soup.find('a', text='API测试工具')
+    if console:
+        api_dict["console"] = console["href"]
+
     # parse parameters and responses
     tables = soup.find_all('table', class_='parameters')
     if len(tables) == 2:

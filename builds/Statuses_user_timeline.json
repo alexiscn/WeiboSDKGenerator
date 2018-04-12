@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/user_timeline&httpmethod=GET&", 
     "description": "获取用户发布的微博", 
     "parameters": [
         {

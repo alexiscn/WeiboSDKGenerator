@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/reply&httpmethod=POST&key1=id&value1=3444517204329764&key2=cid&value2=3486209583798050&key3=comment&value3=来自API测试工具", 
     "description": "回复一条我收到的评论", 
     "parameters": [
         {

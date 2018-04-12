@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/timeline&httpmethod=GET&", 
     "description": "获取用户发送及收到的评论列表", 
     "parameters": [
         {

@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "console": "http://open.weibo.com/tools/console?uri=common/get_city&httpmethod=GET&key1=province&value1=001011", 
     "description": "获取城市列表", 
     "parameters": [
         {

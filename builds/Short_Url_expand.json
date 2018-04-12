@@ -1,5 +1,6 @@
 {
     "category": "Short_Url", 
+    "console": "http://open.weibo.com/tools/console?uri=short_url/expand&httpmethod=GET&key1=url_short&value1=http%3A%2F%2Ft.cn%2FzWHICRh", 
     "description": "短链转长链", 
     "parameters": [
         {

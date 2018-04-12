@@ -1,5 +1,6 @@
 {
     "category": "Users", 
+    "console": "http://open.weibo.com/tools/console?uri=users/counts&httpmethod=GET&key1=uids&value1=1904178193,1870632073", 
     "description": "批量获取用户的粉丝数、关注数、微博数", 
     "parameters": [
         {

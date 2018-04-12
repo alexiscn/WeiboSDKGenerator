@@ -1,5 +1,6 @@
 {
     "category": "Emotionsjson", 
+    "console": "http://open.weibo.com/tools/console?uri=emotions&httpmethod=GET&{{{apiToolPara}}}", 
     "description": "获取官方表情", 
     "parameters": [
         {

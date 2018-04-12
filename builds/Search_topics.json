@@ -1,5 +1,6 @@
 {
     "category": "Search", 
+    "console": "http://open.weibo.com/tools/console?uri=search/topics&httpmethod=GET&key1=q&value1=微博", 
     "description": "搜索某一话题下的微博", 
     "parameters": [
         {

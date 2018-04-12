@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/count&httpmethod=GET&key1=ids&value1=3481474642286341,3478931308682632,3479600589793135", 
     "description": "批量获取指定微博的转发数评论数", 
     "parameters": [
         {

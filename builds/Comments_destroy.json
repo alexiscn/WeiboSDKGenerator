@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/destroy&httpmethod=POST&key1=cid&value1=0000000000", 
     "description": "删除一条我的评论", 
     "parameters": [
         {

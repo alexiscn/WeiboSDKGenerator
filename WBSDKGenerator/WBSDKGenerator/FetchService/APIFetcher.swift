@@ -10,4 +10,7 @@ import Foundation
 
 class APIFetcher {
     
+    class func fetch() {
+        
+    }
 }

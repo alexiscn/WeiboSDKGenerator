@@ -19,6 +19,8 @@ struct WBFunction: Codable {
     /// full URL string, eg: https://api.weibo.com/2/statuses/mentions.json
     let url: URL
     
+    let console: URL?
+    
     /// path, eg: /2/statuses/mentions.json
     let path: String
     

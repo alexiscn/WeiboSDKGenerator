@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/home_timeline&httpmethod=GET&", 
     "description": "获取当前登录用户及其所关注用户的最新微博", 
     "parameters": [
         {

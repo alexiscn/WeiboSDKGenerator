@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "console": "http://open.weibo.com/tools/console?uri=comments/create&httpmethod=POST&key1=comment&value1=来自API测试工具&key2=id&value2=3444517204329764", 
     "description": "评论一条微博", 
     "parameters": [
         {

@@ -1,5 +1,6 @@
 {
     "category": "Account", 
+    "console": "http://open.weibo.com/tools/console?uri=account/rate_limit_status&httpmethod=GET&", 
     "description": "获取当前授权用户API访问频率限制", 
     "parameters": [], 
     "url": "https://api.weibo.com/2/account/rate_limit_status.json", 

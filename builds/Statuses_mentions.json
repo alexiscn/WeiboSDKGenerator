@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "console": "http://open.weibo.com/tools/console?uri=statuses/mentions&httpmethod=GET&", 
     "description": "获取@当前用户的最新微博", 
     "parameters": [
         {
