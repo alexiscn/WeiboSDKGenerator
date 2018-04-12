@@ -2,11 +2,14 @@
 
 extension WeiboSDK {
 
-    public struct Users_countsParameter {
+    public class Users_countsParameter: NSObject {
 
         // 需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。
-        var uids: String
+        public var uids: String
 
+        public init(uids: String) {
+            self.uids = uids
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["uids"] = uids
@@ -14,11 +17,14 @@ extension WeiboSDK {
         }
     }
 
-    public struct Users_domain_showParameter {
+    public class Users_domain_showParameter: NSObject {
 
         // 需要查询的个性化域名。
-        var domain: String
+        public var domain: String
 
+        public init(domain: String) {
+            self.domain = domain
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["domain"] = domain
@@ -26,13 +32,13 @@ extension WeiboSDK {
         }
     }
 
-    public struct Users_showParameter {
+    public class Users_showParameter: NSObject {
 
         // 需要查询的用户ID。
-        var uid: Int64?
+        public var uid: Int64?
 
         // 需要查询的用户昵称。
-        var screen_name: String?
+        public var screen_name: String?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]

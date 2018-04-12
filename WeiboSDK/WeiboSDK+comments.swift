@@ -20,6 +20,20 @@ extension WeiboSDK {
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
 
+    /// 评论一条微博
+    ///
+    /// - Parameters:
+    ///   - comment: 评论内容，必须做URLencode，内容不超过140个汉字。
+    ///   - id: 需要评论的微博ID。
+    ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
+    ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
+    ///   - completion: Callback
+    public class func Comments_create(param: Comments_createParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+        let path = "/2/comments/create.json"
+        let params = param.value()
+        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+    }
+
     /// 删除一条我的评论
     ///
     /// - Parameters:
@@ -54,6 +68,22 @@ extension WeiboSDK {
     ///   - completion: Callback
     public class func Comments_mentions(param: Comments_mentionsParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/mentions.json"
+        let params = param.value()
+        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+    }
+
+    /// 回复一条我收到的评论
+    ///
+    /// - Parameters:
+    ///   - cid: 需要回复的评论ID。
+    ///   - id: 需要评论的微博ID。
+    ///   - comment: 回复评论内容，必须做URLencode，内容不超过140个汉字。
+    ///   - without_mention: 回复中是否自动加入“回复@用户名”，0：是、1：否，默认为0。
+    ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
+    ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
+    ///   - completion: Callback
+    public class func Comments_reply(param: Comments_replyParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+        let path = "/2/comments/reply.json"
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }

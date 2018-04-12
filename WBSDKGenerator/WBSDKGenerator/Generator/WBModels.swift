@@ -19,7 +19,7 @@ struct WBFunction: Codable {
     /// full URL string, eg: https://api.weibo.com/2/statuses/mentions.json
     let url: URL
     
-    let console: URL?
+    let console: String?
     
     /// path, eg: /2/statuses/mentions.json
     let path: String
@@ -39,8 +39,10 @@ struct WBFunction: Codable {
                 let decoder = JSONDecoder()
                 let f = try decoder.decode(WBFunction.self, from: data)
                 return f
-            } catch (let error as NSError) {
-                print(error.localizedDescription + path)
+            } catch let error {
+                print("=======================")
+                print(path)
+                print(error)
             }
         }
         return nil

@@ -2,22 +2,22 @@
 
 extension WeiboSDK {
 
-    public struct Friendships_followersParameter {
+    public class Friendships_followersParameter: NSObject {
 
         // 需要查询的用户UID。
-        var uid: Int64?
+        public var uid: Int64?
 
         // 需要查询的用户昵称。
-        var screen_name: String?
+        public var screen_name: String?
 
         // 单页返回的记录条数，默认为5，最大不超过5。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
-        var cursor: Int?
+        public var cursor: Int?
 
         // 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
-        var trim_status: Int?
+        public var trim_status: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
@@ -40,22 +40,22 @@ extension WeiboSDK {
         }
     }
 
-    public struct Friendships_friendsParameter {
+    public class Friendships_friendsParameter: NSObject {
 
         // 需要查询的用户UID。
-        var uid: Int64?
+        public var uid: Int64?
 
         // 需要查询的用户昵称。
-        var screen_name: String?
+        public var screen_name: String?
 
         // 单页返回的记录条数，默认为5，最大不超过5。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
-        var cursor: Int?
+        public var cursor: Int?
 
         // 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
-        var trim_status: Int?
+        public var trim_status: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
@@ -78,19 +78,19 @@ extension WeiboSDK {
         }
     }
 
-    public struct Friendships_idsParameter {
+    public class Friendships_idsParameter: NSObject {
 
         // 需要查询的用户UID。
-        var uid: Int64?
+        public var uid: Int64?
 
         // 需要查询的用户昵称。
-        var screen_name: String?
+        public var screen_name: String?
 
         // 单页返回的记录条数，默认为5，最大不超过5。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
-        var cursor: Int?
+        public var cursor: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
@@ -105,6 +105,38 @@ extension WeiboSDK {
             }
             if let cursor = cursor {
                 params["cursor"] = cursor
+            }
+            return params
+        }
+    }
+
+    public class Friendships_showParameter: NSObject {
+
+        // 源用户的UID。
+        public var source_id: Int64?
+
+        // 源用户的微博昵称。
+        public var source_screen_name: String?
+
+        // 目标用户的UID。
+        public var target_id: Int64?
+
+        // 目标用户的微博昵称。
+        public var target_screen_name: String?
+
+        func value() -> [String: Any] {
+            var params: [String: Any] = [:]
+            if let source_id = source_id {
+                params["source_id"] = source_id
+            }
+            if let source_screen_name = source_screen_name {
+                params["source_screen_name"] = source_screen_name
+            }
+            if let target_id = target_id {
+                params["target_id"] = target_id
+            }
+            if let target_screen_name = target_screen_name {
+                params["target_screen_name"] = target_screen_name
             }
             return params
         }

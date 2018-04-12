@@ -40,12 +40,9 @@ func generate() {
         for file in files {
             print("processing file:\(file)")
             let path = buildPath.appending(file)
-            
             if let f = WBFunction.fromLocalFilePath(path) {
                 let doc = Document(wbFunction: f)
                 doc.generate()
-                //                let generator = APIGenerator(wbFunction: f)
-                //                generator.generate()
             }
             print("done file:\(file)")
             print("")

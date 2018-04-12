@@ -67,16 +67,31 @@ extension Document {
         let requestParamTypeName = "\(wbFunction.signature)Parameter"
         
         var content = ""
-        content.append("    public struct \(requestParamTypeName) {\n\n")
+        content.append("    public class \(requestParamTypeName): NSObject {\n\n")
         for param in wbFunction.parameters {
             content.append("        // \(param.description)\n")
-            content.append("        var ")
+            content.append("        public var ")
             content.append("\(param.name): \(swiftTypeFor(param.type))")
             if param.optional {
                 content.append("?")
             }
             content.append("\n")
             content.append("\n")
+        }
+        
+        let initialProperties = wbFunction.parameters.filter({ return $0.optional == false })
+        if initialProperties.count > 0 {
+            content.append("        public init(")
+            for property in initialProperties {
+                content.append("\(property.name): \(swiftTypeFor(property.type)), ")
+            }
+            content.removeLast()
+            content.removeLast()
+            content.append(") {\n")
+            for property in initialProperties {
+                content.append("            self.\(property.name) = \(property.name)\n ")
+            }
+            content.append("}\n")
         }
         
         // create value function for request parameter

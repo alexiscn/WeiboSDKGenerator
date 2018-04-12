@@ -2,11 +2,14 @@
 
 extension WeiboSDK {
 
-    public struct Statuses_countParameter {
+    public class Statuses_countParameter: NSObject {
 
         // 需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。
-        var ids: String
+        public var ids: String
 
+        public init(ids: String) {
+            self.ids = ids
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["ids"] = ids
@@ -14,28 +17,28 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_home_timelineParameter {
+    public class Statuses_home_timelineParameter: NSObject {
 
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-        var since_id: Int64?
+        public var since_id: Int64?
 
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-        var max_id: Int64?
+        public var max_id: Int64?
 
         // 单页返回的记录条数，最大不超过100，默认为20。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的页码，默认为1。
-        var page: Int?
+        public var page: Int?
 
         // 是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0。
-        var base_app: Int?
+        public var base_app: Int?
 
         // 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
-        var feature: Int?
+        public var feature: Int?
 
         // 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
-        var trim_user: Int?
+        public var trim_user: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
@@ -64,28 +67,28 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_mentionsParameter {
+    public class Statuses_mentionsParameter: NSObject {
 
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-        var since_id: Int64?
+        public var since_id: Int64?
 
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-        var max_id: Int64?
+        public var max_id: Int64?
 
         // 单页返回的记录条数，最大不超过200，默认为20。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的页码，默认为1。
-        var page: Int?
+        public var page: Int?
 
         // 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
-        var filter_by_author: Int?
+        public var filter_by_author: Int?
 
         // 来源筛选类型，0：全部、1：来自微博、2：来自微群，默认为0。
-        var filter_by_source: Int?
+        public var filter_by_source: Int?
 
         // 原创筛选类型，0：全部微博、1：原创的微博，默认为0。
-        var filter_by_type: Int?
+        public var filter_by_type: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
@@ -114,26 +117,29 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_repost_timelineParameter {
+    public class Statuses_repost_timelineParameter: NSObject {
 
         // 需要查询的微博ID。
-        var id: Int64
+        public var id: Int64
 
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-        var since_id: Int64?
+        public var since_id: Int64?
 
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-        var max_id: Int64?
+        public var max_id: Int64?
 
         // 单页返回的记录条数，最大不超过200，默认为20。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的页码，默认为1。
-        var page: Int?
+        public var page: Int?
 
         // 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
-        var filter_by_author: Int?
+        public var filter_by_author: Int?
 
+        public init(id: Int64) {
+            self.id = id
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["id"] = id
@@ -156,17 +162,20 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_shareParameter {
+    public class Statuses_shareParameter: NSObject {
 
         // 用户分享到微博的文本内容，必须做URLencode，内容不超过140个汉字，文本中不能包含“#话题词#”，同时文本中必须包含至少一个第三方分享到微博的网页URL，且该URL只能是该第三方（调用方）绑定域下的URL链接，绑定域在“我的应用 － 应用信息 － 基本应用信息编辑 － 安全域名”里设置。
-        var status: String
+        public var status: String
 
         // 用户想要分享到微博的图片，仅支持JPEG、GIF、PNG图片，上传图片大小限制为<5M。上传图片时，POST方式提交请求，需要采用multipart/form-data编码方式。
-        var pic: Any?
+        public var pic: Any?
 
         // 开发者上报的操作用户真实IP，形如：211.156.0.1。
-        var rip: String?
+        public var rip: String?
 
+        public init(status: String) {
+            self.status = status
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["status"] = status
@@ -180,11 +189,14 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_showParameter {
+    public class Statuses_showParameter: NSObject {
 
         // 需要获取的微博ID。
-        var id: Int64
+        public var id: Int64
 
+        public init(id: Int64) {
+            self.id = id
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["id"] = id
@@ -192,34 +204,34 @@ extension WeiboSDK {
         }
     }
 
-    public struct Statuses_user_timelineParameter {
+    public class Statuses_user_timelineParameter: NSObject {
 
         // 需要查询的用户ID。
-        var uid: Int64?
+        public var uid: Int64?
 
         // 需要查询的用户昵称。
-        var screen_name: String?
+        public var screen_name: String?
 
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-        var since_id: Int64?
+        public var since_id: Int64?
 
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-        var max_id: Int64?
+        public var max_id: Int64?
 
         // 单页返回的记录条数，最大不超过100，超过100以100处理，默认为20。
-        var count: Int?
+        public var count: Int?
 
         // 返回结果的页码，默认为1。
-        var page: Int?
+        public var page: Int?
 
         // 是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0。
-        var base_app: Int?
+        public var base_app: Int?
 
         // 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
-        var feature: Int?
+        public var feature: Int?
 
         // 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
-        var trim_user: Int?
+        public var trim_user: Int?
 
         func value() -> [String: Any] {
             var params: [String: Any] = [:]

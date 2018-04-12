@@ -2,11 +2,14 @@
 
 extension WeiboSDK {
 
-    public struct Short_Url_countsParameter {
+    public class Short_Url_countsParameter: NSObject {
 
         // 需要取得分享数的短链接，需要URLencoded，最多不超过20个。
-        var url_short: String
+        public var url_short: String
 
+        public init(url_short: String) {
+            self.url_short = url_short
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["url_short"] = url_short
@@ -14,11 +17,14 @@ extension WeiboSDK {
         }
     }
 
-    public struct Short_Url_expandParameter {
+    public class Short_Url_expandParameter: NSObject {
 
         // 需要还原的短链接，需要URLencoded，最多不超过20个 。
-        var url_short: String
+        public var url_short: String
 
+        public init(url_short: String) {
+            self.url_short = url_short
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["url_short"] = url_short
@@ -26,11 +32,14 @@ extension WeiboSDK {
         }
     }
 
-    public struct Short_Url_shortenParameter {
+    public class Short_Url_shortenParameter: NSObject {
 
         // 需要转换的长链接，需要URLencoded，最多不超过20个。
-        var url_long: String
+        public var url_long: String
 
+        public init(url_long: String) {
+            self.url_long = url_long
+ }
         func value() -> [String: Any] {
             var params: [String: Any] = [:]
             params["url_long"] = url_long

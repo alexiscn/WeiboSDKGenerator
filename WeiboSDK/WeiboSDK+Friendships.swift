@@ -48,4 +48,18 @@ extension WeiboSDK {
         let params = param.value()
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
+
+    /// 获取两个用户之间是否存在关注关系
+    ///
+    /// - Parameters:
+    ///   - source_id: 源用户的UID。
+    ///   - source_screen_name: 源用户的微博昵称。
+    ///   - target_id: 目标用户的UID。
+    ///   - target_screen_name: 目标用户的微博昵称。
+    ///   - completion: Callback
+    public class func Friendships_show(param: Friendships_showParameter,completion: @escaping GenericNetworkingCompletion<Int>) {
+        let path = "/2/friendships/show.json"
+        let params = param.value()
+        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+    }
 }
