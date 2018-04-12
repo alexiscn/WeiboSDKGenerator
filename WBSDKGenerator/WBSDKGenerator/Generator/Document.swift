@@ -158,14 +158,16 @@ extension Document {
         content.append("    /// \(wbFunction.description)\n")
         content.append("    ///\n")
         content.append("    /// - Parameters:\n")
-        for param in wbFunction.parameters {
-            content.append("    ///   - \(param.name): \(param.description)\n")
+        
+        let type = "WBParameter.\(wbFunction.category).\(wbFunction.shortName)"
+        if wbFunction.parameters.count > 0 {
+            content.append("    ///   - \(wbFunction.shortName): Refer `\(type)` to see more details. \n")
         }
         content.append("    ///   - completion: Callback\n")
         content.append("    ")
         content.append("public class func \(wbFunction.signature)(")
         if wbFunction.parameters.count > 0 {
-            let type = "WBParameter.\(wbFunction.category).\(wbFunction.shortName)"
+            
             content.append("param: \(type),")
         }
         content.append("completion: @escaping GenericNetworkingCompletion<Int>")

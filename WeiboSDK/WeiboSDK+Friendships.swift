@@ -8,11 +8,7 @@ extension WeiboSDK {
     /// 获取用户粉丝列表
     ///
     /// - Parameters:
-    ///   - uid: 需要查询的用户UID。
-    ///   - screen_name: 需要查询的用户昵称。
-    ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
-    ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
-    ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
+    ///   - Followers: Refer `WBParameter.Friendships.Followers` to see more details. 
     ///   - completion: Callback
     public class func FriendshipsFollowers(param: WBParameter.Friendships.Followers,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers.json"
@@ -23,11 +19,7 @@ extension WeiboSDK {
     /// 获取用户的关注列表
     ///
     /// - Parameters:
-    ///   - uid: 需要查询的用户UID。
-    ///   - screen_name: 需要查询的用户昵称。
-    ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
-    ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
-    ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
+    ///   - Friends: Refer `WBParameter.Friendships.Friends` to see more details. 
     ///   - completion: Callback
     public class func FriendshipsFriends(param: WBParameter.Friendships.Friends,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/friends.json"
@@ -38,10 +30,7 @@ extension WeiboSDK {
     /// 获取用户粉丝UID列表
     ///
     /// - Parameters:
-    ///   - uid: 需要查询的用户UID。
-    ///   - screen_name: 需要查询的用户昵称。
-    ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
-    ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
+    ///   - Ids: Refer `WBParameter.Friendships.Ids` to see more details. 
     ///   - completion: Callback
     public class func FriendshipsIds(param: WBParameter.Friendships.Ids,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers/ids.json"
@@ -52,10 +41,7 @@ extension WeiboSDK {
     /// 获取两个用户之间是否存在关注关系
     ///
     /// - Parameters:
-    ///   - source_id: 源用户的UID。
-    ///   - source_screen_name: 源用户的微博昵称。
-    ///   - target_id: 目标用户的UID。
-    ///   - target_screen_name: 目标用户的微博昵称。
+    ///   - Show: Refer `WBParameter.Friendships.Show` to see more details. 
     ///   - completion: Callback
     public class func FriendshipsShow(param: WBParameter.Friendships.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/show.json"

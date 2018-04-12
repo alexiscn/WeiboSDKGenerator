@@ -8,7 +8,7 @@ extension WeiboSDK {
     /// 获取短链接在微博上的微博评论数
     ///
     /// - Parameters:
-    ///   - url_short: 需要取得分享数的短链接，需要URLencoded，最多不超过20个。
+    ///   - Counts: Refer `WBParameter.Short_Url.Counts` to see more details. 
     ///   - completion: Callback
     public class func Short_UrlCounts(param: WBParameter.Short_Url.Counts,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/comment/counts.json"
@@ -19,7 +19,7 @@ extension WeiboSDK {
     /// 短链转长链
     ///
     /// - Parameters:
-    ///   - url_short: 需要还原的短链接，需要URLencoded，最多不超过20个 。
+    ///   - Expand: Refer `WBParameter.Short_Url.Expand` to see more details. 
     ///   - completion: Callback
     public class func Short_UrlExpand(param: WBParameter.Short_Url.Expand,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/expand.json"
@@ -30,7 +30,7 @@ extension WeiboSDK {
     /// 长链转短链
     ///
     /// - Parameters:
-    ///   - url_long: 需要转换的长链接，需要URLencoded，最多不超过20个。
+    ///   - Shorten: Refer `WBParameter.Short_Url.Shorten` to see more details. 
     ///   - completion: Callback
     public class func Short_UrlShorten(param: WBParameter.Short_Url.Shorten,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/shorten.json"

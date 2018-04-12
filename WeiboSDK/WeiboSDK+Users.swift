@@ -8,7 +8,7 @@ extension WeiboSDK {
     /// 批量获取用户的粉丝数、关注数、微博数
     ///
     /// - Parameters:
-    ///   - uids: 需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。
+    ///   - Counts: Refer `WBParameter.Users.Counts` to see more details. 
     ///   - completion: Callback
     public class func UsersCounts(param: WBParameter.Users.Counts,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/counts.json"
@@ -19,7 +19,7 @@ extension WeiboSDK {
     /// 通过个性域名获取用户信息
     ///
     /// - Parameters:
-    ///   - domain: 需要查询的个性化域名。
+    ///   - DomainShow: Refer `WBParameter.Users.DomainShow` to see more details. 
     ///   - completion: Callback
     public class func UsersDomainShow(param: WBParameter.Users.DomainShow,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/domain_show.json"
@@ -30,8 +30,7 @@ extension WeiboSDK {
     /// 获取用户信息
     ///
     /// - Parameters:
-    ///   - uid: 需要查询的用户ID。
-    ///   - screen_name: 需要查询的用户昵称。
+    ///   - Show: Refer `WBParameter.Users.Show` to see more details. 
     ///   - completion: Callback
     public class func UsersShow(param: WBParameter.Users.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/users/show.json"

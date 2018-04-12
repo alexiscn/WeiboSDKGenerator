@@ -8,7 +8,7 @@ extension WeiboSDK {
     /// 批量获取指定微博的转发数评论数
     ///
     /// - Parameters:
-    ///   - ids: 需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。
+    ///   - Count: Refer `WBParameter.Statuses.Count` to see more details. 
     ///   - completion: Callback
     public class func StatusesCount(param: WBParameter.Statuses.Count,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/count.json"
@@ -19,13 +19,7 @@ extension WeiboSDK {
     /// 获取当前登录用户及其所关注用户的最新微博
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-    ///   - count: 单页返回的记录条数，最大不超过100，默认为20。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - base_app: 是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0。
-    ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
-    ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
+    ///   - HomeTimeline: Refer `WBParameter.Statuses.HomeTimeline` to see more details. 
     ///   - completion: Callback
     public class func StatusesHomeTimeline(param: WBParameter.Statuses.HomeTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/home_timeline.json"
@@ -36,13 +30,7 @@ extension WeiboSDK {
     /// 获取@当前用户的最新微博
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-    ///   - count: 单页返回的记录条数，最大不超过200，默认为20。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
-    ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博、2：来自微群，默认为0。
-    ///   - filter_by_type: 原创筛选类型，0：全部微博、1：原创的微博，默认为0。
+    ///   - Mentions: Refer `WBParameter.Statuses.Mentions` to see more details. 
     ///   - completion: Callback
     public class func StatusesMentions(param: WBParameter.Statuses.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/mentions.json"
@@ -53,12 +41,7 @@ extension WeiboSDK {
     /// 返回一条原创微博的最新转发微博
     ///
     /// - Parameters:
-    ///   - id: 需要查询的微博ID。
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-    ///   - count: 单页返回的记录条数，最大不超过200，默认为20。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
+    ///   - RepostTimeline: Refer `WBParameter.Statuses.RepostTimeline` to see more details. 
     ///   - completion: Callback
     public class func StatusesRepostTimeline(param: WBParameter.Statuses.RepostTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/repost_timeline.json"
@@ -69,9 +52,7 @@ extension WeiboSDK {
     /// 第三方分享链接到微博
     ///
     /// - Parameters:
-    ///   - status: 用户分享到微博的文本内容，必须做URLencode，内容不超过140个汉字，文本中不能包含“#话题词#”，同时文本中必须包含至少一个第三方分享到微博的网页URL，且该URL只能是该第三方（调用方）绑定域下的URL链接，绑定域在“我的应用 － 应用信息 － 基本应用信息编辑 － 安全域名”里设置。
-    ///   - pic: 用户想要分享到微博的图片，仅支持JPEG、GIF、PNG图片，上传图片大小限制为<5M。上传图片时，POST方式提交请求，需要采用multipart/form-data编码方式。
-    ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
+    ///   - Share: Refer `WBParameter.Statuses.Share` to see more details. 
     ///   - completion: Callback
     public class func StatusesShare(param: WBParameter.Statuses.Share,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/share.json"
@@ -82,7 +63,7 @@ extension WeiboSDK {
     /// 根据ID获取单条微博信息
     ///
     /// - Parameters:
-    ///   - id: 需要获取的微博ID。
+    ///   - Show: Refer `WBParameter.Statuses.Show` to see more details. 
     ///   - completion: Callback
     public class func StatusesShow(param: WBParameter.Statuses.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/show.json"
@@ -93,15 +74,7 @@ extension WeiboSDK {
     /// 获取用户发布的微博
     ///
     /// - Parameters:
-    ///   - uid: 需要查询的用户ID。
-    ///   - screen_name: 需要查询的用户昵称。
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
-    ///   - count: 单页返回的记录条数，最大不超过100，超过100以100处理，默认为20。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - base_app: 是否只获取当前应用的数据。0为否（所有数据），1为是（仅当前应用），默认为0。
-    ///   - feature: 过滤类型ID，0：全部、1：原创、2：图片、3：视频、4：音乐，默认为0。
-    ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
+    ///   - UserTimeline: Refer `WBParameter.Statuses.UserTimeline` to see more details. 
     ///   - completion: Callback
     public class func StatusesUserTimeline(param: WBParameter.Statuses.UserTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/statuses/user_timeline.json"

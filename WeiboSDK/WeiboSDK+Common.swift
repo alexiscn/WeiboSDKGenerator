@@ -8,7 +8,7 @@ extension WeiboSDK {
     /// 通过地址编码获取地址名称
     ///
     /// - Parameters:
-    ///   - codes: 需要查询的地址编码，多个之间用逗号分隔。
+    ///   - CodeToLocation: Refer `WBParameter.Common.CodeToLocation` to see more details. 
     ///   - completion: Callback
     public class func CommonCodeToLocation(param: WBParameter.Common.CodeToLocation,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/code_to_location.json"
@@ -19,9 +19,7 @@ extension WeiboSDK {
     /// 获取城市列表
     ///
     /// - Parameters:
-    ///   - province: 省份的省份代码。
-    ///   - capital: 城市的首字母，a-z，可为空代表返回全部，默认为全部。
-    ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
+    ///   - GetCity: Refer `WBParameter.Common.GetCity` to see more details. 
     ///   - completion: Callback
     public class func CommonGetCity(param: WBParameter.Common.GetCity,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_city.json"
@@ -32,8 +30,7 @@ extension WeiboSDK {
     /// 获取国家列表
     ///
     /// - Parameters:
-    ///   - capital: 国家的首字母，a-z，可为空代表返回全部，默认为全部。
-    ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
+    ///   - GetCountry: Refer `WBParameter.Common.GetCountry` to see more details. 
     ///   - completion: Callback
     public class func CommonGetCountry(param: WBParameter.Common.GetCountry,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_country.json"
@@ -44,9 +41,7 @@ extension WeiboSDK {
     /// 获取省份列表
     ///
     /// - Parameters:
-    ///   - country: 国家的国家代码。
-    ///   - capital: 省份的首字母，a-z，可为空代表返回全部，默认为全部。
-    ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
+    ///   - GetProvince: Refer `WBParameter.Common.GetProvince` to see more details. 
     ///   - completion: Callback
     public class func CommonGetProvince(param: WBParameter.Common.GetProvince,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_province.json"
@@ -57,7 +52,7 @@ extension WeiboSDK {
     /// 获取时区配置表
     ///
     /// - Parameters:
-    ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
+    ///   - GetTimezone: Refer `WBParameter.Common.GetTimezone` to see more details. 
     ///   - completion: Callback
     public class func CommonGetTimezone(param: WBParameter.Common.GetTimezone,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_timezone.json"

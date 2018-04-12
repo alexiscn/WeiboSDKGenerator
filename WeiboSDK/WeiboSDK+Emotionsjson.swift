@@ -8,8 +8,7 @@ extension WeiboSDK {
     /// 获取官方表情
     ///
     /// - Parameters:
-    ///   - type: 表情类别，face：普通表情、ani：魔法表情、cartoon：动漫表情，默认为face。
-    ///   - language: 语言类别，cnname：简体、twname：繁体，默认为cnname。
+    ///   - Emotions: Refer `WBParameter.Emotionsjson.Emotions` to see more details. 
     ///   - completion: Callback
     public class func EmotionsjsonEmotions(param: WBParameter.Emotionsjson.Emotions,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/emotions.json"

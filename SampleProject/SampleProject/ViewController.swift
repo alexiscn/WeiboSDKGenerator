@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let p = WBParameter.Common.GetCity(province: "beijing")
+        let _ = WBParameter.Common.GetCity(province: "beijing")
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,9 +8,7 @@ extension WeiboSDK {
     /// 搜索某一话题下的微博
     ///
     /// - Parameters:
-    ///   - q: 搜索的话题关键字，必须进行URLencode，utf-8编码。
-    ///   - count: 单页返回的记录条数，默认为10，最大为50。
-    ///   - page: 返回结果的页码，默认为1。
+    ///   - Topics: Refer `WBParameter.Search.Topics` to see more details. 
     ///   - completion: Callback
     public class func SearchTopics(param: WBParameter.Search.Topics,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/search/topics.json"

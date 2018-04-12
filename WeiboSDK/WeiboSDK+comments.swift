@@ -8,11 +8,7 @@ extension WeiboSDK {
     /// 我发出的评论列表
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
-    ///   - count: 单页返回的记录条数，默认为50。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
+    ///   - ByMe: Refer `WBParameter.Comments.ByMe` to see more details. 
     ///   - completion: Callback
     public class func CommentsByMe(param: WBParameter.Comments.ByMe,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/by_me.json"
@@ -23,10 +19,7 @@ extension WeiboSDK {
     /// 评论一条微博
     ///
     /// - Parameters:
-    ///   - comment: 评论内容，必须做URLencode，内容不超过140个汉字。
-    ///   - id: 需要评论的微博ID。
-    ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
-    ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
+    ///   - Create: Refer `WBParameter.Comments.Create` to see more details. 
     ///   - completion: Callback
     public class func CommentsCreate(param: WBParameter.Comments.Create,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/create.json"
@@ -37,7 +30,7 @@ extension WeiboSDK {
     /// 删除一条我的评论
     ///
     /// - Parameters:
-    ///   - cid: 要删除的评论ID，只能删除登录用户自己发布的评论。
+    ///   - Destroy: Refer `WBParameter.Comments.Destroy` to see more details. 
     ///   - completion: Callback
     public class func CommentsDestroy(param: WBParameter.Comments.Destroy,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy.json"
@@ -48,7 +41,7 @@ extension WeiboSDK {
     /// 批量删除我的评论
     ///
     /// - Parameters:
-    ///   - cids: 需要删除的评论ID，用半角逗号隔开，最多20个。
+    ///   - DestroyBatch: Refer `WBParameter.Comments.DestroyBatch` to see more details. 
     ///   - completion: Callback
     public class func CommentsDestroyBatch(param: WBParameter.Comments.DestroyBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/destroy_batch.json"
@@ -59,12 +52,7 @@ extension WeiboSDK {
     /// 获取@到我的评论
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
-    ///   - count: 单页返回的记录条数，默认为50。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
-    ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
+    ///   - Mentions: Refer `WBParameter.Comments.Mentions` to see more details. 
     ///   - completion: Callback
     public class func CommentsMentions(param: WBParameter.Comments.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/mentions.json"
@@ -75,12 +63,7 @@ extension WeiboSDK {
     /// 回复一条我收到的评论
     ///
     /// - Parameters:
-    ///   - cid: 需要回复的评论ID。
-    ///   - id: 需要评论的微博ID。
-    ///   - comment: 回复评论内容，必须做URLencode，内容不超过140个汉字。
-    ///   - without_mention: 回复中是否自动加入“回复@用户名”，0：是、1：否，默认为0。
-    ///   - comment_ori: 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
-    ///   - rip: 开发者上报的操作用户真实IP，形如：211.156.0.1。
+    ///   - Reply: Refer `WBParameter.Comments.Reply` to see more details. 
     ///   - completion: Callback
     public class func CommentsReply(param: WBParameter.Comments.Reply,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/reply.json"
@@ -91,12 +74,7 @@ extension WeiboSDK {
     /// 获取某条微博的评论列表
     ///
     /// - Parameters:
-    ///   - id: 需要查询的微博ID。
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
-    ///   - count: 单页返回的记录条数，默认为50。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
+    ///   - Show: Refer `WBParameter.Comments.Show` to see more details. 
     ///   - completion: Callback
     public class func CommentsShow(param: WBParameter.Comments.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/show.json"
@@ -107,7 +85,7 @@ extension WeiboSDK {
     /// 批量获取评论内容
     ///
     /// - Parameters:
-    ///   - cids: 需要查询的批量评论ID，用半角逗号分隔，最大50。
+    ///   - ShowBatch: Refer `WBParameter.Comments.ShowBatch` to see more details. 
     ///   - completion: Callback
     public class func CommentsShowBatch(param: WBParameter.Comments.ShowBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/show_batch.json"
@@ -118,11 +96,7 @@ extension WeiboSDK {
     /// 获取用户发送及收到的评论列表
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
-    ///   - count: 单页返回的记录条数，默认为50。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - trim_user: 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
+    ///   - Timeline: Refer `WBParameter.Comments.Timeline` to see more details. 
     ///   - completion: Callback
     public class func CommentsTimeline(param: WBParameter.Comments.Timeline,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/timeline.json"
@@ -133,12 +107,7 @@ extension WeiboSDK {
     /// 我收到的评论列表
     ///
     /// - Parameters:
-    ///   - since_id: 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
-    ///   - max_id: 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
-    ///   - count: 单页返回的记录条数，默认为50。
-    ///   - page: 返回结果的页码，默认为1。
-    ///   - filter_by_author: 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
-    ///   - filter_by_source: 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
+    ///   - ToMe: Refer `WBParameter.Comments.ToMe` to see more details. 
     ///   - completion: Callback
     public class func CommentsToMe(param: WBParameter.Comments.ToMe,completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/comments/to_me.json"
