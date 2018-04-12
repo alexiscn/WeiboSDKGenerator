@@ -8,9 +8,10 @@
 
 import Foundation
 
-// update to your local path
+// update to your settings
 let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/builds/"
 let WBOutputDir = "/Users/xushuifeng/github/WeiboSDKGenerator/WeiboSDK"
+let accessToken = "" // use access token to simulate API requests and parse response to model
 
 func doNecessaryWork() {
     

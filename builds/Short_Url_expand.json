@@ -1,1 +1,38 @@
-{"category": "Short_Url", "description": "短链转长链", "parameters": [{"optional": false, "type": "string", "name": "url_short", "description": "需要还原的短链接，需要URLencoded，最多不超过20个 。"}], "url": "https://api.weibo.com/2/short_url/expand.json", "response": [{"type": "string", "name": "url_short", "description": "短链接"}, {"type": "string", "name": "url_long", "description": "原始长链接"}, {"type": "int", "name": "type", "description": "链接的类型，0：普通网页、1：视频、2：音乐、3：活动、5、投票"}, {"type": "boolean", "name": "result", "description": "短链的可用状态，true：可用、false：不可用。"}], "signature": "Short_Url_expand", "path": "/2/short_url/expand.json", "method": "GET"}
+{
+    "category": "Short_Url", 
+    "description": "短链转长链", 
+    "parameters": [
+        {
+            "optional": false, 
+            "type": "string", 
+            "name": "url_short", 
+            "description": "需要还原的短链接，需要URLencoded，最多不超过20个 。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/short_url/expand.json", 
+    "response": [
+        {
+            "type": "string", 
+            "name": "url_short", 
+            "description": "短链接"
+        }, 
+        {
+            "type": "string", 
+            "name": "url_long", 
+            "description": "原始长链接"
+        }, 
+        {
+            "type": "int", 
+            "name": "type", 
+            "description": "链接的类型，0：普通网页、1：视频、2：音乐、3：活动、5、投票"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "result", 
+            "description": "短链的可用状态，true：可用、false：不可用。"
+        }
+    ], 
+    "signature": "Short_Url_expand", 
+    "path": "/2/short_url/expand.json", 
+    "method": "GET"
+}

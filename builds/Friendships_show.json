@@ -1,1 +1,35 @@
-{"category": "Friendships", "description": "获取两个用户之间是否存在关注关系", "parameters": [{"optional": true, "type": "int64", "name": "source_id", "description": "源用户的UID。"}, {"optional": true, "type": "string", "name": "source_screen_name", "description": "源用户的微博昵称。"}, {"optional": true, "type": "int64", "name": "target_id", "description": "目标用户的UID。"}, {"optional": true, "type": "string", "name": "target_screen_name", "description": "目标用户的微博昵称。"}], "url": "https://api.weibo.com/2/friendships/show.json", "response": [], "signature": "Friendships_show", "path": "/2/friendships/show.json", "method": "GET"}
+{
+    "category": "Friendships", 
+    "description": "获取两个用户之间是否存在关注关系", 
+    "parameters": [
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "source_id", 
+            "description": "源用户的UID。"
+        }, 
+        {
+            "optional": true, 
+            "type": "string", 
+            "name": "source_screen_name", 
+            "description": "源用户的微博昵称。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "target_id", 
+            "description": "目标用户的UID。"
+        }, 
+        {
+            "optional": true, 
+            "type": "string", 
+            "name": "target_screen_name", 
+            "description": "目标用户的微博昵称。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/friendships/show.json", 
+    "response": [], 
+    "signature": "Friendships_show", 
+    "path": "/2/friendships/show.json", 
+    "method": "GET"
+}

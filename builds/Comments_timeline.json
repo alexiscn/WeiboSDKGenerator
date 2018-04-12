@@ -1,1 +1,87 @@
-{"category": "Comments", "description": "获取用户发送及收到的评论列表", "parameters": [{"optional": true, "type": "int64", "name": "since_id", "description": "若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。"}, {"optional": true, "type": "int64", "name": "max_id", "description": "若指定此参数，则返回ID小于或等于max_id的评论，默认为0。"}, {"optional": true, "type": "int", "name": "count", "description": "单页返回的记录条数，默认为50。"}, {"optional": true, "type": "int", "name": "page", "description": "返回结果的页码，默认为1。"}, {"optional": true, "type": "int", "name": "trim_user", "description": "返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。"}], "url": "https://api.weibo.com/2/comments/timeline.json", "response": [{"type": "string", "name": "created_at", "description": "评论创建时间"}, {"type": "int64", "name": "id", "description": "评论的ID"}, {"type": "string", "name": "text", "description": "评论的内容"}, {"type": "string", "name": "source", "description": "评论的来源"}, {"type": "object", "name": "user", "description": "评论作者的用户信息字段 详细"}, {"type": "string", "name": "mid", "description": "评论的MID"}, {"type": "string", "name": "idstr", "description": "字符串型的评论ID"}, {"type": "object", "name": "status", "description": "评论的微博信息字段 详细"}, {"type": "object", "name": "reply_comment", "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"}], "signature": "Comments_timeline", "path": "/2/comments/timeline.json", "method": "GET"}
+{
+    "category": "Comments", 
+    "description": "获取用户发送及收到的评论列表", 
+    "parameters": [
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "since_id", 
+            "description": "若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "max_id", 
+            "description": "若指定此参数，则返回ID小于或等于max_id的评论，默认为0。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int", 
+            "name": "count", 
+            "description": "单页返回的记录条数，默认为50。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int", 
+            "name": "page", 
+            "description": "返回结果的页码，默认为1。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int", 
+            "name": "trim_user", 
+            "description": "返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/comments/timeline.json", 
+    "response": [
+        {
+            "type": "string", 
+            "name": "created_at", 
+            "description": "评论创建时间"
+        }, 
+        {
+            "type": "int64", 
+            "name": "id", 
+            "description": "评论的ID"
+        }, 
+        {
+            "type": "string", 
+            "name": "text", 
+            "description": "评论的内容"
+        }, 
+        {
+            "type": "string", 
+            "name": "source", 
+            "description": "评论的来源"
+        }, 
+        {
+            "type": "object", 
+            "name": "user", 
+            "description": "评论作者的用户信息字段 详细"
+        }, 
+        {
+            "type": "string", 
+            "name": "mid", 
+            "description": "评论的MID"
+        }, 
+        {
+            "type": "string", 
+            "name": "idstr", 
+            "description": "字符串型的评论ID"
+        }, 
+        {
+            "type": "object", 
+            "name": "status", 
+            "description": "评论的微博信息字段 详细"
+        }, 
+        {
+            "type": "object", 
+            "name": "reply_comment", 
+            "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
+        }
+    ], 
+    "signature": "Comments_timeline", 
+    "path": "/2/comments/timeline.json", 
+    "method": "GET"
+}

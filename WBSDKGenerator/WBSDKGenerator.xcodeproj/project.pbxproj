@@ -75,6 +75,7 @@
 		A3811BD5207DEDD900E20BAD /* WBSDKGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				A38B2EC3207EFE8700456815 /* JSON2Swift */,
 				A3811BD6207DEDD900E20BAD /* main.swift */,
 				A3811BDD207DEE4000E20BAD /* APILoader.swift */,
 				A3811BDF207DEE4E00E20BAD /* APIGenerator.swift */,
@@ -85,6 +86,13 @@
 				A3811C09207E25FA00E20BAD /* Document.swift */,
 			);
 			path = WBSDKGenerator;
+			sourceTree = "<group>";
+		};
+		A38B2EC3207EFE8700456815 /* JSON2Swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSON2Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

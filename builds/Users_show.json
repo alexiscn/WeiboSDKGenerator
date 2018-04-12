@@ -1,1 +1,194 @@
-{"category": "Users", "description": "获取用户信息", "parameters": [{"optional": true, "type": "int64", "name": "uid", "description": "需要查询的用户ID。"}, {"optional": true, "type": "string", "name": "screen_name", "description": "需要查询的用户昵称。"}], "url": "https://api.weibo.com/2/users/show.json", "response": [{"type": "int64", "name": "id", "description": "用户UID"}, {"type": "string", "name": "idstr", "description": "字符串型的用户UID"}, {"type": "string", "name": "screen_name", "description": "用户昵称"}, {"type": "string", "name": "name", "description": "友好显示名称"}, {"type": "int", "name": "province", "description": "用户所在省级ID"}, {"type": "int", "name": "city", "description": "用户所在城市ID"}, {"type": "string", "name": "location", "description": "用户所在地"}, {"type": "string", "name": "description", "description": "用户个人描述"}, {"type": "string", "name": "url", "description": "用户博客地址"}, {"type": "string", "name": "profile_image_url", "description": "用户头像地址（中图），50×50像素"}, {"type": "string", "name": "profile_url", "description": "用户的微博统一URL地址"}, {"type": "string", "name": "domain", "description": "用户的个性化域名"}, {"type": "string", "name": "weihao", "description": "用户的微号"}, {"type": "string", "name": "gender", "description": "性别，m：男、f：女、n：未知"}, {"type": "int", "name": "followers_count", "description": "粉丝数"}, {"type": "int", "name": "friends_count", "description": "关注数"}, {"type": "int", "name": "statuses_count", "description": "微博数"}, {"type": "int", "name": "favourites_count", "description": "收藏数"}, {"type": "string", "name": "created_at", "description": "用户创建（注册）时间"}, {"type": "boolean", "name": "following", "description": "暂未支持"}, {"type": "boolean", "name": "allow_all_act_msg", "description": "是否允许所有人给我发私信，true：是，false：否"}, {"type": "boolean", "name": "geo_enabled", "description": "是否允许标识用户的地理位置，true：是，false：否"}, {"type": "boolean", "name": "verified", "description": "是否是微博认证用户，即加V用户，true：是，false：否"}, {"type": "int", "name": "verified_type", "description": "暂未支持"}, {"type": "string", "name": "remark", "description": "用户备注信息，只有在查询用户关系时才返回此字段"}, {"type": "object", "name": "status", "description": "用户的最近一条微博信息字段 详细"}, {"type": "boolean", "name": "allow_all_comment", "description": "是否允许所有人对我的微博进行评论，true：是，false：否"}, {"type": "string", "name": "avatar_large", "description": "用户头像地址（大图），180×180像素"}, {"type": "string", "name": "avatar_hd", "description": "用户头像地址（高清），高清头像原图"}, {"type": "string", "name": "verified_reason", "description": "认证原因"}, {"type": "boolean", "name": "follow_me", "description": "该用户是否关注当前登录用户，true：是，false：否"}, {"type": "int", "name": "online_status", "description": "用户的在线状态，0：不在线、1：在线"}, {"type": "int", "name": "bi_followers_count", "description": "用户的互粉数"}, {"type": "string", "name": "lang", "description": "用户当前的语言版本，zh-cn：简体中文，zh-tw：繁体中文，en：英语"}], "signature": "Users_show", "path": "/2/users/show.json", "method": "GET"}
+{
+    "category": "Users", 
+    "description": "获取用户信息", 
+    "parameters": [
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "uid", 
+            "description": "需要查询的用户ID。"
+        }, 
+        {
+            "optional": true, 
+            "type": "string", 
+            "name": "screen_name", 
+            "description": "需要查询的用户昵称。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/users/show.json", 
+    "response": [
+        {
+            "type": "int64", 
+            "name": "id", 
+            "description": "用户UID"
+        }, 
+        {
+            "type": "string", 
+            "name": "idstr", 
+            "description": "字符串型的用户UID"
+        }, 
+        {
+            "type": "string", 
+            "name": "screen_name", 
+            "description": "用户昵称"
+        }, 
+        {
+            "type": "string", 
+            "name": "name", 
+            "description": "友好显示名称"
+        }, 
+        {
+            "type": "int", 
+            "name": "province", 
+            "description": "用户所在省级ID"
+        }, 
+        {
+            "type": "int", 
+            "name": "city", 
+            "description": "用户所在城市ID"
+        }, 
+        {
+            "type": "string", 
+            "name": "location", 
+            "description": "用户所在地"
+        }, 
+        {
+            "type": "string", 
+            "name": "description", 
+            "description": "用户个人描述"
+        }, 
+        {
+            "type": "string", 
+            "name": "url", 
+            "description": "用户博客地址"
+        }, 
+        {
+            "type": "string", 
+            "name": "profile_image_url", 
+            "description": "用户头像地址（中图），50×50像素"
+        }, 
+        {
+            "type": "string", 
+            "name": "profile_url", 
+            "description": "用户的微博统一URL地址"
+        }, 
+        {
+            "type": "string", 
+            "name": "domain", 
+            "description": "用户的个性化域名"
+        }, 
+        {
+            "type": "string", 
+            "name": "weihao", 
+            "description": "用户的微号"
+        }, 
+        {
+            "type": "string", 
+            "name": "gender", 
+            "description": "性别，m：男、f：女、n：未知"
+        }, 
+        {
+            "type": "int", 
+            "name": "followers_count", 
+            "description": "粉丝数"
+        }, 
+        {
+            "type": "int", 
+            "name": "friends_count", 
+            "description": "关注数"
+        }, 
+        {
+            "type": "int", 
+            "name": "statuses_count", 
+            "description": "微博数"
+        }, 
+        {
+            "type": "int", 
+            "name": "favourites_count", 
+            "description": "收藏数"
+        }, 
+        {
+            "type": "string", 
+            "name": "created_at", 
+            "description": "用户创建（注册）时间"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "following", 
+            "description": "暂未支持"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "allow_all_act_msg", 
+            "description": "是否允许所有人给我发私信，true：是，false：否"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "geo_enabled", 
+            "description": "是否允许标识用户的地理位置，true：是，false：否"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "verified", 
+            "description": "是否是微博认证用户，即加V用户，true：是，false：否"
+        }, 
+        {
+            "type": "int", 
+            "name": "verified_type", 
+            "description": "暂未支持"
+        }, 
+        {
+            "type": "string", 
+            "name": "remark", 
+            "description": "用户备注信息，只有在查询用户关系时才返回此字段"
+        }, 
+        {
+            "type": "object", 
+            "name": "status", 
+            "description": "用户的最近一条微博信息字段 详细"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "allow_all_comment", 
+            "description": "是否允许所有人对我的微博进行评论，true：是，false：否"
+        }, 
+        {
+            "type": "string", 
+            "name": "avatar_large", 
+            "description": "用户头像地址（大图），180×180像素"
+        }, 
+        {
+            "type": "string", 
+            "name": "avatar_hd", 
+            "description": "用户头像地址（高清），高清头像原图"
+        }, 
+        {
+            "type": "string", 
+            "name": "verified_reason", 
+            "description": "认证原因"
+        }, 
+        {
+            "type": "boolean", 
+            "name": "follow_me", 
+            "description": "该用户是否关注当前登录用户，true：是，false：否"
+        }, 
+        {
+            "type": "int", 
+            "name": "online_status", 
+            "description": "用户的在线状态，0：不在线、1：在线"
+        }, 
+        {
+            "type": "int", 
+            "name": "bi_followers_count", 
+            "description": "用户的互粉数"
+        }, 
+        {
+            "type": "string", 
+            "name": "lang", 
+            "description": "用户当前的语言版本，zh-cn：简体中文，zh-tw：繁体中文，en：英语"
+        }
+    ], 
+    "signature": "Users_show", 
+    "path": "/2/users/show.json", 
+    "method": "GET"
+}

@@ -105,7 +105,7 @@ def parse_detail_wiki(url, desc):
 
     file_path = builds_dir + "/" + api_category + "_" + filename
     with open(file_path, mode='w') as f:
-        f.write(json.dumps(api_dict, encoding='UTF-8', ensure_ascii=False))
+        f.write(json.dumps(api_dict, encoding='UTF-8', ensure_ascii=False, indent=4))
     print "parsing detail page done ====== "
 
 

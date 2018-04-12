@@ -1,1 +1,35 @@
-{"category": "Friendships", "description": "获取用户粉丝UID列表", "parameters": [{"optional": true, "type": "int64", "name": "uid", "description": "需要查询的用户UID。"}, {"optional": true, "type": "string", "name": "screen_name", "description": "需要查询的用户昵称。"}, {"optional": true, "type": "int", "name": "count", "description": "单页返回的记录条数，默认为5，最大不超过5。"}, {"optional": true, "type": "int", "name": "cursor", "description": "返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。"}], "url": "https://api.weibo.com/2/friendships/followers/ids.json", "response": [], "signature": "Friendships_ids", "path": "/2/friendships/followers/ids.json", "method": "GET"}
+{
+    "category": "Friendships", 
+    "description": "获取用户粉丝UID列表", 
+    "parameters": [
+        {
+            "optional": true, 
+            "type": "int64", 
+            "name": "uid", 
+            "description": "需要查询的用户UID。"
+        }, 
+        {
+            "optional": true, 
+            "type": "string", 
+            "name": "screen_name", 
+            "description": "需要查询的用户昵称。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int", 
+            "name": "count", 
+            "description": "单页返回的记录条数，默认为5，最大不超过5。"
+        }, 
+        {
+            "optional": true, 
+            "type": "int", 
+            "name": "cursor", 
+            "description": "返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/friendships/followers/ids.json", 
+    "response": [], 
+    "signature": "Friendships_ids", 
+    "path": "/2/friendships/followers/ids.json", 
+    "method": "GET"
+}

@@ -1,1 +1,63 @@
-{"category": "Comments", "description": "批量获取评论内容", "parameters": [{"optional": false, "type": "int64", "name": "cids", "description": "需要查询的批量评论ID，用半角逗号分隔，最大50。"}], "url": "https://api.weibo.com/2/comments/show_batch.json", "response": [{"type": "string", "name": "created_at", "description": "评论创建时间"}, {"type": "int64", "name": "id", "description": "评论的ID"}, {"type": "string", "name": "text", "description": "评论的内容"}, {"type": "string", "name": "source", "description": "评论的来源"}, {"type": "object", "name": "user", "description": "评论作者的用户信息字段 详细"}, {"type": "string", "name": "mid", "description": "评论的MID"}, {"type": "string", "name": "idstr", "description": "字符串型的评论ID"}, {"type": "object", "name": "status", "description": "评论的微博信息字段 详细"}, {"type": "object", "name": "reply_comment", "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"}], "signature": "Comments_show_batch", "path": "/2/comments/show_batch.json", "method": "GET"}
+{
+    "category": "Comments", 
+    "description": "批量获取评论内容", 
+    "parameters": [
+        {
+            "optional": false, 
+            "type": "int64", 
+            "name": "cids", 
+            "description": "需要查询的批量评论ID，用半角逗号分隔，最大50。"
+        }
+    ], 
+    "url": "https://api.weibo.com/2/comments/show_batch.json", 
+    "response": [
+        {
+            "type": "string", 
+            "name": "created_at", 
+            "description": "评论创建时间"
+        }, 
+        {
+            "type": "int64", 
+            "name": "id", 
+            "description": "评论的ID"
+        }, 
+        {
+            "type": "string", 
+            "name": "text", 
+            "description": "评论的内容"
+        }, 
+        {
+            "type": "string", 
+            "name": "source", 
+            "description": "评论的来源"
+        }, 
+        {
+            "type": "object", 
+            "name": "user", 
+            "description": "评论作者的用户信息字段 详细"
+        }, 
+        {
+            "type": "string", 
+            "name": "mid", 
+            "description": "评论的MID"
+        }, 
+        {
+            "type": "string", 
+            "name": "idstr", 
+            "description": "字符串型的评论ID"
+        }, 
+        {
+            "type": "object", 
+            "name": "status", 
+            "description": "评论的微博信息字段 详细"
+        }, 
+        {
+            "type": "object", 
+            "name": "reply_comment", 
+            "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
+        }
+    ], 
+    "signature": "Comments_show_batch", 
+    "path": "/2/comments/show_batch.json", 
+    "method": "GET"
+}
