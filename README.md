@@ -21,6 +21,8 @@ This project just demonstrate how can we generate Weibo SDK via API wiki.
 2. fetch API response and generate API response model
 
 3. create Weiobo SDK based on [GenericNetworking](https://github.com/alexiscn/GenericNetworking) 
+
+![Flow](Assets/ProcessFlow.jpg)
  
 
 # Contents in Directory

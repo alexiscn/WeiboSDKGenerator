@@ -1,8 +1,8 @@
 //
-//  APILoader.swift
+//  WBModels.swift
 //  WBSDKGenerator
 //
-//  Created by xu.shuifeng on 2018/4/11.
+//  Created by xu.shuifeng on 2018/4/12.
 //  Copyright © 2018 shuifeng.me. All rights reserved.
 //
 
@@ -29,6 +29,20 @@ struct WBFunction: Codable {
     let parameters: [WBParameter]
     
     let response: [WBResponse]
+    
+    static func fromLocalFilePath(_ path: String) -> WBFunction? {
+        let url = URL(fileURLWithPath: path)
+        if let data = try? Data(contentsOf: url) {
+            do {
+                let decoder = JSONDecoder()
+                let f = try decoder.decode(WBFunction.self, from: data)
+                return f
+            } catch (let error as NSError) {
+                print(error.localizedDescription + path)
+            }
+        }
+        return nil
+    }
 }
 
 enum WBHTTPMethod: String, Codable {
@@ -48,20 +62,4 @@ struct WBResponse: Codable {
     let description: String
 }
 
-class APILoader {
-    
-    func load(at path: String) -> WBFunction? {
-        let url = URL(fileURLWithPath: path)
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        do {
-            let decoder = JSONDecoder()
-            let f = try decoder.decode(WBFunction.self, from: data)
-            return f
-        } catch (let error as NSError) {
-            print(error.localizedDescription + path)
-        }
-        return nil
-    }
-}
+

@@ -10,15 +10,21 @@ import Foundation
 
 class Document {
     
-    let filename: String
+    let wbFunction: WBFunction
     
-    init(filename: String) {
-        self.filename = filename
+    init(wbFunction: WBFunction) {
+        self.wbFunction = wbFunction
     }
     
     var functions: [WBFunction] = []
     
-    func writeFunction(_ wbFuc: WBFunction) {
+    func generateFunction() {
+        
+    }
+    
+    func generateRequestParam() {
+        
+        //FileManager.default.fileExists(atPath: <#T##String#>)
         
     }
     

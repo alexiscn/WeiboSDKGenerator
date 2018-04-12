@@ -50,6 +50,8 @@ class APIGenerator {
         }
     }
     
+    
+    
     func generateFunc() -> String {
         
         var content = ""

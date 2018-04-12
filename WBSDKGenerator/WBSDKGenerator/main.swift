@@ -37,8 +37,7 @@ func generate() {
         for file in files {
             print("processing file:\(file)")
             let path = buildPath.appending(file)
-            let loader = APILoader()
-            if let f = loader.load(at: path) {
+            if let f = WBFunction.fromLocalFilePath(path) {
                 let generator = APIGenerator(wbFunction: f)
                 generator.generate()
             }
