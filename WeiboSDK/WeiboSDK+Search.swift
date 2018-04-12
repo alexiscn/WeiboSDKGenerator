@@ -8,15 +8,13 @@ extension WeiboSDK {
     /// 搜索某一话题下的微博
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - q: 搜索的话题关键字，必须进行URLencode，utf-8编码。
     ///   - count: 单页返回的记录条数，默认为10，最大为50。
     ///   - page: 返回结果的页码，默认为1。
     ///   - completion: Callback
-    public class func Search_topics(access_token: String, q: String, count: Int?, page: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Search_topics(q: String, count: Int?, page: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/search/topics.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["q"] = q
         if let count = count {
             params["count"] = count

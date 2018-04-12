@@ -8,17 +8,15 @@ extension WeiboSDK {
     /// 获取用户粉丝列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - uid: 需要查询的用户UID。
     ///   - screen_name: 需要查询的用户昵称。
     ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
     ///   - completion: Callback
-    public class func Friendships_followers(access_token: String, uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, trim_status: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Friendships_followers(uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, trim_status: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let uid = uid {
             params["uid"] = uid
         }
@@ -40,17 +38,15 @@ extension WeiboSDK {
     /// 获取用户的关注列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - uid: 需要查询的用户UID。
     ///   - screen_name: 需要查询的用户昵称。
     ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - trim_status: 返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。
     ///   - completion: Callback
-    public class func Friendships_friends(access_token: String, uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, trim_status: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Friendships_friends(uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, trim_status: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/friends.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let uid = uid {
             params["uid"] = uid
         }
@@ -72,16 +68,14 @@ extension WeiboSDK {
     /// 获取用户粉丝UID列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - uid: 需要查询的用户UID。
     ///   - screen_name: 需要查询的用户昵称。
     ///   - count: 单页返回的记录条数，默认为5，最大不超过5。
     ///   - cursor: 返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。
     ///   - completion: Callback
-    public class func Friendships_ids(access_token: String, uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Friendships_ids(uid: Int64?, screen_name: String?, count: Int?, cursor: Int?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/followers/ids.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let uid = uid {
             params["uid"] = uid
         }
@@ -100,16 +94,14 @@ extension WeiboSDK {
     /// 获取两个用户之间是否存在关注关系
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - source_id: 源用户的UID。
     ///   - source_screen_name: 源用户的微博昵称。
     ///   - target_id: 目标用户的UID。
     ///   - target_screen_name: 目标用户的微博昵称。
     ///   - completion: Callback
-    public class func Friendships_show(access_token: String, source_id: Int64?, source_screen_name: String?, target_id: Int64?, target_screen_name: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Friendships_show(source_id: Int64?, source_screen_name: String?, target_id: Int64?, target_screen_name: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/friendships/show.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let source_id = source_id {
             params["source_id"] = source_id
         }

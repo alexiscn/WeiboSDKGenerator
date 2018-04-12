@@ -8,13 +8,11 @@ extension WeiboSDK {
     /// 通过地址编码获取地址名称
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - codes: 需要查询的地址编码，多个之间用逗号分隔。
     ///   - completion: Callback
-    public class func Common_code_to_location(access_token: String, codes: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_code_to_location(codes: String, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/code_to_location.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["codes"] = codes
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
@@ -22,15 +20,13 @@ extension WeiboSDK {
     /// 获取城市列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - province: 省份的省份代码。
     ///   - capital: 城市的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_city(access_token: String, province: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_city(province: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_city.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["province"] = province
         if let capital = capital {
             params["capital"] = capital
@@ -44,14 +40,12 @@ extension WeiboSDK {
     /// 获取国家列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - capital: 国家的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_country(access_token: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_country(capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_country.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let capital = capital {
             params["capital"] = capital
         }
@@ -64,15 +58,13 @@ extension WeiboSDK {
     /// 获取省份列表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - country: 国家的国家代码。
     ///   - capital: 省份的首字母，a-z，可为空代表返回全部，默认为全部。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_province(access_token: String, country: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_province(country: String, capital: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_province.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["country"] = country
         if let capital = capital {
             params["capital"] = capital
@@ -86,13 +78,11 @@ extension WeiboSDK {
     /// 获取时区配置表
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - language: 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
     ///   - completion: Callback
-    public class func Common_get_timezone(access_token: String, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Common_get_timezone(language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/common/get_timezone.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let language = language {
             params["language"] = language
         }

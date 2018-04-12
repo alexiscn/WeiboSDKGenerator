@@ -1,0 +1,1 @@
+{"category": "Account", "description": "授权之后获取用户的UID", "parameters": [], "url": "https://api.weibo.com/2/account/get_uid.json", "response": [], "signature": "Account_get_uid", "path": "/2/account/get_uid.json", "method": "GET"}

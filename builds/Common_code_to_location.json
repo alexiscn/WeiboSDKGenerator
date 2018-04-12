@@ -1,0 +1,1 @@
+{"category": "Common", "description": "通过地址编码获取地址名称", "parameters": [{"optional": false, "type": "string", "name": "codes", "description": "需要查询的地址编码，多个之间用逗号分隔。"}], "url": "https://api.weibo.com/2/common/code_to_location.json", "response": [], "signature": "Common_code_to_location", "path": "/2/common/code_to_location.json", "method": "GET"}

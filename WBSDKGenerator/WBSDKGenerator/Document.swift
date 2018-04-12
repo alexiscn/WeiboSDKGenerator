@@ -18,6 +18,10 @@ class Document {
     
     var functions: [WBFunction] = []
     
+    func writeFunction(_ wbFuc: WBFunction) {
+        
+    }
+    
     func flush() {
         
     }

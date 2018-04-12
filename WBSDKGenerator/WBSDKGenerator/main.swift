@@ -9,7 +9,7 @@
 import Foundation
 
 // update to your local path
-let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/build/"
+let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/builds/"
 let WBOutputDir = "/Users/xushuifeng/github/WeiboSDKGenerator/WeiboSDK"
 
 func doNecessaryWork() {

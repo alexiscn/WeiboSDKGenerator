@@ -8,13 +8,11 @@ extension WeiboSDK {
     /// 获取短链接在微博上的微博评论数
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - url_short: 需要取得分享数的短链接，需要URLencoded，最多不超过20个。
     ///   - completion: Callback
-    public class func Short_Url_counts(access_token: String, url_short: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_Url_counts(url_short: String, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/comment/counts.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["url_short"] = url_short
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
@@ -22,13 +20,11 @@ extension WeiboSDK {
     /// 短链转长链
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - url_short: 需要还原的短链接，需要URLencoded，最多不超过20个 。
     ///   - completion: Callback
-    public class func Short_Url_expand(access_token: String, url_short: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_Url_expand(url_short: String, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/expand.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["url_short"] = url_short
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }
@@ -36,13 +32,11 @@ extension WeiboSDK {
     /// 长链转短链
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - url_long: 需要转换的长链接，需要URLencoded，最多不超过20个。
     ///   - completion: Callback
-    public class func Short_Url_shorten(access_token: String, url_long: String, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Short_Url_shorten(url_long: String, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/short_url/shorten.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         params["url_long"] = url_long
         GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
     }

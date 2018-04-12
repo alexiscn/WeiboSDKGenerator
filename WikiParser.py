@@ -21,11 +21,13 @@ if sys.getdefaultencoding() != defaultencoding:
 
 base_url = 'http://open.weibo.com'
 
+builds_dir = "builds"
+
 
 def parse_main_wiki():
     url = 'http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI'
     content = requests.get(url).text
-    soup = BeautifulSoup(content, "html5lib")
+    soup = BeautifulSoup(content, "html.parser")
     table = soup.find_all(class_='wiki_table')
     parse_main_wiki_table(table)
 
@@ -61,7 +63,7 @@ def parse_detail_wiki(url, desc):
     print url
 
     content = requests.get(url).text
-    soup = BeautifulSoup(content, "html5lib")
+    soup = BeautifulSoup(content, "html.parser")
 
     api_dict = dict()
 
@@ -101,7 +103,7 @@ def parse_detail_wiki(url, desc):
     if not filename.endswith('json'):
         return
 
-    file_path = "build/" + api_category + "_" + filename
+    file_path = builds_dir + "/" + api_category + "_" + filename
     with open(file_path, mode='w') as f:
         f.write(json.dumps(api_dict, encoding='UTF-8', ensure_ascii=False))
     print "parsing detail page done ====== "
@@ -114,6 +116,8 @@ def parse_request_parameters(table):
         tds = line.find_all('td')
         if len(tds) == 4:
             name = tds[0].get_text().rstrip()
+            if name == 'access_token':
+                continue
             is_must = tds[1].get_text().rstrip()
             b_optional = True if is_must == "false" else False
             param_type = tds[2].get_text().rstrip()
@@ -147,8 +151,9 @@ def parse_response_model(table):
 
 
 if __name__ == '__main__':
-    shutil.rmtree('build')
-    os.mkdir('build')
+    if os.path.exists(builds_dir):
+        shutil.rmtree(builds_dir)
+    os.mkdir(builds_dir)
     parse_main_wiki()
 
 

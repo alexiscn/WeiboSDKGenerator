@@ -1,0 +1,1 @@
+{"category": "Short_Url", "description": "获取短链接在微博上的微博评论数", "parameters": [{"optional": false, "type": "string", "name": "url_short", "description": "需要取得分享数的短链接，需要URLencoded，最多不超过20个。"}], "url": "https://api.weibo.com/2/short_url/comment/counts.json", "response": [], "signature": "Short_Url_counts", "path": "/2/short_url/comment/counts.json", "method": "GET"}

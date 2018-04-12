@@ -8,14 +8,12 @@ extension WeiboSDK {
     /// 获取官方表情
     ///
     /// - Parameters:
-    ///   - access_token: 采用OAuth授权方式为必填参数，OAuth授权后获得。
     ///   - type: 表情类别，face：普通表情、ani：魔法表情、cartoon：动漫表情，默认为face。
     ///   - language: 语言类别，cnname：简体、twname：繁体，默认为cnname。
     ///   - completion: Callback
-    public class func Emotionsjson_emotions(access_token: String, type: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
+    public class func Emotionsjson_emotions(type: String?, language: String?, completion: @escaping GenericNetworkingCompletion<Int>) {
         let path = "/2/emotions.json"
         var params: [String: Any] = [:]
-        params["access_token"] = access_token
         if let type = type {
             params["type"] = type
         }
