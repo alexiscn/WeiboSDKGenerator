@@ -1,6 +1,6 @@
 # NOTE!!!
 
-Since [Weibo](https://weibo.com) Open API does not provide post Weibo anymore. You should prefer to use [official weibosdk](https://github.com/sinaweibosdk/weibo_ios_sdk) .
+Since [Weibo Open API](http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI) does not provide post Weibo anymore. You should prefer to use [official weibosdk](https://github.com/sinaweibosdk/weibo_ios_sdk) .
 
 # WeiboSDKGenerator
 Weibo iOS SDK Generator
@@ -16,11 +16,11 @@ This project just demonstrate how can we generate Weibo SDK via API wiki.
 
 # How it works
 
-1. parse [Weibo wiki](http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI),
+1. parse [Weibo wiki](http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI) int API JSON file
 
 2. fetch API response and generate API response model
 
-3. create Weiobo SDK based on [GenericNetworking](https://github.com/alexiscn/GenericNetworking) 
+3. create Weibo SDK based on [GenericNetworking](https://github.com/alexiscn/GenericNetworking) 
 
 ![Flow](Assets/ProcessFlow.jpg)
  
