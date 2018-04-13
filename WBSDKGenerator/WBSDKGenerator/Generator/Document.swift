@@ -8,19 +8,14 @@
 
 import Foundation
 
-enum DocumentMeta {
-    case `func`
-    case `class`
-    case `struct`
-    case `extension`
-}
-
-struct DocumentLine {
+struct Line {
+    
     let content: String
+    
     let indent: Indent
     
-    var newLine: DocumentLine {
-        return DocumentLine(content: "\n", indent: .level0)
+    static var newLine: Line {
+        return Line(content: "\n", indent: .level0)
     }
     
     func text() -> String {
@@ -94,51 +89,54 @@ extension Document {
     
     fileprivate func parameterMembers() -> String {
         
-        var content = ""
-        content.append("        public class \(wbFunction.signature): NSObject {\n\n")
+        var lines: [Line] = []
+        
+        lines.append(Line(content: "public class \(wbFunction.signature): NSObject {", indent: .level2))
         for param in wbFunction.parameters {
-            content.append("            // \(param.description)\n")
-            content.append("            public var ")
-            content.append("\(param.name): \(swiftTypeFor(param.type))")
+            lines.append(Line(content: "// \(param.description)", indent: .level3))
+            var declaration = "public var \(param.name): \(swiftTypeFor(param.type))"
             if param.optional {
-                content.append("?")
+                declaration += "?"
             }
-            content.append("\n")
-            content.append("\n")
+            lines.append(Line(content: declaration, indent: .level3))
         }
         
         let initialProperties = wbFunction.parameters.filter({ return $0.optional == false })
         if initialProperties.count > 0 {
-            content.append("            public init(")
+            var initFunction = "public init("
             for property in initialProperties {
-                content.append("\(property.name): \(swiftTypeFor(property.type)), ")
+                initFunction.append("\(property.name): \(swiftTypeFor(property.type)), ")
             }
-            content.removeLast()
-            content.removeLast()
-            content.append(") {\n")
+            initFunction.removeLast()
+            initFunction.removeLast()
+            initFunction.append(") {")
+            lines.append(Line(content: initFunction, indent: .level3))
             for property in initialProperties {
-                content.append("                self.\(property.name) = \(property.name)\n ")
+                lines.append(Line(content: "self.\(property.name) = \(property.name)", indent: .level4))
             }
-            content.append("            }\n")
+            lines.append(Line(content: "}", indent: .level3))
+        } else {
+            lines.append(Line.newLine)
         }
-        
-        // create value function for request parameter
-        content.append("            func value() -> [String: Any] {\n")
-        content.append("                var params: [String: Any] = [:]\n")
+        lines.append(Line(content: "func value() -> [String: Any] {", indent: .level3))
+        lines.append(Line(content: "var params: [String: Any] = [:]", indent: .level4))
         for param in wbFunction.parameters {
             if param.optional {
-                content.append("                if let \(param.name) = \(param.name) {\n")
-                content.append("                    params[\"\(param.name)\"] = \(param.name)\n")
-                content.append("                }\n")
+                lines.append(Line(content: "if let \(param.name) = \(param.name) {", indent: .level4))
+                lines.append(Line(content: "params[\"\(param.name)\"] = \(param.name)", indent: .level5))
+                lines.append(Line(content: "}", indent: .level4))
+                
             } else {
-                content.append("                params[\"\(param.name)\"] = \(param.name)\n")
+                lines.append(Line(content: "params[\"\(param.name)\"] = \(param.name)", indent: .level4))
             }
         }
-        content.append("                return params\n")
-        content.append("            }\n")
-        
-        content.append("        }\n")
-        return content
+        lines.append(Line(content: "return params", indent: .level4))
+        lines.append(Line(content: "}", indent: .level3))
+        lines.append(Line(content: "}", indent: .level2))
+    
+        var result = ""
+        lines.forEach({ result += $0.text() })
+        return result
     }
 }
 
@@ -183,38 +181,41 @@ extension Document {
     }
     
     func weiboMethod() -> String {
-        var content = ""
-        content.append("        /// \(wbFunction.description)\n")
-        content.append("        ///\n")
-        content.append("        /// - Parameters:\n")
-        
+        var lines: [Line] = []
+        lines.append(Line(content: "///\(wbFunction.description)", indent: .level2))
+        lines.append(Line(content: "///", indent: .level2))
+        lines.append(Line(content: "/// - Parameters:", indent: .level2))
         let type = "WBParameter.\(wbFunction.category).\(wbFunction.signature)"
         if wbFunction.parameters.count > 0 {
-            content.append("        ///   - \(wbFunction.signature): Refer `\(type)` to see more details. \n")
+            lines.append(Line(content: "///   - param: Refer `\(type)` to see more details. ", indent: .level2))
         }
-        content.append("        ///   - completion: Callback\n")
-        content.append("        ")
-        content.append("public static func \(wbFunction.signature.lowercaseFirstLetter())(")
+        lines.append(Line(content: "///   - completion: Callback", indent: .level2))
+        
+        var signature = "public static func \(wbFunction.signature.lowercaseFirstLetter())("
         if wbFunction.parameters.count > 0 {
-            
-            content.append("param: \(type),")
+            signature.append("param: \(type), ")
         }
-        content.append("completion: @escaping GenericNetworkingCompletion<Int>")
-        content.append(") {\n")
-        content.append("            let path = \"\(wbFunction.path)\"\n")
+        signature.append("completion: @escaping GenericNetworkingCompletion<Int>) {")
+        lines.append(Line(content: signature, indent: .level2))
+        
+        // append body
+        lines.append(Line(content: "let path = \"\(wbFunction.path)\"", indent: .level3))
         if wbFunction.parameters.count == 0 {
-            content.append("            let params: [String: Any] = [:]\n")
+            lines.append(Line(content: "let params: [String: Any] = [:]", indent: .level3))
         } else {
-            content.append("            let params = param.value()\n")
+            lines.append(Line(content: "let params = param.value()", indent: .level3))
         }
         switch wbFunction.method {
         case .GET:
-            content.append("            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)\n")
+            lines.append(Line(content: "GenericNetworking.getJSON(path: path, parameters: params, completion: completion)", indent: .level3))
         case .POST:
-            content.append("            GenericNetworking.postJSON(path: path, parameters: params, completion: completion)\n")
+            lines.append(Line(content: "GenericNetworking.postJSON(path: path, parameters: params, completion: completion)", indent: .level3))
         }
-        content.append("        }\n")
-        return content
+        lines.append(Line(content: "}", indent: .level2))
+        
+        var result = ""
+        lines.forEach({ result += $0.text() })
+        return result
     }
     
 }

@@ -7,111 +7,111 @@ extension WeiboSDK {
 
     public struct Comments {
 
-        /// 我发出的评论列表
+        ///我发出的评论列表
         ///
         /// - Parameters:
-        ///   - ByMe: Refer `WBParameter.Comments.ByMe` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.ByMe` to see more details. 
         ///   - completion: Callback
-        public static func byMe(param: WBParameter.Comments.ByMe,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func byMe(param: WBParameter.Comments.ByMe, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/by_me.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 评论一条微博
+        ///评论一条微博
         ///
         /// - Parameters:
-        ///   - Create: Refer `WBParameter.Comments.Create` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Create` to see more details. 
         ///   - completion: Callback
-        public static func create(param: WBParameter.Comments.Create,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func create(param: WBParameter.Comments.Create, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/create.json"
             let params = param.value()
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 删除一条我的评论
+        ///删除一条我的评论
         ///
         /// - Parameters:
-        ///   - Destroy: Refer `WBParameter.Comments.Destroy` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Destroy` to see more details. 
         ///   - completion: Callback
-        public static func destroy(param: WBParameter.Comments.Destroy,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func destroy(param: WBParameter.Comments.Destroy, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/destroy.json"
             let params = param.value()
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 批量删除我的评论
+        ///批量删除我的评论
         ///
         /// - Parameters:
-        ///   - DestroyBatch: Refer `WBParameter.Comments.DestroyBatch` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.DestroyBatch` to see more details. 
         ///   - completion: Callback
-        public static func destroyBatch(param: WBParameter.Comments.DestroyBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func destroyBatch(param: WBParameter.Comments.DestroyBatch, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/destroy_batch.json"
             let params = param.value()
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 获取@到我的评论
+        ///获取@到我的评论
         ///
         /// - Parameters:
-        ///   - Mentions: Refer `WBParameter.Comments.Mentions` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Mentions` to see more details. 
         ///   - completion: Callback
-        public static func mentions(param: WBParameter.Comments.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func mentions(param: WBParameter.Comments.Mentions, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/mentions.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 回复一条我收到的评论
+        ///回复一条我收到的评论
         ///
         /// - Parameters:
-        ///   - Reply: Refer `WBParameter.Comments.Reply` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Reply` to see more details. 
         ///   - completion: Callback
-        public static func reply(param: WBParameter.Comments.Reply,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func reply(param: WBParameter.Comments.Reply, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/reply.json"
             let params = param.value()
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 获取某条微博的评论列表
+        ///获取某条微博的评论列表
         ///
         /// - Parameters:
-        ///   - Show: Refer `WBParameter.Comments.Show` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Show` to see more details. 
         ///   - completion: Callback
-        public static func show(param: WBParameter.Comments.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func show(param: WBParameter.Comments.Show, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/show.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 批量获取评论内容
+        ///批量获取评论内容
         ///
         /// - Parameters:
-        ///   - ShowBatch: Refer `WBParameter.Comments.ShowBatch` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.ShowBatch` to see more details. 
         ///   - completion: Callback
-        public static func showBatch(param: WBParameter.Comments.ShowBatch,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func showBatch(param: WBParameter.Comments.ShowBatch, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/show_batch.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 获取用户发送及收到的评论列表
+        ///获取用户发送及收到的评论列表
         ///
         /// - Parameters:
-        ///   - Timeline: Refer `WBParameter.Comments.Timeline` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.Timeline` to see more details. 
         ///   - completion: Callback
-        public static func timeline(param: WBParameter.Comments.Timeline,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func timeline(param: WBParameter.Comments.Timeline, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/timeline.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 我收到的评论列表
+        ///我收到的评论列表
         ///
         /// - Parameters:
-        ///   - ToMe: Refer `WBParameter.Comments.ToMe` to see more details. 
+        ///   - param: Refer `WBParameter.Comments.ToMe` to see more details. 
         ///   - completion: Callback
-        public static func toMe(param: WBParameter.Comments.ToMe,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func toMe(param: WBParameter.Comments.ToMe, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/to_me.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

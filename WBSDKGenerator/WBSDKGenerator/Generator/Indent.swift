@@ -14,4 +14,5 @@ enum Indent: String {
     case level2 = "        "
     case level3 = "            "
     case level4 = "                "
+    case level5 = "                    "
 }

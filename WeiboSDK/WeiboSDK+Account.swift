@@ -7,7 +7,7 @@ extension WeiboSDK {
 
     public struct Account {
 
-        /// 授权之后获取用户的联系邮箱
+        ///授权之后获取用户的联系邮箱
         ///
         /// - Parameters:
         ///   - completion: Callback
@@ -17,7 +17,7 @@ extension WeiboSDK {
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 授权之后获取用户的UID
+        ///授权之后获取用户的UID
         ///
         /// - Parameters:
         ///   - completion: Callback
@@ -27,7 +27,7 @@ extension WeiboSDK {
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
 
-        /// 获取当前授权用户API访问频率限制
+        ///获取当前授权用户API访问频率限制
         ///
         /// - Parameters:
         ///   - completion: Callback

@@ -7,12 +7,12 @@ extension WeiboSDK {
 
     public struct Search {
 
-        /// 搜索某一话题下的微博
+        ///搜索某一话题下的微博
         ///
         /// - Parameters:
-        ///   - Topics: Refer `WBParameter.Search.Topics` to see more details. 
+        ///   - param: Refer `WBParameter.Search.Topics` to see more details. 
         ///   - completion: Callback
-        public static func topics(param: WBParameter.Search.Topics,completion: @escaping GenericNetworkingCompletion<Int>) {
+        public static func topics(param: WBParameter.Search.Topics, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/search/topics.json"
             let params = param.value()
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)

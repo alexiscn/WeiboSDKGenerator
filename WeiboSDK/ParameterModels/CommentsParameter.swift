@@ -4,21 +4,17 @@ extension WBParameter {
     public struct Comments {
 
         public class ByMe: NSObject {
-
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
-
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
             public var max_id: Int64?
-
             // 单页返回的记录条数，默认为50。
             public var count: Int?
-
             // 返回结果的页码，默认为1。
             public var page: Int?
-
             // 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
             public var filter_by_source: Int?
+
 
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
@@ -42,23 +38,18 @@ extension WBParameter {
         }
 
         public class Create: NSObject {
-
             // 评论内容，必须做URLencode，内容不超过140个汉字。
             public var comment: String
-
             // 需要评论的微博ID。
             public var id: Int64
-
             // 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
             public var comment_ori: Int?
-
             // 开发者上报的操作用户真实IP，形如：211.156.0.1。
             public var rip: String?
-
             public init(comment: String, id: Int64) {
                 self.comment = comment
-                 self.id = id
-             }
+                self.id = id
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["comment"] = comment
@@ -74,13 +65,11 @@ extension WBParameter {
         }
 
         public class Destroy: NSObject {
-
             // 要删除的评论ID，只能删除登录用户自己发布的评论。
             public var cid: Int64
-
             public init(cid: Int64) {
                 self.cid = cid
-             }
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["cid"] = cid
@@ -89,13 +78,11 @@ extension WBParameter {
         }
 
         public class DestroyBatch: NSObject {
-
             // 需要删除的评论ID，用半角逗号隔开，最多20个。
             public var cids: Int64
-
             public init(cids: Int64) {
                 self.cids = cids
-             }
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["cids"] = cids
@@ -104,24 +91,19 @@ extension WBParameter {
         }
 
         public class Mentions: NSObject {
-
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
-
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
             public var max_id: Int64?
-
             // 单页返回的记录条数，默认为50。
             public var count: Int?
-
             // 返回结果的页码，默认为1。
             public var page: Int?
-
             // 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
             public var filter_by_author: Int?
-
             // 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
             public var filter_by_source: Int?
+
 
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
@@ -148,30 +130,23 @@ extension WBParameter {
         }
 
         public class Reply: NSObject {
-
             // 需要回复的评论ID。
             public var cid: Int64
-
             // 需要评论的微博ID。
             public var id: Int64
-
             // 回复评论内容，必须做URLencode，内容不超过140个汉字。
             public var comment: String
-
             // 回复中是否自动加入“回复@用户名”，0：是、1：否，默认为0。
             public var without_mention: Int?
-
             // 当评论转发微博时，是否评论给原微博，0：否、1：是，默认为0。
             public var comment_ori: Int?
-
             // 开发者上报的操作用户真实IP，形如：211.156.0.1。
             public var rip: String?
-
             public init(cid: Int64, id: Int64, comment: String) {
                 self.cid = cid
-                 self.id = id
-                 self.comment = comment
-             }
+                self.id = id
+                self.comment = comment
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["cid"] = cid
@@ -191,28 +166,21 @@ extension WBParameter {
         }
 
         public class Show: NSObject {
-
             // 需要查询的微博ID。
             public var id: Int64
-
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
-
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
             public var max_id: Int64?
-
             // 单页返回的记录条数，默认为50。
             public var count: Int?
-
             // 返回结果的页码，默认为1。
             public var page: Int?
-
             // 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
             public var filter_by_author: Int?
-
             public init(id: Int64) {
                 self.id = id
-             }
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["id"] = id
@@ -236,13 +204,11 @@ extension WBParameter {
         }
 
         public class ShowBatch: NSObject {
-
             // 需要查询的批量评论ID，用半角逗号分隔，最大50。
             public var cids: Int64
-
             public init(cids: Int64) {
                 self.cids = cids
-             }
+            }
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
                 params["cids"] = cids
@@ -251,21 +217,17 @@ extension WBParameter {
         }
 
         public class Timeline: NSObject {
-
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
-
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
             public var max_id: Int64?
-
             // 单页返回的记录条数，默认为50。
             public var count: Int?
-
             // 返回结果的页码，默认为1。
             public var page: Int?
-
             // 返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。
             public var trim_user: Int?
+
 
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
@@ -289,24 +251,19 @@ extension WBParameter {
         }
 
         public class ToMe: NSObject {
-
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
-
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
             public var max_id: Int64?
-
             // 单页返回的记录条数，默认为50。
             public var count: Int?
-
             // 返回结果的页码，默认为1。
             public var page: Int?
-
             // 作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。
             public var filter_by_author: Int?
-
             // 来源筛选类型，0：全部、1：来自微博的评论、2：来自微群的评论，默认为0。
             public var filter_by_source: Int?
+
 
             func value() -> [String: Any] {
                 var params: [String: Any] = [:]
