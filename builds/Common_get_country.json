@@ -18,8 +18,7 @@
     ], 
     "url": "https://api.weibo.com/2/common/get_country.json", 
     "response": [], 
-    "signature": "CommonGetCountry", 
+    "signature": "GetCountry", 
     "path": "/2/common/get_country.json", 
-    "shortName": "GetCountry", 
     "method": "GET"
 }

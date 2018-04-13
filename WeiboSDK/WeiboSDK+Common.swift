@@ -5,58 +5,61 @@ import GenericNetworking
 // MARK: - Common related API 
 extension WeiboSDK {
 
-    /// 通过地址编码获取地址名称
-    ///
-    /// - Parameters:
-    ///   - CodeToLocation: Refer `WBParameter.Common.CodeToLocation` to see more details. 
-    ///   - completion: Callback
-    public class func CommonCodeToLocation(param: WBParameter.Common.CodeToLocation,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/common/code_to_location.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+    public struct Common {
 
-    /// 获取城市列表
-    ///
-    /// - Parameters:
-    ///   - GetCity: Refer `WBParameter.Common.GetCity` to see more details. 
-    ///   - completion: Callback
-    public class func CommonGetCity(param: WBParameter.Common.GetCity,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/common/get_city.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 通过地址编码获取地址名称
+        ///
+        /// - Parameters:
+        ///   - CodeToLocation: Refer `WBParameter.Common.CodeToLocation` to see more details. 
+        ///   - completion: Callback
+        public static func codeToLocation(param: WBParameter.Common.CodeToLocation,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/common/code_to_location.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取国家列表
-    ///
-    /// - Parameters:
-    ///   - GetCountry: Refer `WBParameter.Common.GetCountry` to see more details. 
-    ///   - completion: Callback
-    public class func CommonGetCountry(param: WBParameter.Common.GetCountry,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/common/get_country.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 获取城市列表
+        ///
+        /// - Parameters:
+        ///   - GetCity: Refer `WBParameter.Common.GetCity` to see more details. 
+        ///   - completion: Callback
+        public static func getCity(param: WBParameter.Common.GetCity,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/common/get_city.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取省份列表
-    ///
-    /// - Parameters:
-    ///   - GetProvince: Refer `WBParameter.Common.GetProvince` to see more details. 
-    ///   - completion: Callback
-    public class func CommonGetProvince(param: WBParameter.Common.GetProvince,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/common/get_province.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 获取国家列表
+        ///
+        /// - Parameters:
+        ///   - GetCountry: Refer `WBParameter.Common.GetCountry` to see more details. 
+        ///   - completion: Callback
+        public static func getCountry(param: WBParameter.Common.GetCountry,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/common/get_country.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取时区配置表
-    ///
-    /// - Parameters:
-    ///   - GetTimezone: Refer `WBParameter.Common.GetTimezone` to see more details. 
-    ///   - completion: Callback
-    public class func CommonGetTimezone(param: WBParameter.Common.GetTimezone,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/common/get_timezone.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        /// 获取省份列表
+        ///
+        /// - Parameters:
+        ///   - GetProvince: Refer `WBParameter.Common.GetProvince` to see more details. 
+        ///   - completion: Callback
+        public static func getProvince(param: WBParameter.Common.GetProvince,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/common/get_province.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
+
+        /// 获取时区配置表
+        ///
+        /// - Parameters:
+        ///   - GetTimezone: Refer `WBParameter.Common.GetTimezone` to see more details. 
+        ///   - completion: Callback
+        public static func getTimezone(param: WBParameter.Common.GetTimezone,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/common/get_timezone.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
     }
 }

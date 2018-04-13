@@ -5,8 +5,7 @@
     "parameters": [], 
     "url": "https://api.weibo.com/2/account/rate_limit_status.json", 
     "response": [], 
-    "signature": "AccountRateLimitStatus", 
+    "signature": "RateLimitStatus", 
     "path": "/2/account/rate_limit_status.json", 
-    "shortName": "RateLimitStatus", 
     "method": "GET"
 }

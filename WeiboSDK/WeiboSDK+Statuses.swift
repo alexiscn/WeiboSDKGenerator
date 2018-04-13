@@ -5,80 +5,83 @@ import GenericNetworking
 // MARK: - Statuses related API 
 extension WeiboSDK {
 
-    /// 批量获取指定微博的转发数评论数
-    ///
-    /// - Parameters:
-    ///   - Count: Refer `WBParameter.Statuses.Count` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesCount(param: WBParameter.Statuses.Count,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/count.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+    public struct Statuses {
 
-    /// 获取当前登录用户及其所关注用户的最新微博
-    ///
-    /// - Parameters:
-    ///   - HomeTimeline: Refer `WBParameter.Statuses.HomeTimeline` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesHomeTimeline(param: WBParameter.Statuses.HomeTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/home_timeline.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 批量获取指定微博的转发数评论数
+        ///
+        /// - Parameters:
+        ///   - Count: Refer `WBParameter.Statuses.Count` to see more details. 
+        ///   - completion: Callback
+        public static func count(param: WBParameter.Statuses.Count,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/count.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取@当前用户的最新微博
-    ///
-    /// - Parameters:
-    ///   - Mentions: Refer `WBParameter.Statuses.Mentions` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesMentions(param: WBParameter.Statuses.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/mentions.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 获取当前登录用户及其所关注用户的最新微博
+        ///
+        /// - Parameters:
+        ///   - HomeTimeline: Refer `WBParameter.Statuses.HomeTimeline` to see more details. 
+        ///   - completion: Callback
+        public static func homeTimeline(param: WBParameter.Statuses.HomeTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/home_timeline.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 返回一条原创微博的最新转发微博
-    ///
-    /// - Parameters:
-    ///   - RepostTimeline: Refer `WBParameter.Statuses.RepostTimeline` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesRepostTimeline(param: WBParameter.Statuses.RepostTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/repost_timeline.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 获取@当前用户的最新微博
+        ///
+        /// - Parameters:
+        ///   - Mentions: Refer `WBParameter.Statuses.Mentions` to see more details. 
+        ///   - completion: Callback
+        public static func mentions(param: WBParameter.Statuses.Mentions,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/mentions.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 第三方分享链接到微博
-    ///
-    /// - Parameters:
-    ///   - Share: Refer `WBParameter.Statuses.Share` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesShare(param: WBParameter.Statuses.Share,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/share.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 返回一条原创微博的最新转发微博
+        ///
+        /// - Parameters:
+        ///   - RepostTimeline: Refer `WBParameter.Statuses.RepostTimeline` to see more details. 
+        ///   - completion: Callback
+        public static func repostTimeline(param: WBParameter.Statuses.RepostTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/repost_timeline.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 根据ID获取单条微博信息
-    ///
-    /// - Parameters:
-    ///   - Show: Refer `WBParameter.Statuses.Show` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesShow(param: WBParameter.Statuses.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/show.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 第三方分享链接到微博
+        ///
+        /// - Parameters:
+        ///   - Share: Refer `WBParameter.Statuses.Share` to see more details. 
+        ///   - completion: Callback
+        public static func share(param: WBParameter.Statuses.Share,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/share.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取用户发布的微博
-    ///
-    /// - Parameters:
-    ///   - UserTimeline: Refer `WBParameter.Statuses.UserTimeline` to see more details. 
-    ///   - completion: Callback
-    public class func StatusesUserTimeline(param: WBParameter.Statuses.UserTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/statuses/user_timeline.json"
-        let params = param.value()
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        /// 根据ID获取单条微博信息
+        ///
+        /// - Parameters:
+        ///   - Show: Refer `WBParameter.Statuses.Show` to see more details. 
+        ///   - completion: Callback
+        public static func show(param: WBParameter.Statuses.Show,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/show.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
+
+        /// 获取用户发布的微博
+        ///
+        /// - Parameters:
+        ///   - UserTimeline: Refer `WBParameter.Statuses.UserTimeline` to see more details. 
+        ///   - completion: Callback
+        public static func userTimeline(param: WBParameter.Statuses.UserTimeline,completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/statuses/user_timeline.json"
+            let params = param.value()
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
     }
 }

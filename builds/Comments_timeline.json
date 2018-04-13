@@ -82,8 +82,7 @@
             "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
         }
     ], 
-    "signature": "CommentsTimeline", 
+    "signature": "Timeline", 
     "path": "/2/comments/timeline.json", 
-    "shortName": "Timeline", 
     "method": "GET"
 }

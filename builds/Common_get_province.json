@@ -24,8 +24,7 @@
     ], 
     "url": "https://api.weibo.com/2/common/get_province.json", 
     "response": [], 
-    "signature": "CommonGetProvince", 
+    "signature": "GetProvince", 
     "path": "/2/common/get_province.json", 
-    "shortName": "GetProvince", 
     "method": "GET"
 }

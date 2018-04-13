@@ -5,33 +5,36 @@ import GenericNetworking
 // MARK: - Account related API 
 extension WeiboSDK {
 
-    /// 授权之后获取用户的联系邮箱
-    ///
-    /// - Parameters:
-    ///   - completion: Callback
-    public class func AccountEmail(completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/account/profile/email.json"
-        let params: [String: Any] = [:]
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+    public struct Account {
 
-    /// 授权之后获取用户的UID
-    ///
-    /// - Parameters:
-    ///   - completion: Callback
-    public class func AccountGetUid(completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/account/get_uid.json"
-        let params: [String: Any] = [:]
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
-    }
+        /// 授权之后获取用户的联系邮箱
+        ///
+        /// - Parameters:
+        ///   - completion: Callback
+        public static func email(completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/account/profile/email.json"
+            let params: [String: Any] = [:]
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
 
-    /// 获取当前授权用户API访问频率限制
-    ///
-    /// - Parameters:
-    ///   - completion: Callback
-    public class func AccountRateLimitStatus(completion: @escaping GenericNetworkingCompletion<Int>) {
-        let path = "/2/account/rate_limit_status.json"
-        let params: [String: Any] = [:]
-        GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        /// 授权之后获取用户的UID
+        ///
+        /// - Parameters:
+        ///   - completion: Callback
+        public static func getUid(completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/account/get_uid.json"
+            let params: [String: Any] = [:]
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
+
+        /// 获取当前授权用户API访问频率限制
+        ///
+        /// - Parameters:
+        ///   - completion: Callback
+        public static func rateLimitStatus(completion: @escaping GenericNetworkingCompletion<Int>) {
+            let path = "/2/account/rate_limit_status.json"
+            let params: [String: Any] = [:]
+            GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
+        }
     }
 }

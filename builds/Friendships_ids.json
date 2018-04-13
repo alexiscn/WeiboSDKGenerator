@@ -30,8 +30,7 @@
     ], 
     "url": "https://api.weibo.com/2/friendships/followers/ids.json", 
     "response": [], 
-    "signature": "FriendshipsIds", 
+    "signature": "Ids", 
     "path": "/2/friendships/followers/ids.json", 
-    "shortName": "Ids", 
     "method": "GET"
 }

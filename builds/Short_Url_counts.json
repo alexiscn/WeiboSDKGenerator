@@ -12,8 +12,7 @@
     ], 
     "url": "https://api.weibo.com/2/short_url/comment/counts.json", 
     "response": [], 
-    "signature": "Short_UrlCounts", 
+    "signature": "Counts", 
     "path": "/2/short_url/comment/counts.json", 
-    "shortName": "Counts", 
     "method": "GET"
 }

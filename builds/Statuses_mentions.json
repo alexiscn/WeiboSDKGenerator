@@ -169,8 +169,7 @@
             "description": "微博流内的推广微博ID"
         }
     ], 
-    "signature": "StatusesMentions", 
+    "signature": "Mentions", 
     "path": "/2/statuses/mentions.json", 
-    "shortName": "Mentions", 
     "method": "GET"
 }

@@ -38,8 +38,7 @@
             "description": "暂未支持"
         }
     ], 
-    "signature": "UsersCounts", 
+    "signature": "Counts", 
     "path": "/2/users/counts.json", 
-    "shortName": "Counts", 
     "method": "GET"
 }

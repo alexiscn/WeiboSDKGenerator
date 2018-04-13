@@ -133,8 +133,7 @@
             "description": "微博流内的推广微博ID"
         }
     ], 
-    "signature": "StatusesShow", 
+    "signature": "Show", 
     "path": "/2/statuses/show.json", 
-    "shortName": "Show", 
     "method": "GET"
 }

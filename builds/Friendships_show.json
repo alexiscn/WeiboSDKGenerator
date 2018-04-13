@@ -30,8 +30,7 @@
     ], 
     "url": "https://api.weibo.com/2/friendships/show.json", 
     "response": [], 
-    "signature": "FriendshipsShow", 
+    "signature": "Show", 
     "path": "/2/friendships/show.json", 
-    "shortName": "Show", 
     "method": "GET"
 }

@@ -5,8 +5,7 @@
     "parameters": [], 
     "url": "https://api.weibo.com/2/account/get_uid.json", 
     "response": [], 
-    "signature": "AccountGetUid", 
+    "signature": "GetUid", 
     "path": "/2/account/get_uid.json", 
-    "shortName": "GetUid", 
     "method": "GET"
 }

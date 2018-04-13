@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A37374E5208059C400379844 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37374E4208059C400379844 /* StringExtensions.swift */; };
 		A3811BD7207DEDD900E20BAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BD6207DEDD900E20BAD /* main.swift */; };
 		A3811BE2207DF52C00E20BAD /* TypeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE1207DF52C00E20BAD /* TypeMapper.swift */; };
 		A3811BE5207E0A9200E20BAD /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE4207E0A9200E20BAD /* APIFetcher.swift */; };
@@ -17,6 +18,7 @@
 		A3811C0A207E25FA00E20BAD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811C09207E25FA00E20BAD /* Document.swift */; };
 		A38B2EC6207F017800456815 /* JsonConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B2EC5207F017800456815 /* JsonConvert.swift */; };
 		A38B2ECA207F024E00456815 /* WBModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B2EC9207F024E00456815 /* WBModels.swift */; };
+		A38B2ECC207F804500456815 /* Indent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B2ECB207F804500456815 /* Indent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A37374E4208059C400379844 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A3811BD3207DEDD900E20BAD /* WBSDKGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WBSDKGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3811BD6207DEDD900E20BAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A3811BE1207DF52C00E20BAD /* TypeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMapper.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		A3811C09207E25FA00E20BAD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		A38B2EC5207F017800456815 /* JsonConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonConvert.swift; sourceTree = "<group>"; };
 		A38B2EC9207F024E00456815 /* WBModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBModels.swift; sourceTree = "<group>"; };
+		A38B2ECB207F804500456815 /* Indent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A37374E3208059B600379844 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A37374E4208059C400379844 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A3811BCA207DEDD900E20BAD = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 		A3811BD5207DEDD900E20BAD /* WBSDKGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				A37374E3208059B600379844 /* Extensions */,
 				A38B2EC8207F022000456815 /* FetchService */,
 				A38B2EC7207F020200456815 /* Generator */,
 				A38B2EC4207F011100456815 /* Resources */,
@@ -107,6 +120,7 @@
 				A38B2EC9207F024E00456815 /* WBModels.swift */,
 				A3811C09207E25FA00E20BAD /* Document.swift */,
 				A3811BE1207DF52C00E20BAD /* TypeMapper.swift */,
+				A38B2ECB207F804500456815 /* Indent.swift */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -176,7 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38B2ECC207F804500456815 /* Indent.swift in Sources */,
 				A38B2ECA207F024E00456815 /* WBModels.swift in Sources */,
+				A37374E5208059C400379844 /* StringExtensions.swift in Sources */,
 				A3811C0A207E25FA00E20BAD /* Document.swift in Sources */,
 				A38B2EC6207F017800456815 /* JsonConvert.swift in Sources */,
 				A3811C06207E1C9500E20BAD /* Podspec.txt in Sources */,

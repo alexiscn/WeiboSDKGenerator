@@ -33,8 +33,7 @@
             "description": "暂未支持"
         }
     ], 
-    "signature": "StatusesCount", 
+    "signature": "Count", 
     "path": "/2/statuses/count.json", 
-    "shortName": "Count", 
     "method": "GET"
 }

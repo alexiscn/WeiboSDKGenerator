@@ -145,8 +145,7 @@
             "description": "微博流内的推广微博ID"
         }
     ], 
-    "signature": "SearchTopics", 
+    "signature": "Topics", 
     "path": "/2/search/topics.json", 
-    "shortName": "Topics", 
     "method": "GET"
 }

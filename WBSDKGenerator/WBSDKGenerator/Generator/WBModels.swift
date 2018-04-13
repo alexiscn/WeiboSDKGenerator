@@ -24,9 +24,6 @@ struct WBFunction: Codable {
     /// path, eg: /2/statuses/mentions.json
     let path: String
     
-    // last path of URL. eg: Mentions
-    let shortName: String
-    
     let description: String
     
     let method: WBHTTPMethod

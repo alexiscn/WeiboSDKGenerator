@@ -18,8 +18,7 @@
     ], 
     "url": "https://api.weibo.com/2/emotions.json", 
     "response": [], 
-    "signature": "EmotionsjsonEmotions", 
+    "signature": "Emotions", 
     "path": "/2/emotions.json", 
-    "shortName": "Emotions", 
     "method": "GET"
 }

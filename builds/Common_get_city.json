@@ -24,8 +24,7 @@
     ], 
     "url": "https://api.weibo.com/2/common/get_city.json", 
     "response": [], 
-    "signature": "CommonGetCity", 
+    "signature": "GetCity", 
     "path": "/2/common/get_city.json", 
-    "shortName": "GetCity", 
     "method": "GET"
 }

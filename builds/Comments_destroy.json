@@ -58,8 +58,7 @@
             "description": "评论来源评论，当本评论属于对另一评论的回复时返回此字段"
         }
     ], 
-    "signature": "CommentsDestroy", 
+    "signature": "Destroy", 
     "path": "/2/comments/destroy.json", 
-    "shortName": "Destroy", 
     "method": "POST"
 }
