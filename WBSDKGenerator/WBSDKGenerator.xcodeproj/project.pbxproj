@@ -37,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A32784992080C61500768639 /* Swift-Codeable.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Swift-Codeable.json"; sourceTree = "<group>"; };
 		A37374E4208059C400379844 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A37374E6208085C200379844 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		A3811BD3207DEDD900E20BAD /* WBSDKGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WBSDKGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A38B2EC5207F017800456815 /* JsonConvert.swift */,
+				A32784992080C61500768639 /* Swift-Codeable.json */,
 			);
 			path = JSON2Swift;
 			sourceTree = "<group>";

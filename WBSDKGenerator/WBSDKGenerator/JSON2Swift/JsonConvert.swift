@@ -12,5 +12,17 @@ import Foundation
 /// Convert JSON to Swift Codeable Model
 class JsonConvert {
     
+    public static func convert(data: Data) {
+        
+        do {
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            if let dict = json as? [String: Any] {
+                print(dict.keys)
+            }
+        } catch let error {
+            print(error)
+        }
+        
+    }
     
 }
