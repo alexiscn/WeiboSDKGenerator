@@ -8,6 +8,16 @@
 
 import Foundation
 
+extension String {
+    
+    func toLines() -> [Line] {
+        let array = self.split(separator: "\n")
+        var lines: [Line] = []
+        array.forEach { lines.append(Line.fromText(String($0))) }
+        return lines
+    }
+}
+
 struct Line {
     
     let content: String
@@ -15,11 +25,28 @@ struct Line {
     let indent: Indent
     
     static var newLine: Line {
-        return Line(content: "\n", indent: .level0)
+        return Line(content: " ", indent: .level0)
+    }
+    
+    static func fromText(_ text: String) -> Line {
+        if text.count == 0 {
+            return Line(content: text, indent: .level0)
+        }
+        var i = 0
+        while text.dropFirst() == " " {
+            i = i + 1
+        }
+        return Line(content: text, indent: Indent.fromInt(i))
     }
     
     func text() -> String {
         return indent.rawValue + content + "\n"
+    }
+    
+    static func listToString(_ lines: [Line]) -> String {
+        var result = ""
+        lines.forEach({ result += $0.text() })
+        return result
     }
 }
 
@@ -47,50 +74,41 @@ class Document {
 extension Document {
     
     fileprivate func createParameterDocument() {
-        
         if wbFunction.parameters.count == 0 {
             return
         }
-        
         let fileName = "\(wbFunction.category)Parameter.swift"
         let filePath = WBOutputDir.appending("/\(Document.ParameterFolderName)/\(fileName)")
         let fileURL = URL(fileURLWithPath: filePath)
+        var lines: [Line] = []
         if !FileManager.default.fileExists(atPath: fileURL.path) {
-            var body = ""
-            body.append(headerString)
-            body.append("\n\n")
-            body.append("extension WBParameter {\n")
-            
-            body.append("    public struct \(wbFunction.category) {\n")
-            
-            body.append("    }\n")
-            body.append("}")
-            if let data = body.data(using: .utf8) {
-                try? data.write(to: fileURL)
+            lines.append(Line(content: headerString, indent: .level0))
+            lines.append(Line.newLine)
+            lines.append(Line(content: "extension WBParameter {", indent: .level0))
+            lines.append(Line(content: "public struct \(wbFunction.category) {", indent: .level1))
+            lines.append(Line(content: "}", indent: .level1))
+            lines.append(Line(content: "}", indent: .level0))
+        } else {
+            guard let body = try? String(contentsOfFile: fileURL.path) else {
+                return
             }
+            lines = body.toLines()
         }
+        lines.removeLast()
+        lines.removeLast()
+        lines.append(contentsOf: parameterMembers())
+        lines.append(Line(content: "}", indent: .level1))
+        lines.append(Line(content: "}", indent: .level0))
         
-        guard var body = try? String(contentsOfFile: fileURL.path) else {
-            return
-        }
-        
-        for _ in 0...6 {
-            body.removeLast()
-        }
-    
-        body.append("\n")
-        body.append(parameterMembers())
-        body.append("    }\n")
-        body.append("}")
+        var body = ""
+        lines.forEach({ body += $0.text() })
         if let data = body.data(using: .utf8) {
             try? data.write(to: fileURL)
         }
     }
     
-    fileprivate func parameterMembers() -> String {
-        
+    fileprivate func parameterMembers() -> [Line] {
         var lines: [Line] = []
-        
         lines.append(Line(content: "public class \(wbFunction.signature): NSObject {", indent: .level2))
         for param in wbFunction.parameters {
             lines.append(Line(content: "// \(param.description)", indent: .level3))
@@ -103,6 +121,7 @@ extension Document {
         
         let initialProperties = wbFunction.parameters.filter({ return $0.optional == false })
         if initialProperties.count > 0 {
+            lines.append(Line.newLine)
             var initFunction = "public init("
             for property in initialProperties {
                 initFunction.append("\(property.name): \(swiftTypeFor(property.type)), ")
@@ -115,9 +134,8 @@ extension Document {
                 lines.append(Line(content: "self.\(property.name) = \(property.name)", indent: .level4))
             }
             lines.append(Line(content: "}", indent: .level3))
-        } else {
-            lines.append(Line.newLine)
         }
+        lines.append(Line.newLine)
         lines.append(Line(content: "func value() -> [String: Any] {", indent: .level3))
         lines.append(Line(content: "var params: [String: Any] = [:]", indent: .level4))
         for param in wbFunction.parameters {
@@ -133,10 +151,7 @@ extension Document {
         lines.append(Line(content: "return params", indent: .level4))
         lines.append(Line(content: "}", indent: .level3))
         lines.append(Line(content: "}", indent: .level2))
-    
-        var result = ""
-        lines.forEach({ result += $0.text() })
-        return result
+        return lines
     }
 }
 
@@ -147,40 +162,42 @@ extension Document {
         let fileName = "WeiboSDK+\(wbFunction.category).swift"
         let filePath = WBOutputDir.appending("/\(fileName)")
         let fileURL = URL(fileURLWithPath: filePath)
+        
+        var lines: [Line] = []
         if !FileManager.default.fileExists(atPath: filePath) {
-            var body = ""
-            body.append(headerString)
-            body.append("\n\n")
-            body.append("import GenericNetworking \n")
-            body.append("\n")
-            
-            body.append("// MARK: - \(wbFunction.category) related API \n")
-            body.append("extension WeiboSDK {\n")
-            body.append("\n")
-            body.append("    public struct \(wbFunction.category) {\n")
-            body.append("    }\n")
-            body.append("}")
-            if let data = body.data(using: .utf8) {
-                try? data.write(to: fileURL)
+            lines.append(Line(content: headerString, indent: .level0))
+            lines.append(Line.newLine)
+            lines.append(Line(content: "import GenericNetworking", indent: .level0))
+            lines.append(Line.newLine)
+            lines.append(Line(content: "// MARK: - \(wbFunction.category) Related API", indent: .level0))
+            lines.append(Line(content: "extension WeiboSDK {", indent: .level0))
+            lines.append(Line.newLine)
+            lines.append(Line(content: "public struct \(wbFunction.category) {", indent: .level1))
+            lines.append(Line(content: "}", indent: .level1))
+            lines.append(Line(content: "}", indent: .level0))
+        } else {
+            guard let body = try? String(contentsOfFile: fileURL.path) else {
+                return
             }
-        }
-        guard var body = try? String(contentsOfFile: fileURL.path) else {
-            return
-        }
-        for _ in 0...6 {
-            body.removeLast()
+            lines = body.toLines()
         }
         
-        body.append("\n")
-        body.append(weiboMethod())
-        body.append("    }\n")
-        body.append("}")
+        lines.removeLast()
+        lines.removeLast()
+        
+        lines.append(Line.newLine)
+        lines.append(contentsOf: weiboMethod())
+        lines.append(Line(content: "}", indent: .level1))
+        lines.append(Line(content: "}", indent: .level0))
+        
+        var body = ""
+        lines.forEach({ body += $0.text() })
         if let data = body.data(using: .utf8) {
             try? data.write(to: fileURL)
         }
     }
     
-    func weiboMethod() -> String {
+    func weiboMethod() -> [Line] {
         var lines: [Line] = []
         lines.append(Line(content: "///\(wbFunction.description)", indent: .level2))
         lines.append(Line(content: "///", indent: .level2))
@@ -212,10 +229,7 @@ extension Document {
             lines.append(Line(content: "GenericNetworking.postJSON(path: path, parameters: params, completion: completion)", indent: .level3))
         }
         lines.append(Line(content: "}", indent: .level2))
-        
-        var result = ""
-        lines.forEach({ result += $0.text() })
-        return result
+        return lines
     }
     
 }
