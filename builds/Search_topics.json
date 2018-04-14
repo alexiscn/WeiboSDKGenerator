@@ -1,5 +1,6 @@
 {
     "category": "Search", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=search/topics&httpmethod=GET&key1=q&value1=微博", 
     "description": "搜索某一话题下的微博", 
     "parameters": [
@@ -22,6 +23,7 @@
             "description": "返回结果的页码，默认为1。"
         }
     ], 
+    "title": "搜索话题接口", 
     "url": "https://api.weibo.com/2/search/topics.json", 
     "response": [
         {

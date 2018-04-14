@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=comments/show_batch&httpmethod=GET&key1=cids&value1=3486200088153858,3486199517447154,3486198749848122", 
     "description": "批量获取评论内容", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要查询的批量评论ID，用半角逗号分隔，最大50。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/comments/show_batch.json", 
     "response": [
         {

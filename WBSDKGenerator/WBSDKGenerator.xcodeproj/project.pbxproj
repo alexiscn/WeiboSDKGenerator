@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A37374E5208059C400379844 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37374E4208059C400379844 /* StringExtensions.swift */; };
 		A37374E7208085C200379844 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37374E6208085C200379844 /* Generator.swift */; };
+		A376777220820FDA004959AB /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A376777120820FDA004959AB /* URLExtensions.swift */; };
 		A3811BD7207DEDD900E20BAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BD6207DEDD900E20BAD /* main.swift */; };
 		A3811BE2207DF52C00E20BAD /* TypeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE1207DF52C00E20BAD /* TypeMapper.swift */; };
 		A3811BE5207E0A9200E20BAD /* APIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE4207E0A9200E20BAD /* APIFetcher.swift */; };
@@ -40,6 +41,7 @@
 		A32784992080C61500768639 /* Swift-Codeable.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Swift-Codeable.json"; sourceTree = "<group>"; };
 		A37374E4208059C400379844 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A37374E6208085C200379844 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		A376777120820FDA004959AB /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		A3811BD3207DEDD900E20BAD /* WBSDKGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WBSDKGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3811BD6207DEDD900E20BAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A3811BE1207DF52C00E20BAD /* TypeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMapper.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				A37374E4208059C400379844 /* StringExtensions.swift */,
+				A376777120820FDA004959AB /* URLExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38B2ECC207F804500456815 /* Indent.swift in Sources */,
+				A376777220820FDA004959AB /* URLExtensions.swift in Sources */,
 				A38B2ECA207F024E00456815 /* WBModels.swift in Sources */,
 				A37374E5208059C400379844 /* StringExtensions.swift in Sources */,
 				A3811C0A207E25FA00E20BAD /* Document.swift in Sources */,

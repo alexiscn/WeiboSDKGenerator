@@ -20,7 +20,6 @@ if sys.getdefaultencoding() != defaultencoding:
 
 
 base_url = 'http://open.weibo.com'
-
 builds_dir = "builds"
 
 
@@ -40,7 +39,6 @@ def parse_main_wiki_table(table):
             tds = line.find_all('td')
             if len(tds) == 0:
                 continue
-
             if len(tds) == 2:
                 api_wiki = base_url + tds[0].find('a')["href"]
                 api_desc = tds[1].get_text().rstrip()
@@ -49,10 +47,10 @@ def parse_main_wiki_table(table):
                 api_wiki = base_url + tds[1].find('a')["href"]
                 api_desc = tds[2].get_text().rstrip()
 
-            parse_detail_wiki(api_wiki, api_desc)
+            parse_detail_wiki(api_wiki, api_title, api_desc)
 
 
-def parse_detail_wiki(url, desc):
+def parse_detail_wiki(url, title, desc):
     """
     解析API明细页面
     :param url: wiki地址
@@ -77,13 +75,14 @@ def parse_detail_wiki(url, desc):
     api_name = api_url.rsplit('/', 1)[1]
     api_category = api_path.rsplit('/')[2]
     api_category = api_category.replace('.', '').title()
-    api_signature =  api_name.rsplit('.', 1)[0].title().replace('_', "")
+    api_signature = api_name.rsplit('.', 1)[0].title().replace('_', "")
     api_dict["url"] = api_url
     api_dict["description"] = desc
     api_dict["method"] = "GET"
-    api_dict["signature"] =  api_signature
+    api_dict["signature"] = api_signature
     api_dict["category"] = api_category
     api_dict["path"] = api_path
+    api_dict["title"] = title
 
     console = soup.find('a', text='API测试工具')
     if console:
@@ -99,13 +98,16 @@ def parse_detail_wiki(url, desc):
     # parse parameters and responses
     tables = soup.find_all('table', class_='parameters')
     if len(tables) == 2:
-        parameters = parse_request_parameters(tables[0])
+        parameters, needs_auth = parse_request_parameters(tables[0])
         api_dict["parameters"] = parameters
+        api_dict["authorize"] = needs_auth
         response = parse_response_model(tables[1])
         api_dict["response"] = response
+
     elif len(tables) == 1:
-        parameters = parse_request_parameters(tables[0])
+        parameters, needs_auth = parse_request_parameters(tables[0])
         api_dict["parameters"] = parameters
+        api_dict["authorize"] = needs_auth
         api_dict["response"] = []
     else:
         print "!!!!!!!!!! detail page error"
@@ -124,11 +126,13 @@ def parse_detail_wiki(url, desc):
 def parse_request_parameters(table):
     lines = table.find_all('tr')
     params = []
+    needs_auth = False
     for line in lines:
         tds = line.find_all('td')
         if len(tds) == 4:
             name = tds[0].get_text().rstrip()
             if name == 'access_token':
+                needs_auth = True
                 continue
             is_must = tds[1].get_text().rstrip()
             b_optional = True if is_must == "false" else False
@@ -141,7 +145,7 @@ def parse_request_parameters(table):
                 "description": desc
             }
             params.append(param)
-    return params
+    return params, needs_auth
 
 
 def parse_response_model(table):
@@ -167,5 +171,4 @@ if __name__ == '__main__':
         shutil.rmtree(builds_dir)
     os.mkdir(builds_dir)
     parse_main_wiki()
-
 

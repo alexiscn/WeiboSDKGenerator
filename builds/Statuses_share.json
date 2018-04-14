@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "authorize": true, 
     "description": "第三方分享链接到微博", 
     "parameters": [
         {
@@ -21,6 +22,7 @@
             "description": "开发者上报的操作用户真实IP，形如：211.156.0.1。"
         }
     ], 
+    "title": "写入接口", 
     "url": "https://api.weibo.com/2/statuses/share.json", 
     "response": [
         {

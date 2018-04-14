@@ -1,5 +1,6 @@
 {
     "category": "Users", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=users/counts&httpmethod=GET&key1=uids&value1=1904178193,1870632073", 
     "description": "批量获取用户的粉丝数、关注数、微博数", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/users/counts.json", 
     "response": [
         {

@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=statuses/count&httpmethod=GET&key1=ids&value1=3481474642286341,3478931308682632,3479600589793135", 
     "description": "批量获取指定微博的转发数评论数", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/statuses/count.json", 
     "response": [
         {

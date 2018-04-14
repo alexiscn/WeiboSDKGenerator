@@ -1,5 +1,6 @@
 {
     "category": "Friendships", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=friendships/friends&httpmethod=GET&key1=uid&value1=1870632073", 
     "description": "获取用户的关注列表", 
     "parameters": [
@@ -34,6 +35,7 @@
             "description": "返回值中user字段中的status字段开关，0：返回完整status字段、1：status字段仅返回status_id，默认为1。"
         }
     ], 
+    "title": "关注读取接口", 
     "url": "https://api.weibo.com/2/friendships/friends.json", 
     "response": [
         {

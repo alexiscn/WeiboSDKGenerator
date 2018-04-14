@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=comments/create&httpmethod=POST&key1=comment&value1=来自API测试工具&key2=id&value2=3444517204329764", 
     "description": "评论一条微博", 
     "parameters": [
@@ -28,6 +29,7 @@
             "description": "开发者上报的操作用户真实IP，形如：211.156.0.1。"
         }
     ], 
+    "title": "写入接口", 
     "url": "https://api.weibo.com/2/comments/create.json", 
     "response": [
         {

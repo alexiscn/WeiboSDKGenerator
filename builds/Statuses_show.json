@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=statuses/show&httpmethod=GET&key1=id&value1=3481475946781445", 
     "description": "根据ID获取单条微博信息", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要获取的微博ID。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/statuses/show.json", 
     "response": [
         {

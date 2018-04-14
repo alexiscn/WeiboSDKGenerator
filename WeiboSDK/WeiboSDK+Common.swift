@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func codeToLocation(param: WBParameter.Common.CodeToLocation, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/common/code_to_location.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -25,7 +28,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func getCity(param: WBParameter.Common.GetCity, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/common/get_city.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -36,7 +42,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func getCountry(param: WBParameter.Common.GetCountry, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/common/get_country.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -47,7 +56,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func getProvince(param: WBParameter.Common.GetProvince, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/common/get_province.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -58,7 +70,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func getTimezone(param: WBParameter.Common.GetTimezone, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/common/get_timezone.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

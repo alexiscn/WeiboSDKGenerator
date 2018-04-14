@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func count(param: WBParameter.Statuses.Count, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/count.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -25,7 +28,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func homeTimeline(param: WBParameter.Statuses.HomeTimeline, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/home_timeline.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -36,7 +42,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func mentions(param: WBParameter.Statuses.Mentions, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/mentions.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -47,7 +56,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func repostTimeline(param: WBParameter.Statuses.RepostTimeline, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/repost_timeline.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -58,7 +70,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func share(param: WBParameter.Statuses.Share, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/share.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -69,7 +84,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func show(param: WBParameter.Statuses.Show, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/show.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -80,7 +98,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func userTimeline(param: WBParameter.Statuses.UserTimeline, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/statuses/user_timeline.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

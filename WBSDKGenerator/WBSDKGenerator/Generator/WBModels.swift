@@ -30,6 +30,8 @@ struct WBFunction: Codable {
     
     let parameters: [WBParameter]
     
+    let authorize: Bool
+    
     let response: [WBResponse]
     
     static func fromLocalFilePath(_ path: String) -> WBFunction? {

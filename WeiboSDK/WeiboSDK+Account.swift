@@ -13,7 +13,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func email(completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/account/profile/email.json"
-            let params: [String: Any] = [:]
+            var params: [String: Any] = [:]
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -23,7 +26,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func getUid(completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/account/get_uid.json"
-            let params: [String: Any] = [:]
+            var params: [String: Any] = [:]
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -33,7 +39,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func rateLimitStatus(completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/account/rate_limit_status.json"
-            let params: [String: Any] = [:]
+            var params: [String: Any] = [:]
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

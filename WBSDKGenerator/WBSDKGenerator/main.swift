@@ -11,7 +11,7 @@ import Foundation
 // update to your settings
 let buildPath = "/Users/xushuifeng/github/WeiboSDKGenerator/builds/"
 let WBOutputDir = "/Users/xushuifeng/github/WeiboSDKGenerator/WeiboSDK"
-let accessToken = "" // use access token to simulate API requests and parse response to model
+let accessToken = "YOUR_ACCESS_TOKEN" // use access token to simulate API requests and parse response to model
 
 func doNecessaryWork() {
     
@@ -54,12 +54,15 @@ func generate() {
     }
 }
 
+func testAPIFetcher() {
+    let jsonPath = buildPath.appending("Statuses_home_timeline.json")
+    if let f = WBFunction.fromLocalFilePath(jsonPath) {
+        let fetcher = APIFetcher()
+        fetcher.fetch(api: f)
+    }
+    RunLoop.main.run()
+}
+
 doNecessaryWork()
 generate()
-
-//let jsonPath = buildPath.appending("Statuses_show.json")
-//if let data = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) {
-//    JsonConvert.convert(data: data)
-//}
-
 

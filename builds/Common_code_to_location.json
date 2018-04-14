@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=common/code_to_location&httpmethod=GET&key1=codes&value1=100,200", 
     "description": "通过地址编码获取地址名称", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要查询的地址编码，多个之间用逗号分隔。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/common/code_to_location.json", 
     "response": [], 
     "signature": "CodeToLocation", 

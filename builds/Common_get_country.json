@@ -1,5 +1,6 @@
 {
     "category": "Common", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=common/get_country&httpmethod=GET&key1=capital&value1=c", 
     "description": "获取国家列表", 
     "parameters": [
@@ -16,6 +17,7 @@
             "description": "返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/common/get_country.json", 
     "response": [], 
     "signature": "GetCountry", 

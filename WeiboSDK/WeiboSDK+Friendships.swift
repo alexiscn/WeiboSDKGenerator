@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func followers(param: WBParameter.Friendships.Followers, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/friendships/followers.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -25,7 +28,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func friends(param: WBParameter.Friendships.Friends, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/friendships/friends.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -36,7 +42,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func ids(param: WBParameter.Friendships.Ids, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/friendships/followers/ids.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -47,7 +56,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func show(param: WBParameter.Friendships.Show, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/friendships/show.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

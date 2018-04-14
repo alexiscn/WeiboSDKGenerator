@@ -1,5 +1,6 @@
 {
     "category": "Friendships", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=friendships/followers/ids&httpmethod=GET&key1=uid&value1=1904178193", 
     "description": "获取用户粉丝UID列表", 
     "parameters": [
@@ -28,6 +29,7 @@
             "description": "返回结果的游标，下一页用返回值里的next_cursor，上一页用previous_cursor，默认为0。"
         }
     ], 
+    "title": "粉丝读取接口", 
     "url": "https://api.weibo.com/2/friendships/followers/ids.json", 
     "response": [], 
     "signature": "Ids", 

@@ -218,10 +218,15 @@ extension Document {
         // append body
         lines.append(Line(content: "let path = \"\(wbFunction.path)\"", indent: .level3))
         if wbFunction.parameters.count == 0 {
-            lines.append(Line(content: "let params: [String: Any] = [:]", indent: .level3))
+            lines.append(Line(content: "var params: [String: Any] = [:]", indent: .level3))
         } else {
-            lines.append(Line(content: "let params = param.value()", indent: .level3))
+            lines.append(Line(content: "var params = param.value()", indent: .level3))
         }
+        // append access token
+        lines.append(Line(content: "if let token = WeiboSDK.accessToken {", indent: .level3))
+        lines.append(Line(content: "params[\"access_token\"] = token", indent: .level4))
+        lines.append(Line(content: "}", indent: .level3))
+        
         switch wbFunction.method {
         case .GET:
             lines.append(Line(content: "GenericNetworking.getJSON(path: path, parameters: params, completion: completion)", indent: .level3))

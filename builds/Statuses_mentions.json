@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=statuses/mentions&httpmethod=GET&", 
     "description": "获取@当前用户的最新微博", 
     "parameters": [
@@ -46,6 +47,7 @@
             "description": "原创筛选类型，0：全部微博、1：原创的微博，默认为0。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/statuses/mentions.json", 
     "response": [
         {

@@ -1,5 +1,6 @@
 {
     "category": "Statuses", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=statuses/repost_timeline&httpmethod=GET&key1=id&value1=3481474642286341", 
     "description": "返回一条原创微博的最新转发微博", 
     "parameters": [
@@ -40,6 +41,7 @@
             "description": "作者筛选类型，0：全部、1：我关注的人、2：陌生人，默认为0。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/statuses/repost_timeline.json", 
     "response": [
         {

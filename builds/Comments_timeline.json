@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=comments/timeline&httpmethod=GET&", 
     "description": "获取用户发送及收到的评论列表", 
     "parameters": [
@@ -34,6 +35,7 @@
             "description": "返回值中user字段开关，0：返回完整user字段、1：user字段仅返回user_id，默认为0。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/comments/timeline.json", 
     "response": [
         {

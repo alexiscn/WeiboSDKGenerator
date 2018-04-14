@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func byMe(param: WBParameter.Comments.ByMe, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/by_me.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -25,7 +28,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func create(param: WBParameter.Comments.Create, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/create.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -36,7 +42,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func destroy(param: WBParameter.Comments.Destroy, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/destroy.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -47,7 +56,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func destroyBatch(param: WBParameter.Comments.DestroyBatch, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/destroy_batch.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -58,7 +70,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func mentions(param: WBParameter.Comments.Mentions, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/mentions.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -69,7 +84,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func reply(param: WBParameter.Comments.Reply, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/reply.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.postJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -80,7 +98,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func show(param: WBParameter.Comments.Show, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/show.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -91,7 +112,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func showBatch(param: WBParameter.Comments.ShowBatch, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/show_batch.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -102,7 +126,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func timeline(param: WBParameter.Comments.Timeline, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/timeline.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -113,7 +140,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func toMe(param: WBParameter.Comments.ToMe, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/comments/to_me.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

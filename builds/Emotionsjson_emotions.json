@@ -1,5 +1,6 @@
 {
     "category": "Emotionsjson", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=emotions&httpmethod=GET&{{{apiToolPara}}}", 
     "description": "获取官方表情", 
     "parameters": [
@@ -16,6 +17,7 @@
             "description": "语言类别，cnname：简体、twname：繁体，默认为cnname。"
         }
     ], 
+    "title": "读取接口", 
     "url": "https://api.weibo.com/2/emotions.json", 
     "response": [], 
     "signature": "Emotions", 

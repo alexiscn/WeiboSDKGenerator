@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func counts(param: WBParameter.Short_Url.Counts, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/short_url/comment/counts.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -25,7 +28,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func expand(param: WBParameter.Short_Url.Expand, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/short_url/expand.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
  
@@ -36,7 +42,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func shorten(param: WBParameter.Short_Url.Shorten, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/short_url/shorten.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

@@ -1,5 +1,6 @@
 {
     "category": "Comments", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=comments/destroy&httpmethod=POST&key1=cid&value1=0000000000", 
     "description": "删除一条我的评论", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "要删除的评论ID，只能删除登录用户自己发布的评论。"
         }
     ], 
+    "title": "写入接口", 
     "url": "https://api.weibo.com/2/comments/destroy.json", 
     "response": [
         {

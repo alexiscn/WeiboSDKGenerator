@@ -1,5 +1,6 @@
 {
     "category": "Friendships", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=friendships/show&httpmethod=GET&key1=source_id&value1=1904178193&key2=target_screen_name&value2=微博API", 
     "description": "获取两个用户之间是否存在关注关系", 
     "parameters": [
@@ -28,6 +29,7 @@
             "description": "目标用户的微博昵称。"
         }
     ], 
+    "title": "关系读取接口", 
     "url": "https://api.weibo.com/2/friendships/show.json", 
     "response": [], 
     "signature": "Show", 

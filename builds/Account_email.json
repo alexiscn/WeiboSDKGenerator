@@ -1,8 +1,10 @@
 {
     "category": "Account", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=account/profile/email&httpmethod=GET&", 
     "description": "授权之后获取用户的联系邮箱", 
     "parameters": [], 
+    "title": "其他接口", 
     "url": "https://api.weibo.com/2/account/profile/email.json", 
     "response": [], 
     "signature": "Email", 

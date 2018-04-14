@@ -14,7 +14,10 @@ extension WeiboSDK {
         ///   - completion: Callback
         public static func topics(param: WBParameter.Search.Topics, completion: @escaping GenericNetworkingCompletion<Int>) {
             let path = "/2/search/topics.json"
-            let params = param.value()
+            var params = param.value()
+            if let token = WeiboSDK.accessToken {
+                params["access_token"] = token
+            }
             GenericNetworking.getJSON(path: path, parameters: params, completion: completion)
         }
     }

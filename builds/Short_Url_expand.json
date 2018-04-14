@@ -1,5 +1,6 @@
 {
     "category": "Short_Url", 
+    "authorize": true, 
     "console": "http://open.weibo.com/tools/console?uri=short_url/expand&httpmethod=GET&key1=url_short&value1=http%3A%2F%2Ft.cn%2FzWHICRh", 
     "description": "短链转长链", 
     "parameters": [
@@ -10,6 +11,7 @@
             "description": "需要还原的短链接，需要URLencoded，最多不超过20个 。"
         }
     ], 
+    "title": "转换接口", 
     "url": "https://api.weibo.com/2/short_url/expand.json", 
     "response": [
         {
