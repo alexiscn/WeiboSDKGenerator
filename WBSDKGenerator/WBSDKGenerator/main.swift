@@ -48,17 +48,21 @@ func generate() {
                 doc.generate()
             }
             print("done file:\(file)")
-            print("")
         }
-        
     }
 }
 
 func testAPIFetcher() {
     let jsonPath = buildPath.appending("Statuses_home_timeline.json")
     if let f = WBApi.fromLocalFilePath(jsonPath) {
-        let fetcher = APIFetcher()
-        fetcher.fetch(api: f)
+//        let fetcher = APIFetcher()
+//        fetcher.fetch(api: f) { (json, error) in
+//        }
+        if let path = Bundle.main.url(forResource: "home", withExtension: "json") {
+            if let data = try? Data(contentsOf: path) {
+                JsonConvert.convert(data: data, api: f)
+            }
+        }
     }
     RunLoop.main.run()
 }
@@ -66,3 +70,4 @@ func testAPIFetcher() {
 doNecessaryWork()
 generate()
 
+//testAPIFetcher()

@@ -8,6 +8,15 @@
 
 import Foundation
 
+
+/// Represent blank space before code
+///
+/// - level0: zero space
+/// - level1: 4 spaces
+/// - level2: 8 spaces
+/// - level3: 12 spaces
+/// - level4: 16 spaces
+/// - level5: 20 spaces
 enum Indent: Int {
     case level0 = 0
     case level1 = 4
@@ -18,5 +27,16 @@ enum Indent: Int {
     
     func stringValue() -> String {
         return String(repeating: " ", count: self.rawValue)
+    }
+    
+    func children() -> Indent? {
+        return Indent(rawValue: self.rawValue + 4)
+    }
+    
+    func parent() -> Indent? {
+        if self.rawValue - 4 < 0 {
+            return Indent.level0
+        }
+        return Indent(rawValue: self.rawValue - 4)
     }
 }

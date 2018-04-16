@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias APIFetcherCompletion = (_ json: Any?, _ error: Error?) -> Void
+
 class APIFetcher {
     
     let session: URLSession
@@ -19,8 +21,7 @@ class APIFetcher {
         self.session = URLSession(configuration: configuration)
     }
     
-    func fetch(api: WBApi) {
-        
+    func fetch(api: WBApi, completion: @escaping APIFetcherCompletion) {
         var queryString = "access_token=\(accessToken)"
         if let consoleURL = URL(string: api.console ?? ""),
             let parameters = consoleURL.queryParameters() {
@@ -35,20 +36,17 @@ class APIFetcher {
         let urlString = api.url.absoluteString.appending("?\(queryString)")
         var request = URLRequest(url: URL(string: urlString)!)
         request.httpMethod = api.method.rawValue
-        
-        print(urlString)
-        
         self.task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print(error)
-            } else {
-                if let data = data {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                        print(json)
-                    } catch let e {
-                        print(e)
-                    }
+                completion(nil, error)
+                return
+            }
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    completion(json, nil)
+                } catch let e {
+                    completion(nil, e)
                 }
             }
         }
