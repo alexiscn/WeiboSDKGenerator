@@ -19,7 +19,7 @@ class APIFetcher {
         self.session = URLSession(configuration: configuration)
     }
     
-    func fetch(api: WBFunction) {
+    func fetch(api: WBApi) {
         
         var queryString = "access_token=\(accessToken)"
         if let consoleURL = URL(string: api.console ?? ""),

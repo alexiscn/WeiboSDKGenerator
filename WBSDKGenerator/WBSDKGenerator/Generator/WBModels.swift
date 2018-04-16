@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WBFunction: Codable {
+struct WBApi: Codable {
     
     /// funcation signature
     let signature: String
@@ -34,12 +34,12 @@ struct WBFunction: Codable {
     
     let response: [WBResponse]
     
-    static func fromLocalFilePath(_ path: String) -> WBFunction? {
+    static func fromLocalFilePath(_ path: String) -> WBApi? {
         let url = URL(fileURLWithPath: path)
         if let data = try? Data(contentsOf: url) {
             do {
                 let decoder = JSONDecoder()
-                let f = try decoder.decode(WBFunction.self, from: data)
+                let f = try decoder.decode(WBApi.self, from: data)
                 return f
             } catch let error {
                 print("=======================")

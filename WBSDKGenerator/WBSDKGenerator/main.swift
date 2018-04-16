@@ -43,8 +43,8 @@ func generate() {
         for file in files {
             print("processing file:\(file)")
             let path = buildPath.appending(file)
-            if let f = WBFunction.fromLocalFilePath(path) {
-                let doc = Document(wbFunction: f)
+            if let f = WBApi.fromLocalFilePath(path) {
+                let doc = Document(api: f)
                 doc.generate()
             }
             print("done file:\(file)")
@@ -56,7 +56,7 @@ func generate() {
 
 func testAPIFetcher() {
     let jsonPath = buildPath.appending("Statuses_home_timeline.json")
-    if let f = WBFunction.fromLocalFilePath(jsonPath) {
+    if let f = WBApi.fromLocalFilePath(jsonPath) {
         let fetcher = APIFetcher()
         fetcher.fetch(api: f)
     }
