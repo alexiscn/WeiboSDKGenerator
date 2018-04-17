@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Short_Url {
+ 
         public class Counts: NSObject {
+ 
             // 需要取得分享数的短链接，需要URLencoded，最多不超过20个。
             public var url_short: String
  
@@ -16,7 +18,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Expand: NSObject {
+ 
             // 需要还原的短链接，需要URLencoded，最多不超过20个 。
             public var url_short: String
  
@@ -30,7 +34,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Shorten: NSObject {
+ 
             // 需要转换的长链接，需要URLencoded，最多不超过20个。
             public var url_long: String
  

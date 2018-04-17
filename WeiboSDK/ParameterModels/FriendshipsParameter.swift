@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Friendships {
+ 
         public class Followers: NSObject {
+ 
             // 需要查询的用户UID。
             public var uid: Int64?
             // 需要查询的用户昵称。
@@ -34,7 +36,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Friends: NSObject {
+ 
             // 需要查询的用户UID。
             public var uid: Int64?
             // 需要查询的用户昵称。
@@ -66,7 +70,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Ids: NSObject {
+ 
             // 需要查询的用户UID。
             public var uid: Int64?
             // 需要查询的用户昵称。
@@ -93,7 +99,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Show: NSObject {
+ 
             // 源用户的UID。
             public var source_id: Int64?
             // 源用户的微博昵称。

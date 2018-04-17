@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Comments {
+ 
         public class ByMe: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
@@ -34,7 +36,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Create: NSObject {
+ 
             // 评论内容，必须做URLencode，内容不超过140个汉字。
             public var comment: String
             // 需要评论的微博ID。
@@ -62,7 +66,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Destroy: NSObject {
+ 
             // 要删除的评论ID，只能删除登录用户自己发布的评论。
             public var cid: Int64
  
@@ -76,7 +82,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class DestroyBatch: NSObject {
+ 
             // 需要删除的评论ID，用半角逗号隔开，最多20个。
             public var cids: Int64
  
@@ -90,7 +98,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Mentions: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
@@ -127,7 +137,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Reply: NSObject {
+ 
             // 需要回复的评论ID。
             public var cid: Int64
             // 需要评论的微博ID。
@@ -164,7 +176,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Show: NSObject {
+ 
             // 需要查询的微博ID。
             public var id: Int64
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
@@ -203,7 +217,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class ShowBatch: NSObject {
+ 
             // 需要查询的批量评论ID，用半角逗号分隔，最大50。
             public var cids: Int64
  
@@ -217,7 +233,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Timeline: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。
@@ -249,7 +267,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class ToMe: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的评论（即比since_id时间晚的评论），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的评论，默认为0。

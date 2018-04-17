@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Statuses {
+ 
         public class Count: NSObject {
+ 
             // 需要获取数据的微博ID，多个之间用逗号分隔，最多不超过100个。
             public var ids: String
  
@@ -16,7 +18,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class HomeTimeline: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
@@ -58,7 +62,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Mentions: NSObject {
+ 
             // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
             public var since_id: Int64?
             // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
@@ -100,7 +106,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class RepostTimeline: NSObject {
+ 
             // 需要查询的微博ID。
             public var id: Int64
             // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0。
@@ -139,7 +147,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Share: NSObject {
+ 
             // 用户分享到微博的文本内容，必须做URLencode，内容不超过140个汉字，文本中不能包含“#话题词#”，同时文本中必须包含至少一个第三方分享到微博的网页URL，且该URL只能是该第三方（调用方）绑定域下的URL链接，绑定域在“我的应用 － 应用信息 － 基本应用信息编辑 － 安全域名”里设置。
             public var status: String
             // 用户想要分享到微博的图片，仅支持JPEG、GIF、PNG图片，上传图片大小限制为<5M。上传图片时，POST方式提交请求，需要采用multipart/form-data编码方式。
@@ -163,7 +173,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Show: NSObject {
+ 
             // 需要获取的微博ID。
             public var id: Int64
  
@@ -177,7 +189,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class UserTimeline: NSObject {
+ 
             // 需要查询的用户ID。
             public var uid: Int64?
             // 需要查询的用户昵称。

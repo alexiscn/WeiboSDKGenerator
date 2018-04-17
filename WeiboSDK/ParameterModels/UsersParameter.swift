@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Users {
+ 
         public class Counts: NSObject {
+ 
             // 需要获取数据的用户UID，多个之间用逗号分隔，最多不超过100个。
             public var uids: String
  
@@ -16,7 +18,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class DomainShow: NSObject {
+ 
             // 需要查询的个性化域名。
             public var domain: String
  
@@ -30,7 +34,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class Show: NSObject {
+ 
             // 需要查询的用户ID。
             public var uid: Int64?
             // 需要查询的用户昵称。

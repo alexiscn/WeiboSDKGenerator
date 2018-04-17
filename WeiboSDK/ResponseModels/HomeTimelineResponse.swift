@@ -3,41 +3,29 @@
 public struct HomeTimelineResponse : Codable {
 
     // 微博流内的推广微博ID
-    public var ad: [Any]? 
+    public var ad: [String]? 
 
-
-    public var advertises: [Any]? 
-
+    public var advertises: [String]? 
 
     public var hasUnread: Int? 
 
-
     public var hasvisible: Bool? 
-
 
     public var interval: Int? 
 
-
     public var maxId: Int? 
-
 
     public var nextCursor: Int? 
 
-
     public var previousCursor: Int? 
-
 
     public var sinceId: Int? 
 
-
     public var statuses: Statuses? 
-
 
     public var totalNumber: Int? 
 
-
     public var uveBlank: Int? 
-
 
     enum CodingKeys: String, CodingKey {
         case ad = "ad"

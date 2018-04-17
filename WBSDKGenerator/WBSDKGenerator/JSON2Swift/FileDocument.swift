@@ -36,7 +36,6 @@ class FileDocument {
         
         for p in properties {
             content.append(p.toDocumentLine())
-            content.append("\n")
         }
         
         content.append("    enum CodingKeys: String, CodingKey {\n")

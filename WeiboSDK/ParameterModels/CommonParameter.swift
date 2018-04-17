@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Common {
+ 
         public class CodeToLocation: NSObject {
+ 
             // 需要查询的地址编码，多个之间用逗号分隔。
             public var codes: String
  
@@ -16,7 +18,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class GetCity: NSObject {
+ 
             // 省份的省份代码。
             public var province: String
             // 城市的首字母，a-z，可为空代表返回全部，默认为全部。
@@ -40,7 +44,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class GetCountry: NSObject {
+ 
             // 国家的首字母，a-z，可为空代表返回全部，默认为全部。
             public var capital: String?
             // 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
@@ -57,7 +63,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class GetProvince: NSObject {
+ 
             // 国家的国家代码。
             public var country: String
             // 省份的首字母，a-z，可为空代表返回全部，默认为全部。
@@ -81,7 +89,9 @@ extension WBParameter {
                 return params
             }
         }
+ 
         public class GetTimezone: NSObject {
+ 
             // 返回的语言版本，zh-cn：简体中文、zh-tw：繁体中文、english：英文，默认为zh-cn。
             public var language: String?
  

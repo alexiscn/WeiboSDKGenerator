@@ -15,4 +15,11 @@ extension String {
         }
         return prefix(1).lowercased() + dropFirst()
     }
+    
+    func uppercaseFirstLetter() -> String {
+        if count == 0 {
+            return self
+        }
+        return prefix(1).uppercased() + dropFirst()
+    }
 }

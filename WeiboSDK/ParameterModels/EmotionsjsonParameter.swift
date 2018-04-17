@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Emotionsjson {
+ 
         public class Emotions: NSObject {
+ 
             // 表情类别，face：普通表情、ani：魔法表情、cartoon：动漫表情，默认为face。
             public var type: String?
             // 语言类别，cnname：简体、twname：繁体，默认为cnname。

@@ -66,8 +66,8 @@ func testAPIFetcher() {
 //        }
         if let path = Bundle.main.url(forResource: "home", withExtension: "json") {
             if let data = try? Data(contentsOf: path) {
-                let json = JsonConvert()
-                json.convert(data: data, api: f)
+                let json = JsonConvert(api: f)
+                json.convert(data: data)
             }
         }
     }

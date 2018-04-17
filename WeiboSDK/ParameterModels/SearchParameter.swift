@@ -2,7 +2,9 @@
  
 extension WBParameter {
     public struct Search {
+ 
         public class Topics: NSObject {
+ 
             // 搜索的话题关键字，必须进行URLencode，utf-8编码。
             public var q: String
             // 单页返回的记录条数，默认为10，最大为50。
