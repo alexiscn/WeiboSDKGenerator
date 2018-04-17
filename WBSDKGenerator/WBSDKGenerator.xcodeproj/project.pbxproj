@@ -12,7 +12,6 @@
 		A31D09B0208445C0006535B8 /* JSONProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D09AF208445C0006535B8 /* JSONProperty.swift */; };
 		A31D09B220844F12006535B8 /* TypeUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D09B120844F12006535B8 /* TypeUtility.swift */; };
 		A37374E5208059C400379844 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37374E4208059C400379844 /* StringExtensions.swift */; };
-		A37374E7208085C200379844 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37374E6208085C200379844 /* Generator.swift */; };
 		A376777220820FDA004959AB /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A376777120820FDA004959AB /* URLExtensions.swift */; };
 		A3811BD7207DEDD900E20BAD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BD6207DEDD900E20BAD /* main.swift */; };
 		A3811BE2207DF52C00E20BAD /* TypeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3811BE1207DF52C00E20BAD /* TypeMapper.swift */; };
@@ -47,7 +46,6 @@
 		A31D09AF208445C0006535B8 /* JSONProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONProperty.swift; sourceTree = "<group>"; };
 		A31D09B120844F12006535B8 /* TypeUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeUtility.swift; sourceTree = "<group>"; };
 		A37374E4208059C400379844 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		A37374E6208085C200379844 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		A376777120820FDA004959AB /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		A3811BD3207DEDD900E20BAD /* WBSDKGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WBSDKGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3811BD6207DEDD900E20BAD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 				A3811C09207E25FA00E20BAD /* Document.swift */,
 				A3811BE1207DF52C00E20BAD /* TypeMapper.swift */,
 				A38B2ECB207F804500456815 /* Indent.swift */,
-				A37374E6208085C200379844 /* Generator.swift */,
 			);
 			path = Generator;
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 				A3811C06207E1C9500E20BAD /* Podspec.txt in Sources */,
 				A31D09AC20843E2F006535B8 /* Line.swift in Sources */,
 				A31D09B0208445C0006535B8 /* JSONProperty.swift in Sources */,
-				A37374E7208085C200379844 /* Generator.swift in Sources */,
 				A31BEB902084B012001D424D /* FileDocument.swift in Sources */,
 				A3811BE7207E14E300E20BAD /* WeiboSDK.txt in Sources */,
 				A3811BD7207DEDD900E20BAD /* main.swift in Sources */,

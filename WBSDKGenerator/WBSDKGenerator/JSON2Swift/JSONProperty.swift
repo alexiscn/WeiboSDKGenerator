@@ -18,6 +18,9 @@ class JSONProperty: Equatable {
     
     /// property type, eg: String
     var propertyType: String
+    
+    /// if is custom class
+    weak var propertyDocument: FileDocument?
 
     /// remark of property
     var comment: String?
@@ -39,10 +42,6 @@ class JSONProperty: Equatable {
     func toString() -> String {
         return propertyName + ": " + propertyType + (comment == nil ? "" : "//\(comment!)")
     }
-}
-
-
-extension JSONProperty {
     
     func toDocumentLine() -> String {
         var body = ""
@@ -52,50 +51,5 @@ extension JSONProperty {
         body.append("    public var \(propertyName): \(propertyType)? \n")
         body.append("\n")
         return body
-    }
-    
-    class func propertyWithJSONKey(_ jsonKey: String, value: Any) -> JSONProperty {
-        var property: JSONProperty
-        let propertyName = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: false)
-        var propertyType = typeNameForValue(value)
-        if value is NSDictionary {
-            propertyType = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: true)
-            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
-            property.isCustomClass = true
-        } else if value is NSArray {
-            let array = value as! NSArray
-            if array.firstObject is NSDictionary {
-                let className = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: true)
-                propertyType = className
-            } else {
-                
-            }
-            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
-            property.isArray = true
-            
-        } else {
-            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
-        }
-        return property
-    }
-    
-    class func camelCaseNameForPropertyName(input: String, uppcaseFirstCharacter: Bool) -> String {
-        var output = ""
-        let str = input.replacingOccurrences(of: " ", with: "")
-        var needsUppercase = uppcaseFirstCharacter
-        for char in str {
-            if char == "_" {
-                needsUppercase = true
-                continue
-            }
-            if needsUppercase {
-                let up = String(char).uppercased()
-                output += up
-                needsUppercase = false
-            } else {
-                output += String(char)
-            }
-        }
-        return output
     }
 }

@@ -12,8 +12,10 @@ import Foundation
 /// Convert JSON to Swift Codeable Model
 class JsonConvert {
     
-    public static func convert(data: Data, api: WBApi) {
-        //let rootObjectName = "\(api.signature)Response"
+    public func convert(data: Data, api: WBApi) {
+        
+        let rootObjectName = "\(api.signature)Response"
+        let doc = FileDocument(fileName: rootObjectName, className: rootObjectName)
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
             if let jsonDict = jsonObject as? [String: Any] {
@@ -23,10 +25,11 @@ class JsonConvert {
                     if value == nil {
                         continue
                     }
-                    let property = JSONProperty.propertyWithJSONKey(jsonKey, value: value!)
+                    let property = propertyWithJSONKey(jsonKey, value: value!)
                     property.comment = remarkForJsonKey(jsonKey, api: api)
-                    print(property.toString())
+                    doc.properties.append(property)
                 }
+                doc.flush()
             } else if let jsonArray = jsonObject as? [Any] {
                 print(jsonArray)
             }
@@ -35,7 +38,52 @@ class JsonConvert {
         }
     }
     
-    class func remarkForJsonKey(_ key: String, api: WBApi) -> String? {
+    func propertyWithJSONKey(_ jsonKey: String, value: Any) -> JSONProperty {
+        var property: JSONProperty
+        let propertyName = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: false)
+        var propertyType = typeNameForValue(value)
+        if value is NSDictionary {
+            propertyType = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: true)
+            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
+            property.isCustomClass = true
+        } else if value is NSArray {
+            let array = value as! NSArray
+            if array.firstObject is NSDictionary {
+                let className = camelCaseNameForPropertyName(input: jsonKey, uppcaseFirstCharacter: true)
+                propertyType = className
+            } else {
+                
+            }
+            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
+            property.isArray = true
+            
+        } else {
+            property = JSONProperty(jsonKey: jsonKey, propertyName: propertyName, propertyType: propertyType)
+        }
+        return property
+    }
+    
+    func camelCaseNameForPropertyName(input: String, uppcaseFirstCharacter: Bool) -> String {
+        var output = ""
+        let str = input.replacingOccurrences(of: " ", with: "")
+        var needsUppercase = uppcaseFirstCharacter
+        for char in str {
+            if char == "_" {
+                needsUppercase = true
+                continue
+            }
+            if needsUppercase {
+                let up = String(char).uppercased()
+                output += up
+                needsUppercase = false
+            } else {
+                output += String(char)
+            }
+        }
+        return output
+    }
+    
+    func remarkForJsonKey(_ key: String, api: WBApi) -> String? {
         if let res = api.response.first(where: { $0.name == key }) {
             return res.description
         }
